@@ -10,13 +10,13 @@ export function TextHeadline({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
 
@@ -32,13 +32,13 @@ export function TextIntro({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
 
@@ -54,13 +54,13 @@ export function TextMid({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
 
@@ -76,13 +76,13 @@ export function TextBase({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
 
@@ -98,13 +98,13 @@ export function TextSmall({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-base font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
 
@@ -120,12 +120,12 @@ export function TextTiny({
   fadedMax?: boolean
 }) {
   return (
-    <div
+    <p
       className={`text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
-    </div>
+    </p>
   )
 }
