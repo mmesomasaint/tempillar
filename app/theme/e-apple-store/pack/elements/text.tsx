@@ -99,7 +99,7 @@ export function TextSmall({
 }) {
   return (
     <div
-      className={`text-base font-medium ${primary && 'text-apple-store-pri'} ${
+      className={`text-base font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
