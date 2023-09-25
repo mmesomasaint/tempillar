@@ -1,4 +1,4 @@
-export function TextHeader({
+export function TextHeadline({
   primary,
   faded,
   fadedMax,
