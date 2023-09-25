@@ -1,3 +1,4 @@
+import Button from './pack/elements/button'
 import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextTiny } from './pack/elements/text'
 
 export default function AppleStore() {
@@ -27,6 +28,18 @@ export default function AppleStore() {
       <TextTiny>Welcome to the electronic apple store</TextTiny>
       <TextTiny faded>Welcome to the electronic apple store</TextTiny>
       <TextTiny fadedMax>Welcome to the electronic apple store</TextTiny>
+      <Button fillPrimary full>Checkout</Button>
+      <Button fillPrimary large full>Buy Now</Button>
+      <Button outlinePrimary full>Checkout</Button>
+      <Button outlinePrimary large full>Buy Now</Button>
+      <Button fillFaded full>Checkout</Button>
+      <Button fillFaded large full>Buy Now</Button>
+      <Button fillPrimary>Checkout</Button>
+      <Button fillPrimary large>Buy Now</Button>
+      <Button outlinePrimary>Checkout</Button>
+      <Button outlinePrimary large>Buy Now</Button>
+      <Button fillFaded>Checkout</Button>
+      <Button fillFaded large>Buy Now</Button>
     </div>
   )
 }

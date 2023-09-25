@@ -15,8 +15,8 @@ export default function Button({
 }) {
   return (
     <button
-      className={`leading-[0] text-base font-semibold p-2 rounded-2xl border w-fit ${
-        large && 'text-xl'
+      className={`leading-[0] text-base font-semibold my-2 p-4 rounded-2xl border ${
+        large && 'text-xl my-4 p-6 rounded-3xl'
       } ${full && 'w-full'} ${
         outlinePrimary && 'border-apple-store-pri text-apple-store-pri'
       } ${
