@@ -17,8 +17,8 @@ const config: Config = {
       colors: {
         ...colors,
         'apple-store-pri': '#2563eb',
-        'apple-store-faded': '#374151',
-        'apple-store-faded-max': '#6b7280',
+        'apple-store-faded': '#6b7280',
+        'apple-store-faded-max': '#9ca3af',
       },
     },
   },
