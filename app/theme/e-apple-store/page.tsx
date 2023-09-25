@@ -1,5 +1,7 @@
+import { TextHeader } from "./pack/elements/text"
+
 export default function AppleStore() {
   return (
-    <div>Welcome to the electronic apple store</div>
+    <TextHeader primary>Welcome to the electronic apple store</TextHeader>
   )
 }
