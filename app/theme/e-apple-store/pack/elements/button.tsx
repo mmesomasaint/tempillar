@@ -1,4 +1,4 @@
-export function ButtonLarge({
+export default function ButtonLarge({
   large,
   full,
   outlinePrimary,
