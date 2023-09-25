@@ -77,7 +77,7 @@ export function TextBase({
 }) {
   return (
     <div
-      className={`text-lg font-medium ${primary && 'text-apple-store-pri'} ${
+      className={`text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
