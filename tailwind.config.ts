@@ -18,8 +18,8 @@ const config: Config = {
         ...colors,
         'apple-store-pri': '#1d4ed8',
         'apple-store-faded': '#374151',
-        'apple-store-faded-max': '#6b7280'
-      }
+        'apple-store-faded-max': '#6b7280',
+      },
     },
   },
   plugins: [],
