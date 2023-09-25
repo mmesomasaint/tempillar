@@ -4,10 +4,10 @@ export function TextHeader({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
@@ -26,10 +26,10 @@ export function TextIntro({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
@@ -48,10 +48,10 @@ export function TextMid({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
@@ -70,10 +70,10 @@ export function TextBase({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
@@ -92,10 +92,10 @@ export function TextSmall({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
@@ -114,10 +114,10 @@ export function TextTiny({
   fadedMax,
   children,
 }: {
-  primary: boolean
-  faded: boolean
-  fadedMax: boolean
   children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
 }) {
   return (
     <div
