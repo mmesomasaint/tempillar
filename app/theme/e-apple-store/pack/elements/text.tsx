@@ -121,7 +121,7 @@ export function TextTiny({
 }) {
   return (
     <div
-      className={`text-xs font-medium ${primary && 'text-apple-store-pri'} ${
+      className={`text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >

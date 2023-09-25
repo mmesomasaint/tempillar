@@ -1,4 +1,4 @@
-import { TextBase, TextHeader, TextIntro, TextMid, TextSmall } from './pack/elements/text'
+import { TextBase, TextHeader, TextIntro, TextMid, TextSmall, TextTiny } from './pack/elements/text'
 
 export default function AppleStore() {
   return (
@@ -23,6 +23,10 @@ export default function AppleStore() {
       <TextSmall>Welcome to the electronic apple store</TextSmall>
       <TextSmall faded>Welcome to the electronic apple store</TextSmall>
       <TextSmall fadedMax>Welcome to the electronic apple store</TextSmall>
+      <TextTiny primary>Welcome to the electronic apple store</TextTiny>
+      <TextTiny>Welcome to the electronic apple store</TextTiny>
+      <TextTiny faded>Welcome to the electronic apple store</TextTiny>
+      <TextTiny fadedMax>Welcome to the electronic apple store</TextTiny>
     </div>
   )
 }
