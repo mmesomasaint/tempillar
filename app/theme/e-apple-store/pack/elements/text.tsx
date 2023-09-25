@@ -55,7 +55,7 @@ export function TextMid({
 }) {
   return (
     <div
-      className={`text-xl font-medium ${primary && 'text-apple-store-pri'} ${
+      className={`text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
