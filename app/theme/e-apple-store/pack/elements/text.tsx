@@ -11,9 +11,9 @@ export function TextHeader({
 }) {
   return (
     <div
-      className={`text-3xl font-semibold ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
@@ -33,9 +33,9 @@ export function TextIntro({
 }) {
   return (
     <div
-      className={`text-2xl font-medium ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-2xl font-medium ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
@@ -55,9 +55,9 @@ export function TextMid({
 }) {
   return (
     <div
-      className={`text-xl font-medium ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-xl font-medium ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
@@ -77,9 +77,9 @@ export function TextBase({
 }) {
   return (
     <div
-      className={`text-lg font-medium ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-lg font-medium ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
@@ -99,9 +99,9 @@ export function TextSmall({
 }) {
   return (
     <div
-      className={`text-base font-medium ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-base font-medium ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
@@ -121,9 +121,9 @@ export function TextTiny({
 }) {
   return (
     <div
-      className={`text-xs font-medium ${primary && 'bg-apple-store-pri'} ${
-        faded && 'bg-apple-store-faded'
-      } ${fadedMax && 'bg-apple-store-faded-max'}`}
+      className={`text-xs font-medium ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </div>
