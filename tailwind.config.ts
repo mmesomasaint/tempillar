@@ -1,3 +1,4 @@
+import colors from 'tailwindcss/colors'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -13,6 +14,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        ...colors,
+        'apple-store-pri': '#1d4ed8',
+        'apple-store-faded': '#374151',
+        'apple-store-faded-max': '#6b7280'
+      }
     },
   },
   plugins: [],
