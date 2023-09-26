@@ -9,7 +9,7 @@ export default function Slider({ srcList }: { srcList: string[] }) {
   return (
     <div className='flex md:flex-col justify-center items-center gap-10 p-10 border-2 border-apple-store-faded-max w-fit mx-auto rounded-3xl'>
       <div className='order-last md:order-first'>
-        <Image src={activeSrc} width={400} height={400} alt='main-image' />
+        <Image src={activeSrc} width={700} height={700} alt='main-image' />
       </div>
       <div className='flex flex-col md:flex-row justify-evenly items-center gap-6'>
         {srcList.map((src, id) => (
@@ -17,10 +17,10 @@ export default function Slider({ srcList }: { srcList: string[] }) {
             onClick={() => setActiveSrc(src)}
             key={src}
             src={src}
-            width={50}
-            height={50}
+            width={110}
+            height={110}
             alt={`thumbnail-${id + 1}`}
-            className={`transform duration-700 rounded-2xl w-fit p-5 border-2 ${src === activeSrc ? 'border-apple-store-pri' : 'border-apple-store-faded-max'}`}
+            className={`transform duration-700 rounded-2xl w-fit border-2 ${src === activeSrc ? 'border-apple-store-pri' : 'border-apple-store-faded-max'}`}
           />
         ))}
       </div>
