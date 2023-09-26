@@ -1,3 +1,4 @@
+import Slider from './pack/components/product/slider'
 import Button from './pack/elements/button'
 import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextTiny } from './pack/elements/text'
 
@@ -40,6 +41,10 @@ export default function AppleStore() {
       <Button outlinePrimary large>Buy Now</Button>
       <Button fillFaded>Checkout</Button>
       <Button fillFaded large>Buy Now</Button>
+      <Slider srcList={['/imgs/airpods-pro-2nd-gen-singleton-sv.webp',
+'/imgs/airpods-pro-2nd-gen-sv-2.webp',
+'/imgs/airpods-pro-2nd-gen-sv-in.webp',
+'/imgs/airpods-pro-2nd-gen-sv-out.webp']} />
     </div>
   )
 }
