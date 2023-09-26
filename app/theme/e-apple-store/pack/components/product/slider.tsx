@@ -8,7 +8,7 @@ export default function Slider({ srcList }: { srcList: string[] }) {
 
   return (
     <div className='flex md:flex-col justify-center items-center gap-10 p-10 border-2 border-apple-store-faded-max w-fit mx-auto rounded-3xl'>
-      <div className='md:order-0'>
+      <div className='order-last md:order-first'>
         <Image src={activeSrc} width={400} height={400} alt='main-image' />
       </div>
       <div className='flex flex-col md:flex-row justify-evenly items-center gap-6'>
