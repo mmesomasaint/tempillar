@@ -7,7 +7,7 @@ export default function Slider({ srcList }: { srcList: string[] }) {
   const [activeSrc, setActiveSrc] = useState<string>(srcList[0])
 
   return (
-    <div className='flex md:flex-col justify-center items-center gap-10'>
+    <div className='flex md:flex-col justify-center items-center gap-10 p-10 border-2 border-apple-store-faded-max w-fit mx-auto rounded-3xl'>
       <div className='md:order-0'>
         <Image src={activeSrc} width={400} height={400} alt='main-image' />
       </div>
@@ -20,6 +20,7 @@ export default function Slider({ srcList }: { srcList: string[] }) {
             width={50}
             height={50}
             alt={`thumbnail-${id + 1}`}
+            className={`transform duration-700 rounded-2xl w-fit p-5 border-2 ${src === activeSrc ? 'border-apple-store-pri' : 'border-apple-store-faded-max'}`}
           />
         ))}
       </div>
