@@ -46,7 +46,7 @@ export default function AppleStore() {
 '/imgs/airpods-pro-2nd-gen-sv-2.webp',
 '/imgs/airpods-pro-2nd-gen-sv-in.webp',
 '/imgs/airpods-pro-2nd-gen-sv-out.webp']} />
-      <Card title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/mackbook-pro-tv' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
+      <Card title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/mackbook-pro-tv.webp' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
     </div>
   )
 }
