@@ -21,7 +21,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='w-[17%] border border-apple-store-faded-max rounded-md shadow-sm'>
+    <div className='w-[17%] border border-apple-store-faded-max rounded-lg shadow-sm'>
       <Image
         src={src}
         width={100}
