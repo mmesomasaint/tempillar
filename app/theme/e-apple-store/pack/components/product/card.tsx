@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { TextMid, TextSmall } from '../../elements/text'
+import { TextSmall, TextTiny } from '../../elements/text'
 
 export default function Card({
   title,
@@ -31,14 +31,14 @@ export default function Card({
       />
       <div className='px-5 pb-5 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-5'>
-          <TextMid>${price}</TextMid>
+          <TextSmall>${price}</TextSmall>
           <span className='line-through'>
-            <TextSmall faded>${discount}</TextSmall>
+            <TextTiny faded>${discount}</TextTiny>
           </span>
         </div>
         <div className='flex flex-col gap-0'>
-          <TextSmall faded>{title}</TextSmall>
-          <TextSmall faded>{variants.join(' | ')}</TextSmall>
+          <TextTiny faded>{title}</TextTiny>
+          <TextTiny faded>{variants.join(' | ')}</TextTiny>
         </div>
         <div className='flex justify-start items-center gap-4'>
           {colors.map((color) => (
@@ -49,11 +49,13 @@ export default function Card({
             />
           ))}
         </div>
-        <div className='flex justify-start items-center gap-6'>
-          <div className='flex justify-start gap-3'>{rating}</div>
-          <div className='flex justify-start gap-3'>
-            <span>{amountSold}</span>
-            <span>sold</span>
+        <div className='flex justify-start items-center gap-3'>
+          <div className='flex justify-start gap-1'>
+            <TextTiny>{rating}</TextTiny>
+          </div>
+          <div className='flex justify-start gap-1'>
+            <TextTiny>{amountSold}</TextTiny>
+            <TextTiny>sold</TextTiny>
           </div>
         </div>
       </div>
