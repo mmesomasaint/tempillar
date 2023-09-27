@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { TextSmall, TextTiny } from '../../elements/text'
+import { TextMid,  TextTiny } from '../../elements/text'
 
 export default function Card({
   title,
@@ -30,8 +30,8 @@ export default function Card({
         className='w-full'
       />
       <div className='px-5 pb-5 flex flex-col gap-3 items-start justify-start'>
-        <div className='flex justify-start items-center gap-5'>
-          <TextSmall>${price}</TextSmall>
+        <div className='flex justify-start items-center gap-2'>
+          <TextMid>${price}</TextMid>
           <span className='line-through'>
             <TextTiny faded>${discount}</TextTiny>
           </span>
