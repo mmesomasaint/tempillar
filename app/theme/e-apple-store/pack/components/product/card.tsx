@@ -24,10 +24,10 @@ export default function Card({
     <div className='border border-apple-store-faded-max rounded-md shadow-sm w-fit'>
       <Image
         src={src}
-        width={200}
-        height={200}
+        width={100}
+        height={100}
         alt={`Image for product: ${title}`}
-        className='border w-full'
+        className='w-full'
       />
       <div className='px-5 pb-5 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-5'>
