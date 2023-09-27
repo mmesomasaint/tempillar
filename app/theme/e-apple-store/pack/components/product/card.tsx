@@ -21,7 +21,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='shadow-sm w-fit'>
+    <div className='border border-apple-store-faded-max rounded-md shadow-sm w-fit'>
       <Image
         src={src}
         width={200}
@@ -29,7 +29,7 @@ export default function Card({
         alt={`Image for product: ${title}`}
         className='border w-full'
       />
-      <div className='p-10 flex flex-col gap-5 items-start justify-start'>
+      <div className='px-5 pb-5 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-5'>
           <TextMid>${price}</TextMid>
           <span className='line-through'>
