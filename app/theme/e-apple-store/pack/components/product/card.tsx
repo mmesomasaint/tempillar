@@ -21,28 +21,30 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='shadow-sm'>
+    <div className='shadow-sm w-fit'>
       <Image
         src={src}
-        width={300}
-        height={300}
+        width={200}
+        height={200}
         alt={`Image for product: ${title}`}
+        className='border w-full'
       />
-      <div className='p-5 flex flex-col gap-5 items-start justify-start'>
+      <div className='p-10 flex flex-col gap-5 items-start justify-start'>
         <div className='flex justify-start items-center gap-5'>
           <TextMid>${price}</TextMid>
           <span className='line-through'>
-            <TextSmall>${discount}</TextSmall>
+            <TextSmall faded>${discount}</TextSmall>
           </span>
         </div>
         <div className='flex flex-col gap-0'>
-          <TextSmall>{title}</TextSmall>
-          <TextSmall>{variants.join(' | ')}</TextSmall>
+          <TextSmall faded>{title}</TextSmall>
+          <TextSmall faded>{variants.join(' | ')}</TextSmall>
         </div>
         <div className='flex justify-start items-center gap-4'>
           {colors.map((color) => (
             <div
-              className='w-24 h-24 rounded-full'
+              key={color}
+              className='w-6 h-6 rounded-full'
               style={{ backgroundColor: color }}
             />
           ))}
