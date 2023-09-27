@@ -21,7 +21,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='border border-apple-store-faded-max rounded-md shadow-sm w-fit'>
+    <div className='w-[17%] border border-apple-store-faded-max rounded-md shadow-sm'>
       <Image
         src={src}
         width={100}
@@ -29,7 +29,7 @@ export default function Card({
         alt={`Image for product: ${title}`}
         className='w-full'
       />
-      <div className='px-5 pb-5 flex flex-col gap-2 items-start justify-start'>
+      <div className='px-5 pb-5 flex flex-col gap-3 items-start justify-start'>
         <div className='flex justify-start items-center gap-5'>
           <TextSmall>${price}</TextSmall>
           <span className='line-through'>
@@ -51,11 +51,11 @@ export default function Card({
         </div>
         <div className='flex justify-start items-center gap-3'>
           <div className='flex justify-start gap-1'>
-            <TextTiny>{rating}</TextTiny>
+            <TextTiny faded>{rating}</TextTiny>
           </div>
           <div className='flex justify-start gap-1'>
-            <TextTiny>{amountSold}</TextTiny>
-            <TextTiny>sold</TextTiny>
+            <TextTiny faded>{amountSold}</TextTiny>
+            <TextTiny faded>sold</TextTiny>
           </div>
         </div>
       </div>
