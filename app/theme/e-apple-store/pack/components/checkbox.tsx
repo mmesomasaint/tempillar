@@ -20,11 +20,11 @@ export default function CheckBox({
       onClick={() => setCheck && setCheck(!check)}
     >
       <div
-        className={`w-12 h-12 flex justify-center items-center border border-${color}`}
+        className={`w-6 h-6 rounded-md flex justify-center items-center border border-${color}`}
       >
-        <BsCheckLg className={`text-lg text-${color}`} />
+        {check && <BsCheckLg className={`text-lg text-apple-store-pri`} />}
       </div>
-      <TextTiny>{children}</TextTiny>
+      <TextTiny faded>{children}</TextTiny>
     </div>
   )
 }
