@@ -24,7 +24,9 @@ export default function CheckBox({
       >
         {check && <BsCheckLg className={`text-lg text-apple-store-pri`} />}
       </div>
-      <TextTiny faded>{children}</TextTiny>
+      <TextTiny faded={!check} primary={check}>
+        {children}
+      </TextTiny>
     </div>
   )
 }
