@@ -29,10 +29,10 @@ export default function Card({
         alt={`Image for product: ${title}`}
         className='w-full'
       />
-      <div className='px-5 pb-5 flex flex-col gap-3 items-start justify-start'>
+      <div className='p-5 flex flex-col gap-3 items-start justify-start'>
         <div className='flex justify-start items-center gap-2'>
           <TextMid>${price}</TextMid>
-          <span className='line-through'>
+          <span className='line-through text-apple-store-faded'>
             <TextTiny faded>${discount}</TextTiny>
           </span>
         </div>
@@ -40,11 +40,11 @@ export default function Card({
           <TextTiny faded>{title}</TextTiny>
           <TextTiny faded>{variants.join(' | ')}</TextTiny>
         </div>
-        <div className='flex justify-start items-center gap-4'>
+        <div className='flex justify-start items-center gap-2'>
           {colors.map((color) => (
             <div
               key={color}
-              className='w-6 h-6 rounded-full'
+              className='w-6 h-6 rounded-full border border-apple-store-faded-max'
               style={{ backgroundColor: color }}
             />
           ))}
