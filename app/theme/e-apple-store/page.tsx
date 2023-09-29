@@ -48,7 +48,7 @@ export default function AppleStore() {
 '/imgs/airpods-pro-2nd-gen-sv-in.webp',
 '/imgs/airpods-pro-2nd-gen-sv-out.webp']} />
       <Card title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/macbook-pro-fv-2.jpeg' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
-      <CheckBox>Macbook Pro</CheckBox>
+      <CheckBox check={true}>Macbook Pro</CheckBox>
     </div>
   )
 }
