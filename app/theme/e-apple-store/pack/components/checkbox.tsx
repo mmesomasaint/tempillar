@@ -1,3 +1,5 @@
+'use client'
+
 import { BsCheckLg } from 'react-icons/bs'
 import { TextTiny } from '../elements/text'
 

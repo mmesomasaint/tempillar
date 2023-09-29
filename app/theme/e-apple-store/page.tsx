@@ -1,3 +1,4 @@
+import CheckBox from './pack/components/checkbox'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
 import Button from './pack/elements/button'
@@ -47,6 +48,7 @@ export default function AppleStore() {
 '/imgs/airpods-pro-2nd-gen-sv-in.webp',
 '/imgs/airpods-pro-2nd-gen-sv-out.webp']} />
       <Card title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/macbook-pro-fv-1.webp' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
+      <CheckBox></CheckBox>
     </div>
   )
 }
