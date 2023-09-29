@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import {BsStarFill} from 'react-icons/bs'
 import { TextMid,  TextTiny } from '../../elements/text'
 
 export default function Card({
@@ -29,7 +30,7 @@ export default function Card({
         alt={`Image for product: ${title}`}
         className='w-full'
       />
-      <div className='p-5 flex flex-col gap-3 items-start justify-start'>
+      <div className='p-3 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-2'>
           <TextMid>${price}</TextMid>
           <span className='line-through text-apple-store-faded'>
@@ -50,7 +51,8 @@ export default function Card({
           ))}
         </div>
         <div className='flex justify-start items-center gap-3'>
-          <div className='flex justify-start gap-1'>
+          <div className='flex justify-start items-center gap-1'>
+            <BsStarFill className='text-base text-yellow-500' />
             <TextTiny faded>{rating}</TextTiny>
           </div>
           <div className='flex justify-start gap-1'>
