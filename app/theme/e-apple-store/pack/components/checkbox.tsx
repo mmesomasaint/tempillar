@@ -18,7 +18,9 @@ export default function CheckBox({
       onClick={() => setCheck && setCheck(!check)}
     >
       <div
-        className={`w-6 h-6 rounded-md flex justify-center items-center border border-${check ? 'border-apple-store-pri' : 'border-apple-store-faded'}`}
+        className={`w-6 h-6 rounded-md flex justify-center items-center border border-${
+          check ? 'border-apple-store-pri' : 'border-apple-store-faded'
+        }`}
       >
         {check && <BsCheckLg className={`text-lg text-apple-store-pri`} />}
       </div>
