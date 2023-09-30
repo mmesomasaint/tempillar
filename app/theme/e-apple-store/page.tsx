@@ -1,5 +1,5 @@
 import CheckBox from './pack/components/checkbox'
-import { OutlineButton } from './pack/components/outline-btns'
+import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
 import Button from './pack/elements/button'
@@ -55,6 +55,7 @@ export default function AppleStore() {
       <CheckBox check={true}>iPhone</CheckBox>
       <OutlineButton selected>128GB</OutlineButton>
       <OutlineButton>256GB</OutlineButton>
+      <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
     </div>
   )
 }
