@@ -6,8 +6,8 @@ export default function OutlineButtons({
   col,
 }: {
   options: {}
-  setOptions: (prev: {}) => void
-  col: boolean
+  setOptions?: (prev: {}) => void
+  col?: boolean
 }) {
   const setSelectedHandler = (value: boolean, key: string) => {
     const newOptions = { ...options, [key]: value }
