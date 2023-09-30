@@ -54,7 +54,7 @@ export default function AppleStore() {
       <CheckBox check={false}>iMac</CheckBox>
       <CheckBox check={true}>iPhone</CheckBox>
       <OutlineButton selected>128GB</OutlineButton>
-      <OutlineButton>256GB</OutlineButton>
+      <OutlineButton large>256GB</OutlineButton>
       <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
     </div>
   )
