@@ -53,7 +53,7 @@ export default function AppleStore() {
       <CheckBox check={true}>Airpods Pro</CheckBox>
       <CheckBox check={false}>iMac</CheckBox>
       <CheckBox check={true}>iPhone</CheckBox>
-      <OutlineButton selected setSelected={() => {}}>128GB</OutlineButton>
+      <OutlineButton selected>128GB</OutlineButton>
     </div>
   )
 }
