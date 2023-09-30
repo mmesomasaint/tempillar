@@ -54,15 +54,9 @@ export function OutlineButton({
           : 'border-apple-store-faded text-apple-store-faded'
       }`}
     >
-      {large ? (
-        <TextLabel faded={!selected} primary={selected} large>
+      <TextLabel faded={!selected} primary={selected} large={large}>
           {children}
         </TextLabel>
-      ) : (
-        <TextLabel faded={!selected} primary={selected}>
-          {children}
-        </TextLabel>
-      )}
     </div>
   )
 }
