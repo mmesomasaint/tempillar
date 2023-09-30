@@ -54,6 +54,7 @@ export default function AppleStore() {
       <CheckBox check={false}>iMac</CheckBox>
       <CheckBox check={true}>iPhone</CheckBox>
       <OutlineButton selected>128GB</OutlineButton>
+      <OutlineButton>256GB</OutlineButton>
     </div>
   )
 }
