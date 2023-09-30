@@ -1,4 +1,5 @@
 import CheckBox from './pack/components/checkbox'
+import { OutlineButton } from './pack/components/outline-btns'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
 import Button from './pack/elements/button'
@@ -52,6 +53,7 @@ export default function AppleStore() {
       <CheckBox check={true}>Airpods Pro</CheckBox>
       <CheckBox check={false}>iMac</CheckBox>
       <CheckBox check={true}>iPhone</CheckBox>
+      <OutlineButton selected setSelected={() => {}}>128GB</OutlineButton>
     </div>
   )
 }
