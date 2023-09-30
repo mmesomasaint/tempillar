@@ -8,6 +8,7 @@ import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextTiny } from 
 export default function AppleStore() {
   return (
     <div>
+      <div className='flex flex-col'>
       <TextHeadline primary>Welcome to the electronic apple store</TextHeadline>
       <TextHeadline>Welcome to the electronic apple store</TextHeadline>
       <TextHeadline faded>Welcome to the electronic apple store</TextHeadline>
@@ -32,6 +33,7 @@ export default function AppleStore() {
       <TextTiny>Welcome to the electronic apple store</TextTiny>
       <TextTiny faded>Welcome to the electronic apple store</TextTiny>
       <TextTiny fadedMax>Welcome to the electronic apple store</TextTiny>
+      </div>
       <Button fillPrimary full>Checkout</Button>
       <Button fillPrimary large full>Buy Now</Button>
       <Button outlinePrimary full>Checkout</Button>

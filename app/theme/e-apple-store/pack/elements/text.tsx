@@ -11,7 +11,7 @@ export function TextHeadline({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -33,7 +33,7 @@ export function TextIntro({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -55,7 +55,7 @@ export function TextMid({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -77,7 +77,7 @@ export function TextBase({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -99,9 +99,11 @@ export function TextSmall({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-base font-semibold ${primary && 'text-apple-store-pri'} ${
-        faded && 'text-apple-store-faded'
-      } ${fadedMax && 'text-apple-store-faded-max'}`}
+      className={`text-base font-semibold ${
+        primary && 'text-apple-store-pri'
+      } ${faded && 'text-apple-store-faded'} ${
+        fadedMax && 'text-apple-store-faded-max'
+      }`}
     >
       {children}
     </p>
@@ -121,9 +123,35 @@ export function TextTiny({
 }) {
   return (
     <p
-      className={`inline-block leading-[0] text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
+    >
+      {children}
+    </p>
+  )
+}
+
+export function TextLabel({
+  large,
+  primary,
+  faded,
+  fadedMax,
+  children,
+}: {
+  children: React.ReactNode
+  large?:boolean
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
+}) {
+  return (
+    <p
+      className={`leading-[0] font-semibold ${large ? 'text-sm' : 'text-xs'} ${
+        primary && 'text-apple-store-pri'
+      } ${faded && 'text-apple-store-faded'} ${
+        fadedMax && 'text-apple-store-faded-max'
+      }`}
     >
       {children}
     </p>
