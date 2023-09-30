@@ -46,7 +46,11 @@ export function OutlineButton({
       onClick={() => setSelected && setSelected(!selected)}
       className={`inline-block leading-[0] text-base font-semibold my-2 p-4 rounded-2xl border ${
         large && 'text-xl my-4 p-6 rounded-3xl'
-      } ${selected ? 'border-apple-store-pri text-apple-store-pri' : 'border-apple-store-faded text-apple-store-faded'}`}
+      } ${
+        selected
+          ? 'border-apple-store-pri text-apple-store-pri'
+          : 'border-apple-store-faded text-apple-store-faded'
+      }`}
     >
       {children}
     </div>
