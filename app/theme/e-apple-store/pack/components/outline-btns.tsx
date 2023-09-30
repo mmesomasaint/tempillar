@@ -1,6 +1,6 @@
 'use client'
 
-import { TextSmall, TextTiny } from '../elements/text'
+import { TextLabel } from '../elements/text'
 
 export default function OutlineButtons({
   options,
@@ -55,13 +55,13 @@ export function OutlineButton({
       }`}
     >
       {large ? (
-        <TextSmall faded={!selected} primary={selected}>
+        <TextLabel faded={!selected} primary={selected} large>
           {children}
-        </TextSmall>
+        </TextLabel>
       ) : (
-        <TextTiny faded={!selected} primary={selected}>
+        <TextLabel faded={!selected} primary={selected}>
           {children}
-        </TextTiny>
+        </TextLabel>
       )}
     </div>
   )
