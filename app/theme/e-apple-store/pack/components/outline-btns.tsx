@@ -35,7 +35,7 @@ export function OutlineButton({
   children,
 }: {
   selected?: boolean
-  setSelected: (prev: boolean) => void
+  setSelected: (value: boolean) => void
   children: React.ReactNode
   large?: boolean
 }) {
