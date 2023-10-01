@@ -11,7 +11,7 @@ export function SearchBarMain({
   setSearchText?: (value: string) => void
 }) {
   return (
-    <div className='relative h-fit'>
+    <div className='relative h-fit w-full'>
       <BsStarFill className='text-sm z-10 absolute top-[50%] -translate-y-[50%] left-5 pointer-events-none text-apple-store-faded' />
       <input
         name='searchText'
