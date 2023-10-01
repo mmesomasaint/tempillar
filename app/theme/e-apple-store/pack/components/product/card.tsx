@@ -45,7 +45,7 @@ export default function Card({
           {colors.map((color) => (
             <div
               key={color}
-              className='w-6 h-6 rounded-full border border-apple-store-faded-max'
+              className='w-4 h-4 rounded-full border border-apple-store-faded-max'
               style={{ backgroundColor: color }}
             />
           ))}
