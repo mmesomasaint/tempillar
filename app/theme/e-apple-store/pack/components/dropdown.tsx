@@ -26,7 +26,11 @@ export default function DropDown({
         } rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <div className='flex justify-start items-center gap-1 text-apple-store-faded-max focus:text-apple-store-pri'>
+        <div
+          className={`flex justify-start items-center gap-1 text-apple-store-faded-max ${
+            open && 'text-apple-store-pri'
+          }`}
+        >
           <TbCategory2 className='text-sm' />
           <TextLabel>Categories</TextLabel>
         </div>
