@@ -11,7 +11,7 @@ export function TextHeadline({
 }) {
   return (
     <p
-      className={`text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`leading-none text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -33,7 +33,7 @@ export function TextIntro({
 }) {
   return (
     <p
-      className={`text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`leading-none text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -55,7 +55,7 @@ export function TextMid({
 }) {
   return (
     <p
-      className={`text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`leading-none text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -77,7 +77,7 @@ export function TextBase({
 }) {
   return (
     <p
-      className={`text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`leading-none text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -99,7 +99,7 @@ export function TextSmall({
 }) {
   return (
     <p
-      className={`text-base font-semibold ${
+      className={`leading-none text-base font-semibold ${
         primary && 'text-apple-store-pri'
       } ${faded && 'text-apple-store-faded'} ${
         fadedMax && 'text-apple-store-faded-max'
@@ -123,7 +123,7 @@ export function TextTiny({
 }) {
   return (
     <p
-      className={`text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`leading-none text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
