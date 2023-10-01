@@ -31,7 +31,7 @@ export default function DropDown({
             open && 'text-apple-store-pri'
           }`}
         >
-          <TbCategory2 className='text-sm' />
+          <TbCategory2 className='text-xl' />
           <TextLabel>Categories</TextLabel>
         </div>
         <BiDownArrow
