@@ -9,18 +9,18 @@ export default function DropDown({
   full,
 }: {
   selected: string
-  setSelected: (value: string) => void
+  setSelected?: (value: string) => void
   items: string[]
   full?: boolean
 }) {
   return (
     <div className='relative text-apple-store-pri border border-apple-store-faded-max my-2 p-4 rounded-2xl'>
       <TextLabel>{selected}</TextLabel>
-      <div className='top-[100%] border border-apple-store-faded-max rounded-b-2xl'>
+      <div className='top-[100%] border border-apple-store-faded-max rounded-b-2xl flex flex-col gap-0'>
         {items.map((item) => (
           <DropItem
             isSelected={selected === item}
-            setValue={(value) => setSelected(value)}
+            setValue={(value) => setSelected && setSelected(value)}
             full={full}
           >
             {item}
@@ -45,7 +45,7 @@ function DropItem({
   return (
     <div
       onClick={() => setValue(children)}
-      className={`my-2 p-4 rounded-2xl border ${
+      className={`my-2 p-4 border ${
         isSelected ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
       } ${full && 'w-full'}`}
     >

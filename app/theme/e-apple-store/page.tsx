@@ -1,4 +1,5 @@
 import CheckBox from './pack/components/checkbox'
+import DropDown from './pack/components/dropdown'
 import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
@@ -61,6 +62,7 @@ export default function AppleStore() {
       <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
       <SearchBarMain />
       <SearchBarMini cta='Apply' />
+      <DropDown selected={'All'} items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']} />
     </div>
   )
 }
