@@ -1,7 +1,7 @@
 'use client'
 
 import {useState} from 'react'
-import { BsArrowDown } from 'react-icons/bs'
+import { BiDownArrow } from 'react-icons/bi'
 import { TextLabel } from '../elements/text'
 
 export default function DropDown({
@@ -21,7 +21,7 @@ export default function DropDown({
     <div className={`inline-block relative w-[10%] mx-2`}>
       <div className={`flex justify-between items-center gap-5 p-4 text-apple-store-pri border ${open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'} rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`} onClick={() => setOpen(prev => !prev)}>
         <TextLabel>{selected}</TextLabel>
-        <BsArrowDown className={`text-sm text-apple-store-pri ${open && 'rotate-180'}`} />
+        <BiDownArrow className={`text-sm text-apple-store-pri ${open && 'rotate-180'}`} />
       </div>
       <div className={`${open ? 'block' : 'hidden'} w-full absolute left-0 top-[100%] border-y border-apple-store-faded-max border-t-0 border-b-0 rounded-b-2xl flex flex-col`}>
         {items.map((item) => (
