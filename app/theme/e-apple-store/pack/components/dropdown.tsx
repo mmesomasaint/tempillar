@@ -58,7 +58,7 @@ function DropItem({
           : 'border-apple-store-faded-max text-apple-store-faded-max'
       } ${full && 'w-full'}`}
     >
-      {children}
+      <TextLabel>{children}</TextLabel>
     </div>
   )
 }
