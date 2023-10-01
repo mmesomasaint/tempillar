@@ -20,7 +20,7 @@ export default function DropDown({
         <TextLabel>{selected}</TextLabel>
         <BsArrowDown className='text-sm text-apple-store-pri' />
       </div>
-      <div className='absolute left-0 top-[100%] border border-apple-store-faded-max rounded-b-2xl flex flex-col'>
+      <div className='absolute left-0 top-[100%] border-y border-apple-store-faded-max border-t-0 border-b-0 rounded-b-2xl flex flex-col'>
         {items.map((item) => (
           <DropItem
             isSelected={selected === item}
