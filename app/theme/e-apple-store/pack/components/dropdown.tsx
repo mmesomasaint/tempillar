@@ -27,11 +27,13 @@ export default function DropDown({
         onClick={() => setOpen((prev) => !prev)}
       >
         <div className='flex justify-start items-center gap-1 text-apple-store-faded-max focus:text-apple-store-pri'>
-        <TbCategory2 className='text-sm' />
-        <TextLabel>Categories</TextLabel>
+          <TbCategory2 className='text-sm' />
+          <TextLabel>Categories</TextLabel>
         </div>
         <BiDownArrow
-          className={`shrink-0 text-sm text-apple-store-pri ${open && 'rotate-180'}`}
+          className={`shrink-0 text-sm text-apple-store-pri ${
+            open && 'rotate-180'
+          }`}
         />
       </div>
       <div
