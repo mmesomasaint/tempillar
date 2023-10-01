@@ -22,13 +22,13 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='w-[17%] border border-apple-store-faded-max rounded-lg shadow-sm'>
+    <div className='w-[17%] border border-apple-store-faded-max rounded-xl shadow-sm'>
       <Image
         src={src}
         width={100}
         height={100}
         alt={`Image for product: ${title}`}
-        className='w-full'
+        className='w-full rounded-t-xl'
       />
       <div className='p-3 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-2'>
