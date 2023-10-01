@@ -50,8 +50,8 @@ export default function Card({
             />
           ))}
         </div>
-        <div className='flex justify-start items-center gap-3'>
-          <div className='flex justify-start items-end gap-1 border border-red-500'>
+        <div className='flex justify-start items-center gap-10'>
+          <div className='flex justify-start items-center gap-2'>
             <BsStarFill className='text-xs text-yellow-500' />
             <TextLabel faded>{rating}</TextLabel>
           </div>
