@@ -73,7 +73,7 @@ function DropItem({
   return (
     <div
       onClick={() => setValue(children)}
-      className={`last:rounded-b-2xl p-5 border ${
+      className={`bg-white last:rounded-b-2xl p-5 border ${
         isSelected
           ? 'border-apple-store-pri text-apple-store-pri'
           : 'border-apple-store-faded-max text-apple-store-faded-max'
