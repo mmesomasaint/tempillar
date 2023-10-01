@@ -19,7 +19,7 @@ export default function DropDown({
 
   return (
     <div className={`inline-block relative text-apple-store-pri border ${open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'} p-4 rounded-2xl w-[10%]`}>
-      <div className='flex justify-between items-center gap-5'>
+      <div className='flex justify-between items-center gap-5' onClick={() => setOpen(prev => !prev)}>
         <TextLabel>{selected}</TextLabel>
         <BsArrowDown className={`text-sm text-apple-store-pri ${open && 'rotate-180'}`} />
       </div>
