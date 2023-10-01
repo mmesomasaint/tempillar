@@ -19,7 +19,7 @@ export default function DropDown({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`inline-block relative w-[13%] mx-2`}>
+    <div className={`inline-block relative w-[13%]`}>
       <div
         className={`flex justify-between items-center gap-5 p-4 border ${
           open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
