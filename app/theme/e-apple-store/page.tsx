@@ -1,3 +1,4 @@
+import Accordion from './pack/components/accordion'
 import CheckBox from './pack/components/checkbox'
 import DropDown from './pack/components/dropdown'
 import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
@@ -63,6 +64,12 @@ export default function AppleStore() {
       <SearchBarMain />
       <SearchBarMini cta='Apply' />
       <DropDown selected={'All'} items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']} />
+      <Accordion>
+      <CheckBox check={false}>Macbook Pro</CheckBox>
+      <CheckBox check={true}>Airpods Pro</CheckBox>
+      <CheckBox check={false}>iMac</CheckBox>
+      <CheckBox check={true}>iPhone</CheckBox>
+      </Accordion>
     </div>
   )
 }
