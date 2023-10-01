@@ -18,8 +18,8 @@ export default function DropDown({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`inline-block relative text-apple-store-pri border ${open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'} p-4 rounded-2xl w-[10%]`}>
-      <div className='flex justify-between items-center gap-5' onClick={() => setOpen(prev => !prev)}>
+    <div className={`inline-block relative w-[10%] mx-2`}>
+      <div className={`flex justify-between items-center gap-5 p-4 text-apple-store-pri border ${open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'} rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`} onClick={() => setOpen(prev => !prev)}>
         <TextLabel>{selected}</TextLabel>
         <BsArrowDown className={`text-sm text-apple-store-pri ${open && 'rotate-180'}`} />
       </div>
@@ -52,7 +52,7 @@ function DropItem({
   return (
     <div
       onClick={() => setValue(children)}
-      className={`last:rounded-b-2xl p-4 border ${
+      className={`last:rounded-b-2xl p-5 border ${
         isSelected
           ? 'border-apple-store-pri text-apple-store-pri'
           : 'border-apple-store-faded-max text-apple-store-faded-max'
