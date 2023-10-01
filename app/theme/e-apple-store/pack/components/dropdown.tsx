@@ -46,7 +46,7 @@ function DropItem({
     <div
       onClick={() => setValue(children)}
       className={`my-2 p-4 border ${
-        isSelected ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
+        isSelected ? 'border-apple-store-pri text-apple-store-pri' : 'border-apple-store-faded-max text-apple-store-faded-max'
       } ${full && 'w-full'}`}
     >
       {children}
