@@ -140,18 +140,18 @@ export function TextLabel({
   children,
 }: {
   children: React.ReactNode
-  large?:boolean
+  large?: boolean
   primary?: boolean
   faded?: boolean
   fadedMax?: boolean
 }) {
   return (
     <p
-      className={`leading-[0] font-semibold ${large ? 'text-sm' : 'text-xs'} ${
-        primary && 'text-apple-store-pri'
-      } ${faded && 'text-apple-store-faded'} ${
-        fadedMax && 'text-apple-store-faded-max'
-      }`}
+      className={`leading-[0] font-semibold ${
+        large ? 'text-base' : 'text-sm'
+      } ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </p>
