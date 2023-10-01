@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {BsStarFill} from 'react-icons/bs'
-import { TextMid,  TextTiny } from '../../elements/text'
+import { TextLabel, TextMid,  TextTiny } from '../../elements/text'
 
 export default function Card({
   title,
@@ -51,9 +51,9 @@ export default function Card({
           ))}
         </div>
         <div className='flex justify-start items-center gap-3'>
-          <div className='flex justify-start items-center gap-1'>
-            <BsStarFill className='text-base text-yellow-500' />
-            <TextTiny faded>{rating}</TextTiny>
+          <div className='flex justify-start items-end gap-1 border border-red-500'>
+            <BsStarFill className='text-xs text-yellow-500' />
+            <TextLabel faded>{rating}</TextLabel>
           </div>
           <div className='flex justify-start gap-1'>
             <TextTiny faded>{amountSold}</TextTiny>
