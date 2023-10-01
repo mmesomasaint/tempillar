@@ -20,7 +20,11 @@ export default function Accordion({
         <TextLabel>Categories</TextLabel>
         <BiDownArrow className={`${open && 'rotate-180'} text-sm`} />
       </div>
-      <div className={`${open ? 'block' : 'hidden'} absolute left-0 top-[100%] flex flex-col gap-3 items-start justify-start px-4`}>
+      <div
+        className={`${
+          open ? 'block' : 'hidden'
+        } absolute left-0 top-[100%] flex flex-col gap-3 items-start justify-start px-4`}
+      >
         {children}
       </div>
     </div>
