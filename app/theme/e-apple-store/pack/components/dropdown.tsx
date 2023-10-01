@@ -1,5 +1,6 @@
 'use client'
 
+import { BsArrowDown } from 'react-icons/bs'
 import { TextLabel } from '../elements/text'
 
 export default function DropDown({
@@ -14,9 +15,12 @@ export default function DropDown({
   full?: boolean
 }) {
   return (
-    <div className='relative text-apple-store-pri border border-apple-store-faded-max my-2 p-4 rounded-2xl'>
+    <div className='inline-block relative text-apple-store-pri border border-apple-store-faded-max my-2 p-4 rounded-2xl'>
+      <div className='flex justify-start items-center gap-5'>
       <TextLabel>{selected}</TextLabel>
-      <div className='top-[100%] border border-apple-store-faded-max rounded-b-2xl flex flex-col gap-0'>
+      <BsArrowDown className='text-sm text-apple-store-pri' />
+      </div>
+      <div className='absolute left-0 top-[100%] border border-apple-store-faded-max rounded-b-2xl flex flex-col'>
         {items.map((item) => (
           <DropItem
             isSelected={selected === item}
@@ -45,7 +49,7 @@ function DropItem({
   return (
     <div
       onClick={() => setValue(children)}
-      className={`my-2 p-4 border ${
+      className={`last:rounded-b-2xl p-4 border ${
         isSelected ? 'border-apple-store-pri text-apple-store-pri' : 'border-apple-store-faded-max text-apple-store-faded-max'
       } ${full && 'w-full'}`}
     >
