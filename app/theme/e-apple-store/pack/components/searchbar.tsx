@@ -2,7 +2,7 @@
 
 import { BsStarFill } from 'react-icons/bs'
 
-export function SearchMain({
+export function SearchBarMain({
   searchText,
   setSearchText,
 }: {
