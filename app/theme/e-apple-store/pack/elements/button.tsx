@@ -1,4 +1,4 @@
-import { TextLabel } from "./text"
+import { TextLabel } from './text'
 
 export default function Button({
   large,
