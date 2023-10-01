@@ -2,6 +2,7 @@ import CheckBox from './pack/components/checkbox'
 import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
+import { SearchMain } from './pack/components/search'
 import Button from './pack/elements/button'
 import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextTiny } from './pack/elements/text'
 
@@ -58,6 +59,7 @@ export default function AppleStore() {
       <OutlineButton selected>128GB</OutlineButton>
       <OutlineButton large>256GB</OutlineButton>
       <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
+      <SearchMain />
     </div>
   )
 }
