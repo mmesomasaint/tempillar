@@ -1,3 +1,5 @@
+import { TextLabel } from "./text"
+
 export default function Button({
   large,
   full,
@@ -15,8 +17,8 @@ export default function Button({
 }) {
   return (
     <button
-      className={`leading-[0] text-base font-semibold my-2 p-4 rounded-2xl border ${
-        large && 'text-xl my-4 p-6 rounded-3xl'
+      className={`leading-[0] my-2 p-4 rounded-2xl border ${
+        large && 'my-4 p-6 rounded-3xl'
       } ${full && 'w-full'} ${
         outlinePrimary && 'border-apple-store-pri text-apple-store-pri'
       } ${
@@ -25,7 +27,7 @@ export default function Button({
         fillFaded && 'bg-white text-apple-store-faded border-apple-store-faded'
       }`}
     >
-      {children}
+      <TextLabel large={large}>{children}</TextLabel>
     </button>
   )
 }
