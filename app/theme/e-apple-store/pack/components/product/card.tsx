@@ -53,7 +53,7 @@ export default function Card({
         <div className='flex justify-start items-center gap-10'>
           <div className='flex justify-start items-center gap-2'>
             <BsStarFill className='text-xs text-yellow-500' />
-            <TextLabel faded>{rating}</TextLabel>
+            <TextTiny faded>{rating}</TextTiny>
           </div>
           <div className='flex justify-start gap-1'>
             <TextTiny faded>{amountSold}</TextTiny>
