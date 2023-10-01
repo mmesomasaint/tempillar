@@ -33,13 +33,13 @@ export default function Card({
       <div className='p-3 flex flex-col gap-2 items-start justify-start'>
         <div className='flex justify-start items-center gap-2'>
           <TextMid>${price}</TextMid>
-          <span className='line-through text-apple-store-faded'>
+          <span className='line-through text-red-400'>
             <TextTiny faded>${discount}</TextTiny>
           </span>
         </div>
-        <div className='flex flex-col gap-0'>
-          <TextTiny faded>{title}</TextTiny>
-          <TextTiny faded>{variants.join(' | ')}</TextTiny>
+        <div className='flex flex-col gap-5 my-3'>
+          <TextLabel faded>{title}</TextLabel>
+          <TextLabel faded>{variants.join(' | ')}</TextLabel>
         </div>
         <div className='flex justify-start items-center gap-2'>
           {colors.map((color) => (
