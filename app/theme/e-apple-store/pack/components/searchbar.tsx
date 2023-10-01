@@ -24,7 +24,6 @@ export function SearchBarMain({
   )
 }
 
-
 export function SearchBarMini({
   cta,
   searchText,
@@ -36,16 +35,16 @@ export function SearchBarMini({
 }) {
   return (
     <div className='flex justify-start items-center h-fit'>
-    <input
-      name='searchText'
-      value={searchText}
-      className='w-full rounded-l-2xl p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded focus:outline-apple-store-pri'
-      placeholder={`${cta}`}
-      onChange={(e) => setSearchText && setSearchText(e.target.value)}
-    />
-    <button className='bg-apple-store-pri/60 text-white rounded-r-2xl h-full'>
-      <TextLabel>{cta}</TextLabel>
-    </button>
+      <input
+        name='searchText'
+        value={searchText}
+        className='w-full rounded-l-2xl p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded focus:outline-apple-store-pri'
+        placeholder={`${cta}`}
+        onChange={(e) => setSearchText && setSearchText(e.target.value)}
+      />
+      <button className='bg-apple-store-pri/60 text-white rounded-r-2xl h-full'>
+        <TextLabel>{cta}</TextLabel>
+      </button>
     </div>
   )
 }
