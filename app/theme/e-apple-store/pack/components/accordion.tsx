@@ -14,9 +14,9 @@ export default function Accordion({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='relative w-full flex'>
+    <div className='w-full'>
       <div
-        className='flex justify-between items-center gap-8 p-4'
+        className='flex justify-between items-center gap-8'
         onClick={() => setOpen((prev) => !prev)}
       >
         <TextLabel>{title}</TextLabel>
@@ -25,7 +25,7 @@ export default function Accordion({
       <div
         className={`${
           open ? 'block' : 'hidden'
-        } absolute left-0 top-[100%] flex flex-col gap-3 items-start justify-start px-4`}
+        } relative flex flex-col gap-3 items-start justify-start mt-3`}
       >
         {children}
       </div>
