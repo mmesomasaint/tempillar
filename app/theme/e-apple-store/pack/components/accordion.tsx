@@ -5,8 +5,10 @@ import { BiDownArrow } from 'react-icons/bi'
 import { TextLabel } from '../elements/text'
 
 export default function Accordion({
+  title,
   children,
 }: {
+  title: string
   children: ReactNode[] | ReactNode
 }) {
   const [open, setOpen] = useState(false)
@@ -17,7 +19,7 @@ export default function Accordion({
         className='flex justify-between items-center gap-8 p-4'
         onClick={() => setOpen((prev) => !prev)}
       >
-        <TextLabel>Categories</TextLabel>
+        <TextLabel>{title}</TextLabel>
         <BiDownArrow className={`${open && 'rotate-180'} text-sm`} />
       </div>
       <div

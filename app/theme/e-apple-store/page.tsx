@@ -64,7 +64,7 @@ export default function AppleStore() {
       <SearchBarMain />
       <SearchBarMini cta='Apply' />
       <DropDown selected={'All'} items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']} />
-      <Accordion>
+      <Accordion title='Categories'>
       <CheckBox check={false}>Macbook Pro</CheckBox>
       <CheckBox check={true}>Airpods Pro</CheckBox>
       <CheckBox check={false}>iMac</CheckBox>
