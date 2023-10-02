@@ -63,9 +63,7 @@ export default function Home() {
             </Accordion>
           </HR>
           <HR>
-            <Accordion title='Price'>
-              Price
-            </Accordion>
+            <Accordion title='Price'>Price</Accordion>
           </HR>
           <HR>
             <Accordion title='Payment' defaultOpen>
@@ -84,11 +82,11 @@ export default function Home() {
             </span>
             <div className='flex justify-end items-center gap-3'>
               <TextTiny>Sort by:</TextTiny>
-          <DropDown
-            selected={'Popular'}
-            items={['Popular', 'Price', 'New Release', 'Favorite']}
-            full
-          />
+              <DropDown
+                selected={'Popular'}
+                items={['Popular', 'Price', 'New Release', 'Favorite']}
+                full
+              />
             </div>
           </div>
         </div>
