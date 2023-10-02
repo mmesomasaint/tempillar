@@ -61,7 +61,11 @@ export function InputBarButton({
             : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
         } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
       >
-        {large ? <TextLabel faded={faded}>{children}</TextLabel> : <TextTiny faded={faded}>{children}</TextTiny>}
+        {large ? (
+          <TextLabel faded={faded}>{children}</TextLabel>
+        ) : (
+          <TextTiny faded={faded}>{children}</TextTiny>
+        )}
       </button>
     </div>
   )
