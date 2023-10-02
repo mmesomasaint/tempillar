@@ -56,7 +56,9 @@ export default function Home() {
             <CheckBox check={false}>Fairly Used</CheckBox>
             <CheckBox check={false}>Second Hand</CheckBox>
           </Accordion>
-          <Accordion title='Price' defaultOpen>Price</Accordion>
+          <Accordion title='Price' defaultOpen>
+            Price
+          </Accordion>
           <Accordion title='Payment' defaultOpen>
             <CheckBox check={false}>Cash on Delivery</CheckBox>
             <CheckBox check={false}>Prepaid</CheckBox>
