@@ -1,7 +1,7 @@
 import { BsStar } from 'react-icons/bs'
 import DropDown from '../pack/components/dropdown'
 import { SearchBarMain } from '../pack/components/searchbar'
-import { TextIntro, TextLabel } from '../pack/elements/text'
+import { TextIntro, TextLabel, TextTiny } from '../pack/elements/text'
 
 export default function Home() {
   return (
@@ -21,6 +21,22 @@ export default function Home() {
           <BsStar className='text-apple-store-faded-max text-sm' />
           <TextLabel fadedMax>|</TextLabel>
           <div className='w-7 h-7 rounded-full border border-apple-store-faded-max' />
+        </div>
+      </div>
+      <div className='border-b flex justify-between items-center gap-10 border-apple-store-faded-max px-7 py-4'>
+        <div className='flex justify-start items-center gap-5'>
+          <TextTiny fadedMax>Macbook M2 Air</TextTiny>
+          <TextTiny fadedMax>Macbook M2 Pro</TextTiny>
+          <TextTiny fadedMax>Apple Watch Ultra</TextTiny>
+          <TextTiny fadedMax>Airpods Max</TextTiny>
+          <TextTiny fadedMax>iPad Pro</TextTiny>
+        </div>
+        <div className='flex justify-start items-center gap-2'>
+          <span className='flex justify-start items-center gap-1'>
+            <BsStar className='text-sm text-apple-store-faded-max' />
+            <TextTiny fadedMax>Ships to</TextTiny>
+          </span>
+          <TextTiny>Umuajonisi River, Port Harcourt</TextTiny>
         </div>
       </div>
     </main>
