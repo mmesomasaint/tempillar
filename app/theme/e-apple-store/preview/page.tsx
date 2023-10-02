@@ -91,7 +91,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='flex flex-wrap justify-start items-center gap-10'>
+          <div className='flex flex-wrap justify-between items-center gap-10'>
             {products.map((product: Product) => (
               <Card title={product.title} variants={product.variants} src={product.src} price={product.price} discount={product.discount} colors={product.colors} rating={product.rating} amountSold={product.amountSold} />  
             ))}
