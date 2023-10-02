@@ -3,18 +3,20 @@
 import { useState } from 'react'
 import { BiDownArrow } from 'react-icons/bi'
 import { TbCategory2 } from 'react-icons/tb'
-import { TextLabel } from '../elements/text'
+import { TextLabel, TextTiny } from '../elements/text'
 
 export default function DropDown({
   selected,
   setSelected,
   items,
   full,
+  large
 }: {
   selected: string
   setSelected?: (value: string) => void
   items: string[]
   full?: boolean
+  large?: boolean
 }) {
   const [open, setOpen] = useState(false)
 
@@ -27,9 +29,9 @@ export default function DropDown({
         onClick={() => setOpen((prev) => !prev)}
       >
         
-        <TextLabel faded>{selected}</TextLabel>
+        {large ? <TextLabel faded>{selected}</TextLabel> : <TextTiny faded>{selected}</TextTiny>}
         <BiDownArrow
-          className={`shrink-0 text-sm text-apple-store-pri ${
+          className={`shrink-0 text-xs ${large && 'text-sm'} text-apple-store-pri ${
             open && 'rotate-180'
           }`}
         />
@@ -48,6 +50,7 @@ export default function DropDown({
               isSelected={isSelected}
               setValue={(value) => setSelected && setSelected(value)}
               full={full}
+              large={large}
             >
               {item}
             </DropItem>
@@ -139,12 +142,14 @@ function DropItem({
   isSelected,
   setValue,
   full,
+  large,
   children,
 }: {
   isSelected: boolean
   setValue: (value: string) => void
   children: string
   full?: boolean
+  large?: boolean
 }) {
   return (
     <div
@@ -155,7 +160,7 @@ function DropItem({
           : 'last:border-b-apple-store-faded-max border-x-apple-store-faded-max text-apple-store-faded-max'
       } ${full && 'w-full'} hover:border-y hover:border-apple-store-pri`}
     >
-      <TextLabel>{children}</TextLabel>
+      {large ? <TextLabel>{children}</TextLabel> : <TextTiny>{children}</TextTiny>}
     </div>
   )
 }
