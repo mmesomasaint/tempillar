@@ -45,15 +45,20 @@ export default function DropDown({
           open ? 'block' : 'hidden'
         } w-full absolute left-0 top-[100%] border-y border-apple-store-faded-max border-t-0 border-b-0 rounded-b-2xl flex flex-col`}
       >
-        {items.map((item) => (
-          <DropItem
-            isSelected={selected === item}
-            setValue={(value) => setSelected && setSelected(value)}
-            full={full}
-          >
-            {item}
-          </DropItem>
-        ))}
+        {items.map((item) => {
+          const isSelected = selected === item
+          
+          return (
+            <DropItem
+              key={`${item}~${isSelected}`}
+              isSelected={isSelected}
+              setValue={(value) => setSelected && setSelected(value)}
+              full={full}
+            >
+              {item}
+            </DropItem>
+          )
+        })}
       </div>
     </div>
   )
