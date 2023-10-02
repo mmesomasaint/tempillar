@@ -67,12 +67,12 @@ export default function Home() {
           <HR>
             <Accordion title='Price'>Price</Accordion>
           </HR>
-            <Accordion title='Payment' defaultOpen>
-              <CheckBox check={false}>Cash on Delivery</CheckBox>
-              <CheckBox check={false}>Prepaid</CheckBox>
-              <CheckBox check={false}>iStore Coupon</CheckBox>
-              <CheckBox check={false}>Binance Pay</CheckBox>
-            </Accordion>
+          <Accordion title='Payment' defaultOpen>
+            <CheckBox check={false}>Cash on Delivery</CheckBox>
+            <CheckBox check={false}>Prepaid</CheckBox>
+            <CheckBox check={false}>iStore Coupon</CheckBox>
+            <CheckBox check={false}>Binance Pay</CheckBox>
+          </Accordion>
         </div>
         <div className='col-span-8 gap-5 flex flex-col'>
           <div className='flex justify-between items-center gap-10'>
