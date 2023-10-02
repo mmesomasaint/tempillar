@@ -120,7 +120,7 @@ export function DropDownMultiple({
       <div
         className={`${
           open ? 'block' : 'hidden'
-        } w-full absolute left-0 top-[100%] border-y border-apple-store-faded-max border-t-0 border-b-0 rounded-b-2xl flex flex-col`}
+        } w-full absolute z-30 left-0 top-[100%] border-y border-apple-store-faded-max border-t-0 border-b-0 rounded-b-2xl flex flex-col`}
       >
         {items.map((item) => {
           const isSelected = selectedItems.includes(item)
