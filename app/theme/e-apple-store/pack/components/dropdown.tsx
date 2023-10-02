@@ -47,7 +47,7 @@ export default function DropDown({
       >
         {items.map((item) => {
           const isSelected = selected === item
-          
+
           return (
             <DropItem
               key={`${item}~${isSelected}`}
@@ -81,8 +81,8 @@ function DropItem({
       className={`bg-white last:rounded-b-2xl p-5 border ${
         isSelected
           ? 'border-apple-store-pri text-apple-store-pri'
-          : 'border-apple-store-faded-max text-apple-store-faded-max'
-      } ${full && 'w-full'} hover:border-apple-store-pri`}
+          : 'last:border-b-apple-store-faded-max border-x-apple-store-faded-max text-apple-store-faded-max'
+      } ${full && 'w-full'} hover:border-y hover:border-apple-store-pri`}
     >
       <TextLabel>{children}</TextLabel>
     </div>
