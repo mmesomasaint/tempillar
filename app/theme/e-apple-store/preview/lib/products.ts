@@ -9,7 +9,7 @@ interface Product {
   amountSold: number
 }
 
-const products: Product[] = [
+export const products: Product[] = [
   {
     title: 'Apple Macbook Air M1',
     variants: ['256GB', '512GB'],
