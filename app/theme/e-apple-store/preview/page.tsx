@@ -67,7 +67,17 @@ export default function Home() {
           </HR>
           <HR>
             <Accordion title='Price'>
-              <Range ranges={[[500, 1000], [1000, 1500], [1500, 2000], [2000, 2500], [2500, 3000]]} min={0} max={0} />
+              <Range
+                ranges={[
+                  [500, 1000],
+                  [1000, 1500],
+                  [1500, 2000],
+                  [2000, 2500],
+                  [2500, 3000],
+                ]}
+                min={0}
+                max={0}
+              />
             </Accordion>
           </HR>
           <Accordion title='Payment' defaultOpen>
