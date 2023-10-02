@@ -32,6 +32,7 @@ export function InputBarButton({
   setSearchText,
   reverse,
   faded,
+  placeholder,
   children,
 }: {
   children: React.ReactNode
@@ -40,11 +41,13 @@ export function InputBarButton({
   setSearchText?: (value: string) => void
   reverse?: boolean
   faded?: boolean
+  placeholder?: string
 }) {
   return (
     <div className='flex justify-start items-center'>
       <input
         name='searchText'
+        placeholder={placeholder}
         value={searchText}
         className={`grow ${reverse && 'order-last'} ${
           reverse ? 'rounded-r-2xl' : 'rounded-l-2xl'
