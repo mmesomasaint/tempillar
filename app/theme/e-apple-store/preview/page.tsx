@@ -7,6 +7,7 @@ import CheckBox from '../pack/components/checkbox'
 import { HR } from '../pack/elements/rule'
 import { products, Product } from './lib/products'
 import Card from '../pack/components/product/card'
+import Range from '../pack/components/range'
 
 export default function Home() {
   return (
@@ -65,7 +66,9 @@ export default function Home() {
             </Accordion>
           </HR>
           <HR>
-            <Accordion title='Price'>Price</Accordion>
+            <Accordion title='Price'>
+              <Range ranges={[[500, 1000], [1000, 1500], [1500, 2000], [2000, 2500], [2500], [3000]]} min={0} max={0} />
+            </Accordion>
           </HR>
           <Accordion title='Payment' defaultOpen>
             <CheckBox check={false}>Cash on Delivery</CheckBox>

@@ -1,7 +1,7 @@
 'use client'
 
 import { BsStar } from 'react-icons/bs'
-import { TextLabel } from '../elements/text'
+import { TextLabel, TextTiny } from '../elements/text'
 
 export function InputBarIcon({
   large,
@@ -51,7 +51,7 @@ export function InputBarButton({
         value={searchText}
         className={`grow ${reverse && 'order-last'} ${
           reverse ? 'rounded-r-2xl' : 'rounded-l-2xl'
-        } p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded-max focus:outline-none focus:border-apple-store-pri`}
+        } w-full p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded-max focus:outline-none focus:border-apple-store-pri`}
         onChange={(e) => setSearchText && setSearchText(e.target.value)}
       />
       <button
@@ -61,7 +61,7 @@ export function InputBarButton({
             : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
         } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
       >
-        <TextLabel faded={faded}>{children}</TextLabel>
+        {large ? <TextLabel faded={faded}>{children}</TextLabel> : <TextTiny faded={faded}>{children}</TextTiny>}
       </button>
     </div>
   )

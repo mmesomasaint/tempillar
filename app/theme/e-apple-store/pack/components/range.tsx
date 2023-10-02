@@ -14,16 +14,16 @@ export default function Range({
   ranges: number[][]
   min: number
   max: number
-  setMin: (value: number) => void
-  setMax: (value: number) => void
+  setMin?: (value: number) => void
+  setMax?: (value: number) => void
 }) {
   return (
-    <div className='flex flex-col gap-3'>
+    <div className='flex flex-col gap-3 w-full'>
       <div className='flex flex-col gap-2'>
         <InputBarButton
           placeholder='Minimum'
           searchText={min.toString()}
-          setSearchText={(value: string) => setMin(parseInt(value))}
+          setSearchText={(value: string) => setMin && setMin(parseInt(value))}
           faded
           reverse
         >
@@ -32,28 +32,29 @@ export default function Range({
         <InputBarButton
           placeholder='Maximum'
           searchText={max.toString()}
-          setSearchText={(value: string) => setMax(parseInt(value))}
+          setSearchText={(value: string) => setMax && setMax(parseInt(value))}
           faded
           reverse
         >
           <BsStar />
         </InputBarButton>
       </div>
-      <div className='flex gap-2'>
+      <div className='flex flex-wrap gap-2'>
         {ranges.map((range) => {
           const from = range[0]
           const to = range[1]
 
           return (
             <OutlineButton
+              key={`${from}~${to}`}
               selected={from === min && to === max}
               setSelected={(value: boolean) => {
                 if (value) {
-                  setMin(from)
-                  setMax(to)
+                  setMin && setMin(from)
+                  setMax && setMax(to)
                 } else {
-                  setMin(0)
-                  setMax(0)
+                  setMin && setMin(0)
+                  setMax && setMax(0)
                 }
               }}
             >
