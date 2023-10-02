@@ -22,7 +22,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='flex flex-col w-[21.4444444%] border border-apple-store-faded-max rounded-xl shadow-sm'>
+    <div className='flex flex-col w-[21.999999%] border border-apple-store-faded-max rounded-xl shadow-sm'>
       <Image
         src={src}
         width={100}
