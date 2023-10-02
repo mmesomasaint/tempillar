@@ -1,5 +1,5 @@
 import { BsStar } from 'react-icons/bs'
-import DropDown from '../pack/components/dropdown'
+import DropDown, { DropDownMultiple } from '../pack/components/dropdown'
 import { SearchBarMain } from '../pack/components/searchbar'
 import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
 import Accordion from '../pack/components/accordion'
@@ -12,9 +12,10 @@ export default function Home() {
       <div className='flex border-y border-apple-store-faded-max justify-between items-center gap-40 px-7 py-4'>
         <TextIntro primary>iStore</TextIntro>
         <div className='grow flex justify-center items-center gap-5'>
-          <DropDown
-            selected={'All'}
-            items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
+          <DropDownMultiple
+            title={'Categories'}
+            selectedItems={['Macbook', 'iPhone', 'iWatch']}
+            items={['Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
           />
           <SearchBarMain />
         </div>
@@ -74,6 +75,22 @@ export default function Home() {
               <CheckBox check={false}>Binance Pay</CheckBox>
             </Accordion>
           </HR>
+        </div>
+        <div className='col-span-8 gap-5 flex flex-col'>
+          <div className='flex justify-between items-center gap-10'>
+            <span className='flex justify-start items-center gap-1'>
+              <TextTiny>Showing 1-60 items out of a total of 1.2k for</TextTiny>
+              <TextTiny primary>"Apple"</TextTiny>
+            </span>
+            <div className='flex justify-end items-center gap-3'>
+              <TextTiny>Sort by:</TextTiny>
+          <DropDown
+            selected={'Popular'}
+            items={['Popular', 'Price', 'New Release', 'Favorite']}
+            full
+          />
+            </div>
+          </div>
         </div>
       </div>
     </main>

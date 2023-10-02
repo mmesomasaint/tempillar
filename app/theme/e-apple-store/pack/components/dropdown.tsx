@@ -19,21 +19,15 @@ export default function DropDown({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`inline-block relative w-[25%]`}>
+    <div className={`inline-block relative w-[25%] ${full && 'grow'}`}>
       <div
         className={`flex justify-between items-center gap-5 p-3 border ${
           open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
         } rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <div
-          className={`flex justify-start items-center gap-1 text-apple-store-faded-max ${
-            open && 'text-apple-store-pri'
-          }`}
-        >
-          <TbCategory2 className='text-xl' />
-          <TextLabel>{selected}</TextLabel>
-        </div>
+        
+        <TextLabel faded>{selected}</TextLabel>
         <BiDownArrow
           className={`shrink-0 text-sm text-apple-store-pri ${
             open && 'rotate-180'
