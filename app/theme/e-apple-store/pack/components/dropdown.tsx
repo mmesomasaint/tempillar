@@ -19,9 +19,9 @@ export default function DropDown({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`inline-block relative w-[13%]`}>
+    <div className={`inline-block relative w-[25%]`}>
       <div
-        className={`flex justify-between items-center gap-5 p-4 border ${
+        className={`flex justify-between items-center gap-5 p-3 border ${
           open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
         } rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`}
         onClick={() => setOpen((prev) => !prev)}

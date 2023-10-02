@@ -6,7 +6,7 @@ import { TextIntro, TextLabel } from '../pack/elements/text'
 export default function Home() {
   return (
     <main>
-      <div className='flex border justify-between items-center gap-40 px-7 py-3'>
+      <div className='flex border-y border-apple-store-faded-max justify-between items-center gap-40 px-7 py-4'>
         <TextIntro primary>iStore</TextIntro>
         <div className='grow flex justify-center items-center gap-5'>
           <DropDown
