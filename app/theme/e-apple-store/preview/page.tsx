@@ -1,7 +1,7 @@
 import { BsStar } from 'react-icons/bs'
 import DropDown from '../pack/components/dropdown'
 import { SearchBarMain } from '../pack/components/searchbar'
-import { TextIntro, TextLabel, TextTiny } from '../pack/elements/text'
+import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
 
 export default function Home() {
   return (
@@ -37,6 +37,11 @@ export default function Home() {
             <TextLabel fadedMax>Ships to</TextLabel>
           </span>
           <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
+        </div>
+        <div className='bg-apple-store-faded-max px-7 py-4 grid grid-cols-10 place-items-stretch gap-5'>
+          <div className='col-span-3 flex flex-col gap-10 bg-white rounded-xl border border-apple-store-faded-max'>
+            <TextMid>Filters</TextMid>
+          </div>
         </div>
       </div>
     </main>
