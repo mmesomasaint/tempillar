@@ -1,3 +1,4 @@
+import {BsStar} from 'react-icons/bs'
 import Accordion from './pack/components/accordion'
 import CheckBox from './pack/components/checkbox'
 import DropDown from './pack/components/dropdown'
@@ -62,7 +63,10 @@ export default function AppleStore() {
       <OutlineButton large>256GB</OutlineButton>
       <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
       <InputBarIcon />
-      <InputBarButton cta='Apply' />
+      <InputBarButton>Apply</InputBarButton>
+      <InputBarButton reverse faded>
+        <BsStar />
+      </InputBarButton>
       <DropDown selected={'All'} items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']} />
       <Accordion title='Categories'>
       <CheckBox check={false}>Macbook Pro</CheckBox>

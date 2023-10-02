@@ -27,26 +27,38 @@ export function InputBarIcon({
 }
 
 export function InputBarButton({
-  cta,
   large,
   searchText,
   setSearchText,
+  reverse,
+  faded,
+  children,
 }: {
-  cta: string
+  children: React.ReactNode
   large?: boolean
   searchText?: string
   setSearchText?: (value: string) => void
+  reverse?: boolean
+  faded?: boolean
 }) {
   return (
     <div className='flex justify-start items-center'>
       <input
         name='searchText'
         value={searchText}
-        className='grow rounded-l-2xl p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded focus:outline-apple-store-pri'
+        className={`grow ${reverse && 'order-last'} ${
+          reverse ? 'rounded-r-2xl' : 'rounded-l-2xl'
+        } p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-faded-max focus:outline-none focus:border-apple-store-pri`}
         onChange={(e) => setSearchText && setSearchText(e.target.value)}
       />
-      <button className='self-stretch px-4 bg-apple-store-pri/60 text-white rounded-r-2xl hover:bg-apple-store-pri'>
-        <TextLabel>{cta}</TextLabel>
+      <button
+        className={`self-stretch px-4 ${
+          faded
+            ? 'bg-apple-store-faded-max'
+            : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
+        } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
+      >
+        <TextLabel faded={faded}>{children}</TextLabel>
       </button>
     </div>
   )
