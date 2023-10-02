@@ -7,7 +7,7 @@ import CheckBox from '../pack/components/checkbox'
 
 export default function Home() {
   return (
-    <main className='min-h-screen border border-red-500'>
+    <main className='min-h-screen'>
       <div className='flex border-y border-apple-store-faded-max justify-between items-center gap-40 px-7 py-4'>
         <TextIntro primary>iStore</TextIntro>
         <div className='grow flex justify-center items-center gap-5'>
