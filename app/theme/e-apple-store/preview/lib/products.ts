@@ -12,7 +12,7 @@ export interface Product {
 export const products: Product[] = [
   {
     title: 'Apple iPhone 14 pro',
-    variants: ['256GB', '512GB'],
+    variants: ['64', '128', '256GB', '512GB'],
     src: '/imgs/iphone-white-fv.webp',
     price: 1352,
     discount: 2185,
@@ -32,7 +32,7 @@ export const products: Product[] = [
   },
   {
     title: 'Apple iPhone 14 pro',
-    variants: ['256GB', '512GB'],
+    variants: ['64', '128', '256GB'],
     src: '/imgs/iphone-white-fv.webp',
     price: 1352,
     discount: 2185,
@@ -52,7 +52,7 @@ export const products: Product[] = [
   },
   {
     title: 'Apple Airpods Max',
-    variants: ['256GB', '512GB'],
+    variants: ['Noice Cancellation'],
     src: '/imgs/airpods-max-black.webp',
     price: 352,
     discount: 585,
@@ -62,7 +62,7 @@ export const products: Product[] = [
   },
   {
     title: 'Apple Macbook Pro M1',
-    variants: ['1TB`', '512GB'],
+    variants: ['1TB`', '512GB', '256'],
     src: '/imgs/macbook-pro-fv-1.webp',
     price: 1352,
     discount: 2585,
@@ -72,7 +72,7 @@ export const products: Product[] = [
   },
   {
     title: 'Apple iWatch Ultra',
-    variants: ['256GB', '512GB'],
+    variants: ['32GB', '64GB', '128GB'],
     src: '/imgs/iwatch-yellow-sv.webp',
     price: 1352,
     discount: 2585,
@@ -82,7 +82,7 @@ export const products: Product[] = [
   },
   {
     title: 'Airpods Pro 2nd Gen',
-    variants: [],
+    variants: ['Noice Cancellation'],
     src: '/imgs/airpods-pro-2nd-gen-singleton-sv.webp',
     price: 152,
     discount: 285,
@@ -92,7 +92,7 @@ export const products: Product[] = [
   },
   {
     title: 'Apple Airpods Max',
-    variants: ['256GB', '512GB'],
+    variants: ['16GB', '32GB', '64GB'],
     src: '/imgs/airpods-max-blue.webp',
     price: 352,
     discount: 585,
