@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import {BsStarFill} from 'react-icons/bs'
-import { TextLabel, TextMid,  TextXSmall,  TextTiny } from '../../elements/text'
+import { BsStarFill } from 'react-icons/bs'
+import { TextMid, TextXSmall, TextTiny } from '../../elements/text'
 
 export default function Card({
   title,
