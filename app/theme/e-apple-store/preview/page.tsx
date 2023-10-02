@@ -1,6 +1,6 @@
 import { BsStar } from 'react-icons/bs'
 import DropDown, { DropDownMultiple } from '../pack/components/dropdown'
-import { SearchBarMain } from '../pack/components/searchbar'
+import { InputBarIcon } from '../pack/components/inputBar'
 import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
 import Accordion from '../pack/components/accordion'
 import CheckBox from '../pack/components/checkbox'
@@ -19,7 +19,7 @@ export default function Home() {
             selectedItems={['Macbook', 'iPhone', 'iWatch']}
             items={['Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
           />
-          <SearchBarMain />
+          <InputBarIcon />
         </div>
         <div className='flex justify-end items-center gap-3'>
           <BsStar className='text-apple-store-faded-max text-sm' />

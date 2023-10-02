@@ -4,7 +4,7 @@ import DropDown from './pack/components/dropdown'
 import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
 import Card from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
-import { SearchBarMain, SearchBarMini } from './pack/components/searchbar'
+import { InputBarIcon, InputBarButton } from './pack/components/inputBar'
 import Button from './pack/elements/button'
 import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextTiny } from './pack/elements/text'
 
@@ -61,8 +61,8 @@ export default function AppleStore() {
       <OutlineButton selected>128GB</OutlineButton>
       <OutlineButton large>256GB</OutlineButton>
       <OutlineButtons options={{[`Macbook Air 13''`]: false, [`Macbook Air 15''`]: true, [`Macbook Pro 14''`]: false, [`Macbook Pro 16''`]: false}} />
-      <SearchBarMain />
-      <SearchBarMini cta='Apply' />
+      <InputBarIcon />
+      <InputBarButton cta='Apply' />
       <DropDown selected={'All'} items={['All', 'Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']} />
       <Accordion title='Categories'>
       <CheckBox check={false}>Macbook Pro</CheckBox>

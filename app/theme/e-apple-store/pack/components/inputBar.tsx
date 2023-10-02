@@ -3,10 +3,12 @@
 import { BsStar } from 'react-icons/bs'
 import { TextLabel } from '../elements/text'
 
-export function SearchBarMain({
+export function InputBarIcon({
+  large,
   searchText,
   setSearchText,
 }: {
+  large?: boolean
   searchText?: string
   setSearchText?: (value: string) => void
 }) {
@@ -24,12 +26,14 @@ export function SearchBarMain({
   )
 }
 
-export function SearchBarMini({
+export function InputBarButton({
   cta,
+  large,
   searchText,
   setSearchText,
 }: {
   cta: string
+  large?: boolean
   searchText?: string
   setSearchText?: (value: string) => void
 }) {
