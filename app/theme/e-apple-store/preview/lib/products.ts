@@ -18,7 +18,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -28,7 +28,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -38,7 +38,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -48,7 +48,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -58,7 +58,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -68,7 +68,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -78,7 +78,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -88,7 +88,7 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
   {
     title: 'Apple Macbook Air M1',
@@ -98,6 +98,6 @@ export const products: Product[] = [
     discount: 2585,
     colors: ['lime', 'gray', 'zinc'],
     rating: 4.8,
-    amountSold: 680
+    amountSold: 680,
   },
 ]
