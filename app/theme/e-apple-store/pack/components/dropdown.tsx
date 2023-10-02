@@ -86,11 +86,14 @@ export function DropDownMultiple({
     // If value is already selected, unselect it.
     if (idxOfValue === -1) newList.push(value)
     else {
-      newList = [...newList.slice(0, idxOfValue), ...newList.slice(idxOfValue+1)]
+      newList = [
+        ...newList.slice(0, idxOfValue),
+        ...newList.slice(idxOfValue + 1),
+      ]
     }
 
     setSelectedItems && setSelectedItems(newList)
-  } 
+  }
 
   return (
     <div className={`inline-block relative w-[25%]`}>
