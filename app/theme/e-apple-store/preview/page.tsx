@@ -8,7 +8,7 @@ import { HR } from '../pack/elements/rule'
 
 export default function Home() {
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-screen flex flex-col'>
       <div className='flex border-y border-apple-store-faded-max justify-between items-center gap-40 px-7 py-4'>
         <TextIntro primary>iStore</TextIntro>
         <div className='grow flex justify-center items-center gap-5'>
@@ -42,7 +42,7 @@ export default function Home() {
           <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
         </div>
       </div>
-      <div className='bg-gray-100 px-7 py-4 min-h-full grid grid-cols-10 gap-5'>
+      <div className='bg-gray-100 px-7 py-4 min-h-full grow grid grid-cols-10 gap-5'>
         <div className='col-span-2 flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
           <HR>
@@ -55,14 +55,14 @@ export default function Home() {
             </Accordion>
           </HR>
           <HR>
-            <Accordion title='Condition' defaultOpen>
+            <Accordion title='Condition'>
               <CheckBox check={false}>New Stuff</CheckBox>
               <CheckBox check={false}>Fairly Used</CheckBox>
               <CheckBox check={false}>Second Hand</CheckBox>
             </Accordion>
           </HR>
           <HR>
-            <Accordion title='Price' defaultOpen>
+            <Accordion title='Price'>
               Price
             </Accordion>
           </HR>
