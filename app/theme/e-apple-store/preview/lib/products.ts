@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   title: string
   variants: string[]
   src: string
