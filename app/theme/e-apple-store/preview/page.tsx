@@ -84,7 +84,7 @@ export default function Home() {
               <TextTiny>Sort by:</TextTiny>
               <DropDown
                 selected={'Popular'}
-                items={['Popular', 'Price', 'New Release', 'Favorite']}
+                items={['Popular', 'Price', 'Latest', 'Favorite']}
                 full
               />
             </div>
