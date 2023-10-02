@@ -10,7 +10,7 @@ export default function DropDown({
   setSelected,
   items,
   full,
-  large
+  large,
 }: {
   selected: string
   setSelected?: (value: string) => void
@@ -28,12 +28,15 @@ export default function DropDown({
         } rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        
-        {large ? <TextLabel faded>{selected}</TextLabel> : <TextTiny faded>{selected}</TextTiny>}
+        {large ? (
+          <TextLabel faded>{selected}</TextLabel>
+        ) : (
+          <TextTiny faded>{selected}</TextTiny>
+        )}
         <BiDownArrow
-          className={`shrink-0 text-xs ${large && 'text-sm'} text-apple-store-pri ${
-            open && 'rotate-180'
-          }`}
+          className={`shrink-0 text-xs ${
+            large && 'text-sm'
+          } text-apple-store-pri ${open && 'rotate-180'}`}
         />
       </div>
       <div
@@ -160,7 +163,11 @@ function DropItem({
           : 'last:border-b-apple-store-faded-max border-x-apple-store-faded-max text-apple-store-faded-max'
       } ${full && 'w-full'} hover:border-y hover:border-apple-store-pri`}
     >
-      {large ? <TextLabel>{children}</TextLabel> : <TextTiny>{children}</TextTiny>}
+      {large ? (
+        <TextLabel>{children}</TextLabel>
+      ) : (
+        <TextTiny>{children}</TextTiny>
+      )}
     </div>
   )
 }
