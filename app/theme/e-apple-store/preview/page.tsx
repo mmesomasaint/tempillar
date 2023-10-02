@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-gray-100 px-7 py-4 min-h-full grow grid grid-cols-10 gap-5 place-items-start'>
-        <div className='col-span-2 h-fit flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
+        <div className='col-span-2 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
           <HR>
             <Accordion title='Categories' defaultOpen>
@@ -67,14 +67,12 @@ export default function Home() {
           <HR>
             <Accordion title='Price'>Price</Accordion>
           </HR>
-          <HR>
             <Accordion title='Payment' defaultOpen>
               <CheckBox check={false}>Cash on Delivery</CheckBox>
               <CheckBox check={false}>Prepaid</CheckBox>
               <CheckBox check={false}>iStore Coupon</CheckBox>
               <CheckBox check={false}>Binance Pay</CheckBox>
             </Accordion>
-          </HR>
         </div>
         <div className='col-span-8 gap-5 flex flex-col'>
           <div className='flex justify-between items-center gap-10'>
@@ -92,8 +90,9 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-wrap justify-between items-center gap-10'>
-            {products.map((product: Product) => (
+            {products.map((product: Product, id) => (
               <Card
+                key={`${product.src + id}`}
                 title={product.title}
                 variants={product.variants}
                 src={product.src}
