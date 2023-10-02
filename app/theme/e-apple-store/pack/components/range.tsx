@@ -39,7 +39,7 @@ export default function Range({
           <BsStar />
         </InputBarButton>
       </div>
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap justify-between gap-2'>
         {ranges.map((range) => {
           const from = range[0]
           const to = range[1]

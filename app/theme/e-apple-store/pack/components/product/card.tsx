@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {BsStarFill} from 'react-icons/bs'
-import { TextLabel, TextMid,  TextTiny } from '../../elements/text'
+import { TextLabel, TextMid,  TextXSmall,  TextTiny } from '../../elements/text'
 
 export default function Card({
   title,
@@ -22,7 +22,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='flex flex-col w-1/5 border border-apple-store-faded-max rounded-xl shadow-sm'>
+    <div className='flex flex-col w-[21.4444444%] border border-apple-store-faded-max rounded-xl shadow-sm'>
       <Image
         src={src}
         width={100}
@@ -30,16 +30,16 @@ export default function Card({
         alt={`Image for product: ${title}`}
         className='w-full rounded-t-xl'
       />
-      <div className='p-3 flex flex-col gap-2 items-start justify-end grow bg-white rounded-b-xl'>
+      <div className='p-3 flex flex-col gap-3 items-start justify-end grow bg-white rounded-b-xl'>
         <div className='flex justify-start items-center gap-2'>
           <TextMid>${price}</TextMid>
           <span className='line-through text-red-400'>
             <TextTiny faded>${discount}</TextTiny>
           </span>
         </div>
-        <div className='flex flex-col gap-5 my-3'>
-          <TextLabel faded>{title}</TextLabel>
-          <TextLabel faded>{variants.join(' | ')}</TextLabel>
+        <div className='flex flex-col gap-2 my-1'>
+          <TextXSmall faded>{title}</TextXSmall>
+          <TextXSmall faded>{variants.join(' | ')}</TextXSmall>
         </div>
         <div className='flex justify-start items-center gap-2'>
           {colors.map((color) => (

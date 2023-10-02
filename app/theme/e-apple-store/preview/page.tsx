@@ -46,8 +46,8 @@ export default function Home() {
           <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
         </div>
       </div>
-      <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-10 gap-5 place-items-start'>
-        <div className='col-span-2 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
+      <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-11 gap-5 place-items-start'>
+        <div className='col-span-3 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
           <HR>
             <Accordion title='Categories' defaultOpen>
@@ -67,7 +67,7 @@ export default function Home() {
           </HR>
           <HR>
             <Accordion title='Price'>
-              <Range ranges={[[500, 1000], [1000, 1500], [1500, 2000], [2000, 2500], [2500], [3000]]} min={0} max={0} />
+              <Range ranges={[[500, 1000], [1000, 1500], [1500, 2000], [2000, 2500], [2500, 3000]]} min={0} max={0} />
             </Accordion>
           </HR>
           <Accordion title='Payment' defaultOpen>
@@ -92,7 +92,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='flex flex-wrap justify-between items-stretch gap-10'>
+          <div className='flex flex-wrap justify-between items-stretch gap-5'>
             {products.map((product: Product, id) => (
               <Card
                 key={`${product.src + id}`}

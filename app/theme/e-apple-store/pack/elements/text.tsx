@@ -110,6 +110,31 @@ export function TextSmall({
   )
 }
 
+
+export function TextXSmall({
+  primary,
+  faded,
+  fadedMax,
+  children,
+}: {
+  children: React.ReactNode
+  primary?: boolean
+  faded?: boolean
+  fadedMax?: boolean
+}) {
+  return (
+    <p
+      className={`leading-none text-sm font-semibold ${
+        primary && 'text-apple-store-pri'
+      } ${faded && 'text-apple-store-faded'} ${
+        fadedMax && 'text-apple-store-faded-max'
+      }`}
+    >
+      {children}
+    </p>
+  )
+}
+
 export function TextTiny({
   primary,
   faded,
