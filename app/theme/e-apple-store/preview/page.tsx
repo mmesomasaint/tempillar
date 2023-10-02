@@ -5,7 +5,7 @@ import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
 import Accordion from '../pack/components/accordion'
 import CheckBox from '../pack/components/checkbox'
 import { HR } from '../pack/elements/rule'
-import {products, Product} from './lib/products'
+import { products, Product } from './lib/products'
 import Card from '../pack/components/product/card'
 
 export default function Home() {
@@ -93,7 +93,16 @@ export default function Home() {
           </div>
           <div className='flex flex-wrap justify-between items-center gap-10'>
             {products.map((product: Product) => (
-              <Card title={product.title} variants={product.variants} src={product.src} price={product.price} discount={product.discount} colors={product.colors} rating={product.rating} amountSold={product.amountSold} />  
+              <Card
+                title={product.title}
+                variants={product.variants}
+                src={product.src}
+                price={product.price}
+                discount={product.discount}
+                colors={product.colors}
+                rating={product.rating}
+                amountSold={product.amountSold}
+              />
             ))}
           </div>
         </div>
