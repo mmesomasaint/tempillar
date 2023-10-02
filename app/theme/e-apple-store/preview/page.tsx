@@ -89,7 +89,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='flex flex-wrap justify-between items-center gap-10'>
+          <div className='flex flex-wrap justify-between items-stretch gap-10'>
             {products.map((product: Product, id) => (
               <Card
                 key={`${product.src + id}`}
