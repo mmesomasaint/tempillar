@@ -34,9 +34,9 @@ export default function Home() {
         <div className='flex justify-start items-center gap-2'>
           <span className='flex justify-start items-center gap-1'>
             <BsStar className='text-sm text-apple-store-faded-max' />
-            <TextTiny fadedMax>Ships to</TextTiny>
+            <TextLabel fadedMax>Ships to</TextLabel>
           </span>
-          <TextTiny>Umuajonisi River, Port Harcourt</TextTiny>
+          <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
         </div>
       </div>
     </main>
