@@ -45,7 +45,7 @@ export default function Home() {
           <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
         </div>
       </div>
-      <div className='bg-gray-100 px-7 py-4 min-h-full grow grid grid-cols-10 gap-5 place-items-start'>
+      <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-10 gap-5 place-items-start'>
         <div className='col-span-2 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
           <HR>
