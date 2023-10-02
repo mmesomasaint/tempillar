@@ -4,6 +4,7 @@ import { SearchBarMain } from '../pack/components/searchbar'
 import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
 import Accordion from '../pack/components/accordion'
 import CheckBox from '../pack/components/checkbox'
+import { HR } from '../pack/elements/rule'
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
       <div className='bg-gray-100 px-7 py-4 min-h-full grid grid-cols-10 gap-5'>
         <div className='col-span-2 flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
+          <HR>
           <Accordion title='Categories' defaultOpen>
             <CheckBox check={false}>Airpods</CheckBox>
             <CheckBox check={false}>iPhone</CheckBox>
@@ -51,20 +53,27 @@ export default function Home() {
             <CheckBox check={false}>Macbook</CheckBox>
             <CheckBox check={false}>Watch</CheckBox>
           </Accordion>
+          </HR>
+          <HR>
           <Accordion title='Condition' defaultOpen>
             <CheckBox check={false}>New Stuff</CheckBox>
             <CheckBox check={false}>Fairly Used</CheckBox>
             <CheckBox check={false}>Second Hand</CheckBox>
           </Accordion>
+          </HR>
+          <HR>
           <Accordion title='Price' defaultOpen>
             Price
           </Accordion>
+          </HR>
+          <HR>
           <Accordion title='Payment' defaultOpen>
             <CheckBox check={false}>Cash on Delivery</CheckBox>
             <CheckBox check={false}>Prepaid</CheckBox>
             <CheckBox check={false}>iStore Coupon</CheckBox>
             <CheckBox check={false}>Binance Pay</CheckBox>
           </Accordion>
+          </HR>
         </div>
       </div>
     </main>
