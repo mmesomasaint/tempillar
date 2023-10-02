@@ -6,12 +6,14 @@ import { TextLabel } from '../elements/text'
 
 export default function Accordion({
   title,
+  defaultOpen,
   children,
 }: {
   title: string
   children: ReactNode[] | ReactNode
+  defaultOpen?: boolean
 }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(defaultOpen)
 
   return (
     <div className='w-full'>

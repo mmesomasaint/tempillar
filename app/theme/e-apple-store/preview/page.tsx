@@ -44,20 +44,20 @@ export default function Home() {
       <div className='bg-gray-100 px-7 py-4 min-h-full grid grid-cols-10 gap-5'>
         <div className='col-span-2 flex flex-col gap-5 bg-white rounded-xl border border-apple-store-faded-max p-5'>
           <TextMid>Filters</TextMid>
-          <Accordion title='Categories'>
+          <Accordion title='Categories' defaultOpen>
             <CheckBox check={false}>Airpods</CheckBox>
             <CheckBox check={false}>iPhone</CheckBox>
             <CheckBox check={false}>iPad</CheckBox>
             <CheckBox check={false}>Macbook</CheckBox>
             <CheckBox check={false}>Watch</CheckBox>
           </Accordion>
-          <Accordion title='Condition'>
+          <Accordion title='Condition' defaultOpen>
             <CheckBox check={false}>New Stuff</CheckBox>
             <CheckBox check={false}>Fairly Used</CheckBox>
             <CheckBox check={false}>Second Hand</CheckBox>
           </Accordion>
-          <Accordion title='Price'>Price</Accordion>
-          <Accordion title='Payment'>
+          <Accordion title='Price' defaultOpen>Price</Accordion>
+          <Accordion title='Payment' defaultOpen>
             <CheckBox check={false}>Cash on Delivery</CheckBox>
             <CheckBox check={false}>Prepaid</CheckBox>
             <CheckBox check={false}>iStore Coupon</CheckBox>
