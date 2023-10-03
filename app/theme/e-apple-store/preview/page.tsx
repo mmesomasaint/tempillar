@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
@@ -22,9 +22,11 @@ import Card from '../pack/components/product/card'
 import Range from '../pack/components/range'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from './lib/filter'
+import Search from './lib/search'
 
 export default function Home() {
   const [searchText, setSearchText] = useState('')
+  const [searchResults, setSearchResults] = useState<Product[]>(products)
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
 
   // Filter Setters
@@ -50,6 +52,11 @@ export default function Home() {
   const setPrice = (value: number, price: string) => {
     setSectionValue(value, 'price', price)
   }
+
+  useEffect(() => {
+    const newResults = Search(searchText, filter)
+    setSearchResults(newResults)
+  }, [searchText, filter])
 
   return (
     <main className='min-h-screen flex flex-col'>
@@ -219,7 +226,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-wrap justify-between items-stretch gap-5'>
-            {products.map((product: Product, id) => (
+            {searchResults.map((product: Product, id) => (
               <Card
                 key={`${product.src + id}`}
                 title={product.title}
