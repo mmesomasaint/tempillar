@@ -1,11 +1,16 @@
-import { BsStar } from 'react-icons/bs'
 import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
 import { FiMapPin } from 'react-icons/fi'
 import DropDown, { DropDownMultiple } from '../pack/components/dropdown'
 import { InputBarIcon } from '../pack/components/inputBar'
-import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
+import {
+  TextIntro,
+  TextLabel,
+  TextMid,
+  TextTiny,
+  TextXSmall,
+} from '../pack/elements/text'
 import Accordion from '../pack/components/accordion'
 import CheckBox from '../pack/components/checkbox'
 import { HR } from '../pack/elements/rule'
@@ -53,9 +58,9 @@ export default function Home() {
         <div className='flex justify-start items-center gap-2'>
           <span className='flex justify-start items-center gap-1'>
             <FiMapPin className='text-sm text-apple-store-faded-max' />
-            <TextLabel fadedMax>Ships to</TextLabel>
+            <TextXSmall fadedMax>Ships to</TextXSmall>
           </span>
-          <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
+          <TextXSmall>Umuajonisi River, Port Harcourt</TextXSmall>
         </div>
       </div>
       <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-11 gap-5 place-items-start'>
