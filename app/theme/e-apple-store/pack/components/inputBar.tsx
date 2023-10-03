@@ -57,7 +57,7 @@ export function InputBarButton({
       <button
         className={`self-stretch px-4 ${
           faded
-            ? 'bg-apple-store-faded-max'
+            ? 'bg-apple-store-outline-faded-max'
             : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
         } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
       >

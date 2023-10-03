@@ -24,7 +24,7 @@ export default function DropDown({
     <div className={`inline-block relative w-[25%] ${full && 'grow'}`}>
       <div
         className={`flex justify-between items-center gap-5 p-3 border ${
-          open ? 'border-apple-store-pri' : 'border-apple-store-faded-max'
+          open ? 'border-apple-store-pri' : 'border-apple-store-outline-faded-max'
         } rounded-t-2xl ${open ? 'rounded-b-none' : 'rounded-2xl'}`}
         onClick={() => setOpen((prev) => !prev)}
       >

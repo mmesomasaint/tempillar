@@ -22,7 +22,7 @@ export default function Card({
   amountSold: number
 }) {
   return (
-    <div className='flex flex-col w-[21.999999%] border border-apple-store-faded-max rounded-xl shadow-sm'>
+    <div className='flex flex-col w-[21.999999%] border border-apple-store-outline-faded-max rounded-xl shadow-sm'>
       <Image
         src={src}
         width={100}
@@ -45,7 +45,7 @@ export default function Card({
           {colors.map((color) => (
             <div
               key={color}
-              className='w-4 h-4 rounded-full border border-apple-store-faded-max'
+              className='w-4 h-4 rounded-full border border-apple-store-outline-faded-max'
               style={{ backgroundColor: color }}
             />
           ))}
