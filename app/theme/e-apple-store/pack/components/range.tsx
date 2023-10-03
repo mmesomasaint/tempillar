@@ -50,7 +50,6 @@ export default function Range({
               selected={from === min && to === max}
               setSelected={(value: boolean) => {
                 if (value) {
-                  console.log('from: ', from)
                   setMin && setMin(from)
                   setMax && setMax(to)
                 } else {

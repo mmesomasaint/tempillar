@@ -35,21 +35,21 @@ export default function Home() {
     section: FilterSection,
     id: string
   ) => {
-    const sectionVal = filter['price']
-    console.log(`section: ${section}, id: ${id}, value: ${value}`)
     setFilter((prev) => ({
       ...prev,
       [section]: { ...prev[section], [id]: value },
     }))
   }
-  const setCategory = (value: boolean, category: string) =>
+  const setCategory = (value: boolean, category: string) => {
     setSectionValue(value, 'categories', category)
-  const setCondition = (value: boolean, condition: string) =>
+  }
+  const setCondition = (value: boolean, condition: string) => {
     setSectionValue(value, 'conditions', condition)
-  const setPaymentGateway = (value: boolean, paymentGateway: string) =>
+  }
+  const setPaymentGateway = (value: boolean, paymentGateway: string) => {
     setSectionValue(value, 'paymentGateways', paymentGateway)
+  }
   const setPrice = (value: number, price: string) => {
-    console.log('min-max: ', value)
     setSectionValue(value, 'price', price)
   }
 
