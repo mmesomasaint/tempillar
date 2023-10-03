@@ -26,8 +26,6 @@ import { Filter, DefaultFilter, FilterSection } from './lib/filter'
 export default function Home() {
   const [searchText, setSearchText] = useState('')
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
-  console.log('min: ', filter.price.min)
-  console.log('max: ', filter.price.max)
 
   // Filter Setters
   const setSectionValue = (
