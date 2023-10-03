@@ -1,6 +1,6 @@
 'use client'
 
-import {useState} from 'react'
+import { useState } from 'react'
 import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
@@ -28,13 +28,30 @@ export default function Home() {
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
   console.log('min: ', filter.price.min)
   console.log('max: ', filter.price.max)
-  
+
   // Filter Setters
-  const setSectionValue = (value: boolean | number, section: FilterSection, id: string) => {const sectionVal = filter['price']; console.log(`section: ${section}, id: ${id}, value: ${value}`); setFilter(prev => ({...prev, [section]: {...prev[section], [id]: value} }))} 
-  const setCategory = (value: boolean, category: string) => setSectionValue(value, 'categories', category)
-  const setCondition = (value: boolean, condition: string) => setSectionValue(value, 'conditions', condition)
-  const setPaymentGateway = (value: boolean, paymentGateway: string) => setSectionValue(value, 'paymentGateways', paymentGateway)
-  const setPrice = (value: number, price: string) => {console.log('min-max: ', value); setSectionValue(value, 'price', price)}
+  const setSectionValue = (
+    value: boolean | number,
+    section: FilterSection,
+    id: string
+  ) => {
+    const sectionVal = filter['price']
+    console.log(`section: ${section}, id: ${id}, value: ${value}`)
+    setFilter((prev) => ({
+      ...prev,
+      [section]: { ...prev[section], [id]: value },
+    }))
+  }
+  const setCategory = (value: boolean, category: string) =>
+    setSectionValue(value, 'categories', category)
+  const setCondition = (value: boolean, condition: string) =>
+    setSectionValue(value, 'conditions', condition)
+  const setPaymentGateway = (value: boolean, paymentGateway: string) =>
+    setSectionValue(value, 'paymentGateways', paymentGateway)
+  const setPrice = (value: number, price: string) => {
+    console.log('min-max: ', value)
+    setSectionValue(value, 'price', price)
+  }
 
   return (
     <main className='min-h-screen flex flex-col'>
@@ -84,18 +101,58 @@ export default function Home() {
           <TextMid>Filters</TextMid>
           <HR>
             <Accordion title='Categories' defaultOpen>
-              <CheckBox check={filter.categories.airpod} setCheck={(value: boolean) => setCategory(value, 'airpod')}>Airpods</CheckBox>
-              <CheckBox check={filter.categories.iPhone} setCheck={(value: boolean) => setCategory(value, 'iPhone')}>iPhone</CheckBox>
-              <CheckBox check={filter.categories.iPad} setCheck={(value: boolean) => setCategory(value, 'iPad')}>iPad</CheckBox>
-              <CheckBox check={filter.categories.macbook} setCheck={(value: boolean) => setCategory(value, 'macbook')}>Macbook</CheckBox>
-              <CheckBox check={filter.categories.iWatch} setCheck={(value: boolean) => setCategory(value, 'iWatch')}>iWatch</CheckBox>
+              <CheckBox
+                check={filter.categories.airpod}
+                setCheck={(value: boolean) => setCategory(value, 'airpod')}
+              >
+                Airpods
+              </CheckBox>
+              <CheckBox
+                check={filter.categories.iPhone}
+                setCheck={(value: boolean) => setCategory(value, 'iPhone')}
+              >
+                iPhone
+              </CheckBox>
+              <CheckBox
+                check={filter.categories.iPad}
+                setCheck={(value: boolean) => setCategory(value, 'iPad')}
+              >
+                iPad
+              </CheckBox>
+              <CheckBox
+                check={filter.categories.macbook}
+                setCheck={(value: boolean) => setCategory(value, 'macbook')}
+              >
+                Macbook
+              </CheckBox>
+              <CheckBox
+                check={filter.categories.iWatch}
+                setCheck={(value: boolean) => setCategory(value, 'iWatch')}
+              >
+                iWatch
+              </CheckBox>
             </Accordion>
           </HR>
           <HR>
             <Accordion title='Condition'>
-              <CheckBox check={filter.conditions.newStuff} setCheck={(value: boolean) => setCondition(value, 'newStuff')}>New Stuff</CheckBox>
-              <CheckBox check={filter.conditions.fairlyUsed} setCheck={(value: boolean) => setCondition(value, 'fairlyUsed')}>Fairly Used</CheckBox>
-              <CheckBox check={filter.conditions.secondHand} setCheck={(value: boolean) => setCondition(value, 'secondHand')}>Second Hand</CheckBox>
+              <CheckBox
+                check={filter.conditions.newStuff}
+                setCheck={(value: boolean) => setCondition(value, 'newStuff')}
+              >
+                New Stuff
+              </CheckBox>
+              <CheckBox
+                check={filter.conditions.fairlyUsed}
+                setCheck={(value: boolean) => setCondition(value, 'fairlyUsed')}
+              >
+                Fairly Used
+              </CheckBox>
+              <CheckBox
+                check={filter.conditions.secondHand}
+                setCheck={(value: boolean) => setCondition(value, 'secondHand')}
+              >
+                Second Hand
+              </CheckBox>
             </Accordion>
           </HR>
           <HR>
@@ -116,10 +173,36 @@ export default function Home() {
             </Accordion>
           </HR>
           <Accordion title='Payment' defaultOpen>
-            <CheckBox check={filter.paymentGateways.cashOnDelivery} setCheck={(value: boolean) => setPaymentGateway(value, 'cashOnDelivery')}>Cash on Delivery</CheckBox>
-            <CheckBox check={filter.paymentGateways.prepaid} setCheck={(value: boolean) => setPaymentGateway(value, 'prepaid')}>Prepaid</CheckBox>
-            <CheckBox check={filter.paymentGateways.iStoreCoupon} setCheck={(value: boolean) => setPaymentGateway(value, 'iStoreCoupon')}>iStore Coupon</CheckBox>
-            <CheckBox check={filter.paymentGateways.binancePay} setCheck={(value: boolean) => setPaymentGateway(value, 'binancePay')}>Binance Pay</CheckBox>
+            <CheckBox
+              check={filter.paymentGateways.cashOnDelivery}
+              setCheck={(value: boolean) =>
+                setPaymentGateway(value, 'cashOnDelivery')
+              }
+            >
+              Cash on Delivery
+            </CheckBox>
+            <CheckBox
+              check={filter.paymentGateways.prepaid}
+              setCheck={(value: boolean) => setPaymentGateway(value, 'prepaid')}
+            >
+              Prepaid
+            </CheckBox>
+            <CheckBox
+              check={filter.paymentGateways.iStoreCoupon}
+              setCheck={(value: boolean) =>
+                setPaymentGateway(value, 'iStoreCoupon')
+              }
+            >
+              iStore Coupon
+            </CheckBox>
+            <CheckBox
+              check={filter.paymentGateways.binancePay}
+              setCheck={(value: boolean) =>
+                setPaymentGateway(value, 'binancePay')
+              }
+            >
+              Binance Pay
+            </CheckBox>
           </Accordion>
         </div>
         <div className='col-span-8 gap-5 flex flex-col'>

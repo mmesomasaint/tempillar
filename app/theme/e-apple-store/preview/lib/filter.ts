@@ -13,7 +13,7 @@ export interface Filter {
   }
   price: {
     min: number
-    max: number 
+    max: number
   }
   paymentGateways: {
     cashOnDelivery: boolean
@@ -23,7 +23,11 @@ export interface Filter {
   }
 }
 
-export type FilterSection = 'categories' | 'conditions' | 'price' | 'paymentGateways'
+export type FilterSection =
+  | 'categories'
+  | 'conditions'
+  | 'price'
+  | 'paymentGateways'
 
 export const DefaultFilter: Filter = {
   categories: {
@@ -31,7 +35,7 @@ export const DefaultFilter: Filter = {
     macbook: false,
     iWatch: false,
     iPad: false,
-    iPhone: false
+    iPhone: false,
   },
   conditions: {
     newStuff: false,
@@ -40,12 +44,12 @@ export const DefaultFilter: Filter = {
   },
   price: {
     min: 0,
-    max: 0, 
+    max: 0,
   },
   paymentGateways: {
     cashOnDelivery: false,
     prepaid: false,
     iStoreCoupon: false,
     binancePay: false,
-  }
+  },
 }
