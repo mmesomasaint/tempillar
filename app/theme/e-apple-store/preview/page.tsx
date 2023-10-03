@@ -1,3 +1,6 @@
+'use client'
+
+import {useState} from 'react'
 import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
@@ -18,8 +21,21 @@ import { products, Product } from './lib/products'
 import Card from '../pack/components/product/card'
 import Range from '../pack/components/range'
 import Image from 'next/image'
+import { Filter, DefaultFilter, FilterSection } from './lib/filter'
 
 export default function Home() {
+  const [searchText, setSearchText] = useState('')
+  const [filter, setFilter] = useState<Filter>(DefaultFilter)
+  console.log('min: ', filter.price.min)
+  console.log('max: ', filter.price.max)
+  
+  // Filter Setters
+  const setSectionValue = (value: boolean | number, section: FilterSection, id: string) => {const sectionVal = filter['price']; console.log(`section: ${section}, id: ${id}, value: ${value}`); setFilter(prev => ({...prev, [section]: {...prev[section], [id]: value} }))} 
+  const setCategory = (value: boolean, category: string) => setSectionValue(value, 'categories', category)
+  const setCondition = (value: boolean, condition: string) => setSectionValue(value, 'conditions', condition)
+  const setPaymentGateway = (value: boolean, paymentGateway: string) => setSectionValue(value, 'paymentGateways', paymentGateway)
+  const setPrice = (value: number, price: string) => {console.log('min-max: ', value); setSectionValue(value, 'price', price)}
+
   return (
     <main className='min-h-screen flex flex-col'>
       <div className='flex border-y border-apple-store-outline-faded-max justify-between items-center gap-40 px-7 py-4'>
@@ -30,7 +46,7 @@ export default function Home() {
             selectedItems={['Macbook', 'iPhone', 'iWatch']}
             items={['Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
           />
-          <InputBarIcon />
+          <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
         </div>
         <div className='flex justify-end items-center gap-3'>
           <TbShoppingBag className='text-apple-store-faded-max text-xl' />
@@ -68,18 +84,18 @@ export default function Home() {
           <TextMid>Filters</TextMid>
           <HR>
             <Accordion title='Categories' defaultOpen>
-              <CheckBox check={false}>Airpods</CheckBox>
-              <CheckBox check={false}>iPhone</CheckBox>
-              <CheckBox check={false}>iPad</CheckBox>
-              <CheckBox check={false}>Macbook</CheckBox>
-              <CheckBox check={false}>Watch</CheckBox>
+              <CheckBox check={filter.categories.airpod} setCheck={(value: boolean) => setCategory(value, 'airpod')}>Airpods</CheckBox>
+              <CheckBox check={filter.categories.iPhone} setCheck={(value: boolean) => setCategory(value, 'iPhone')}>iPhone</CheckBox>
+              <CheckBox check={filter.categories.iPad} setCheck={(value: boolean) => setCategory(value, 'iPad')}>iPad</CheckBox>
+              <CheckBox check={filter.categories.macbook} setCheck={(value: boolean) => setCategory(value, 'macbook')}>Macbook</CheckBox>
+              <CheckBox check={filter.categories.iWatch} setCheck={(value: boolean) => setCategory(value, 'iWatch')}>iWatch</CheckBox>
             </Accordion>
           </HR>
           <HR>
             <Accordion title='Condition'>
-              <CheckBox check={false}>New Stuff</CheckBox>
-              <CheckBox check={false}>Fairly Used</CheckBox>
-              <CheckBox check={false}>Second Hand</CheckBox>
+              <CheckBox check={filter.conditions.newStuff} setCheck={(value: boolean) => setCondition(value, 'newStuff')}>New Stuff</CheckBox>
+              <CheckBox check={filter.conditions.fairlyUsed} setCheck={(value: boolean) => setCondition(value, 'fairlyUsed')}>Fairly Used</CheckBox>
+              <CheckBox check={filter.conditions.secondHand} setCheck={(value: boolean) => setCondition(value, 'secondHand')}>Second Hand</CheckBox>
             </Accordion>
           </HR>
           <HR>
@@ -92,16 +108,18 @@ export default function Home() {
                   [2000, 2500],
                   [2500, 3000],
                 ]}
-                min={0}
-                max={0}
+                min={filter.price.min}
+                max={filter.price.max}
+                setMin={(value: number) => setPrice(value, 'min')}
+                setMax={(value: number) => setPrice(value, 'max')}
               />
             </Accordion>
           </HR>
           <Accordion title='Payment' defaultOpen>
-            <CheckBox check={false}>Cash on Delivery</CheckBox>
-            <CheckBox check={false}>Prepaid</CheckBox>
-            <CheckBox check={false}>iStore Coupon</CheckBox>
-            <CheckBox check={false}>Binance Pay</CheckBox>
+            <CheckBox check={filter.paymentGateways.cashOnDelivery} setCheck={(value: boolean) => setPaymentGateway(value, 'cashOnDelivery')}>Cash on Delivery</CheckBox>
+            <CheckBox check={filter.paymentGateways.prepaid} setCheck={(value: boolean) => setPaymentGateway(value, 'prepaid')}>Prepaid</CheckBox>
+            <CheckBox check={filter.paymentGateways.iStoreCoupon} setCheck={(value: boolean) => setPaymentGateway(value, 'iStoreCoupon')}>iStore Coupon</CheckBox>
+            <CheckBox check={filter.paymentGateways.binancePay} setCheck={(value: boolean) => setPaymentGateway(value, 'binancePay')}>Binance Pay</CheckBox>
           </Accordion>
         </div>
         <div className='col-span-8 gap-5 flex flex-col'>

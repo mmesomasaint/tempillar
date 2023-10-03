@@ -22,7 +22,7 @@ export default function Range({
       <div className='flex flex-col gap-2'>
         <InputBarButton
           placeholder='Minimum'
-          searchText={min.toString()}
+          searchText={min?.toString()}
           setSearchText={(value: string) => setMin && setMin(parseInt(value))}
           faded
           reverse
@@ -31,7 +31,7 @@ export default function Range({
         </InputBarButton>
         <InputBarButton
           placeholder='Maximum'
-          searchText={max.toString()}
+          searchText={max?.toString()}
           setSearchText={(value: string) => setMax && setMax(parseInt(value))}
           faded
           reverse
@@ -41,8 +41,8 @@ export default function Range({
       </div>
       <div className='flex flex-wrap justify-between gap-2'>
         {ranges.map((range) => {
-          const from = range[0]
-          const to = range[1]
+          const from = range[0],
+          to = range[1]
 
           return (
             <OutlineButton
@@ -50,6 +50,7 @@ export default function Range({
               selected={from === min && to === max}
               setSelected={(value: boolean) => {
                 if (value) {
+                  console.log('from: ', from)
                   setMin && setMin(from)
                   setMax && setMax(to)
                 } else {
