@@ -1,7 +1,7 @@
 'use client'
 
-import { BsStar } from 'react-icons/bs'
-import { TextLabel, TextTiny } from '../elements/text'
+import { RiSearchLine } from 'react-icons/ri'
+import { TextLabel, TextTiny, TextMid } from '../elements/text'
 
 export function InputBarIcon({
   large,
@@ -14,7 +14,7 @@ export function InputBarIcon({
 }) {
   return (
     <div className='relative h-fit w-full'>
-      <BsStar className='text-sm z-10 absolute top-[50%] -translate-y-[50%] left-5 pointer-events-none text-apple-store-faded' />
+      <RiSearchLine className='text-xl z-10 absolute top-[50%] -translate-y-[50%] left-5 pointer-events-none text-apple-store-faded' />
       <input
         name='searchText'
         value={searchText}
@@ -63,6 +63,8 @@ export function InputBarButton({
       >
         {large ? (
           <TextLabel faded={faded}>{children}</TextLabel>
+        ) : reverse ? (
+          <TextMid faded={faded}>{children}</TextMid>
         ) : (
           <TextTiny faded={faded}>{children}</TextTiny>
         )}

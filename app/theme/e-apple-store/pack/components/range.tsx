@@ -1,6 +1,6 @@
 'use client'
 
-import { BsStar } from 'react-icons/bs'
+import { TbCoin } from 'react-icons/tb'
 import { InputBarButton } from './inputBar'
 import { OutlineButton } from './outline-btns'
 
@@ -27,7 +27,7 @@ export default function Range({
           faded
           reverse
         >
-          <BsStar />
+          <TbCoin />
         </InputBarButton>
         <InputBarButton
           placeholder='Maximum'
@@ -36,7 +36,7 @@ export default function Range({
           faded
           reverse
         >
-          <BsStar />
+          <TbCoin />
         </InputBarButton>
       </div>
       <div className='flex flex-wrap justify-between gap-2'>

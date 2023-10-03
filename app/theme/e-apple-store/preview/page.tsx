@@ -1,4 +1,8 @@
 import { BsStar } from 'react-icons/bs'
+import { TbShoppingBag } from 'react-icons/tb'
+import { IoMdNotificationsOutline } from 'react-icons/io'
+import { MdOutlineEmail } from 'react-icons/md'
+import { FiMapPin } from 'react-icons/fi'
 import DropDown, { DropDownMultiple } from '../pack/components/dropdown'
 import { InputBarIcon } from '../pack/components/inputBar'
 import { TextIntro, TextLabel, TextMid, TextTiny } from '../pack/elements/text'
@@ -23,9 +27,9 @@ export default function Home() {
           <InputBarIcon />
         </div>
         <div className='flex justify-end items-center gap-3'>
-          <BsStar className='text-apple-store-faded-max text-sm' />
-          <BsStar className='text-apple-store-faded-max text-sm' />
-          <BsStar className='text-apple-store-faded-max text-sm' />
+          <TbShoppingBag className='text-apple-store-faded-max text-xl' />
+          <IoMdNotificationsOutline className='text-apple-store-faded-max text-xl' />
+          <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
           <TextLabel fadedMax>|</TextLabel>
           <div className='w-7 h-7 rounded-full border border-apple-store-faded-max' />
         </div>
@@ -40,7 +44,7 @@ export default function Home() {
         </div>
         <div className='flex justify-start items-center gap-2'>
           <span className='flex justify-start items-center gap-1'>
-            <BsStar className='text-sm text-apple-store-faded-max' />
+            <FiMapPin className='text-sm text-apple-store-faded-max' />
             <TextLabel fadedMax>Ships to</TextLabel>
           </span>
           <TextLabel>Umuajonisi River, Port Harcourt</TextLabel>
