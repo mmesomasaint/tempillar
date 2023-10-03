@@ -12,6 +12,7 @@ import { HR } from '../pack/elements/rule'
 import { products, Product } from './lib/products'
 import Card from '../pack/components/product/card'
 import Range from '../pack/components/range'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -31,7 +32,9 @@ export default function Home() {
           <IoMdNotificationsOutline className='text-apple-store-faded-max text-xl' />
           <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
           <TextLabel fadedMax>|</TextLabel>
-          <div className='w-7 h-7 rounded-full border border-apple-store-outline-faded-max' />
+          <div className='relative w-7 h-7 rounded-full border border-apple-store-outline-faded-max'>
+            <Image src='/imgs/woman-avatar.jpg' fill alt='avatar' className='rounded-full' />
+          </div>
         </div>
       </div>
       <div className='border-b flex justify-between items-center gap-10 border-apple-store-outline-faded-max px-7 py-4'>
