@@ -13,12 +13,12 @@ export function InputBarIcon({
   setSearchText?: (value: string) => void
 }) {
   return (
-    <div className='relative h-fit w-full'>
-      <RiSearchLine className='text-xl z-10 absolute top-[50%] -translate-y-[50%] left-5 pointer-events-none text-apple-store-faded' />
+    <div className='relative h-fit w-full group'>
+      <RiSearchLine className='text-xl z-10 absolute top-[50%] -translate-y-[50%] left-5 pointer-events-none text-apple-store-faded  group-focus-within:text-apple-store-pri' />
       <input
         name='searchText'
         value={searchText}
-        className='w-full rounded-full p-3 pl-10 pr-2 placeholder:text-apple-store-faded placeholder:text-base placeholder:font-semibold text-apple-store-faded font-semibold text-base border border-apple-store-faded-max focus:outline-apple-store-pri'
+        className='w-full rounded-full p-3 pl-12 pr-2 placeholder:text-apple-store-faded placeholder:text-base placeholder:font-semibold text-apple-store-faded font-semibold text-base border border-apple-store-faded-max group-focus-within:outline-apple-store-pri'
         placeholder='Search Store'
         onChange={(e) => setSearchText && setSearchText(e.target.value)}
       />
