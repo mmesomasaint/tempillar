@@ -33,7 +33,12 @@ export default function Home() {
           <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
           <TextLabel fadedMax>|</TextLabel>
           <div className='relative w-7 h-7 rounded-full border border-apple-store-outline-faded-max'>
-            <Image src='/imgs/woman-avatar.jpg' fill alt='avatar' className='rounded-full' />
+            <Image
+              src='/imgs/woman-avatar.jpg'
+              fill
+              alt='avatar'
+              className='rounded-full'
+            />
           </div>
         </div>
       </div>
