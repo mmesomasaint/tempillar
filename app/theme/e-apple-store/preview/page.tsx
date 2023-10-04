@@ -210,7 +210,7 @@ export default function Home() {
             </CheckBox>
           </Accordion>
         </div>
-        <div className='col-span-8 gap-5 flex flex-col'>
+        <div className='col-span-8 gap-5 flex flex-col w-full'>
           <div className='flex justify-between items-center gap-10'>
             <span className='flex justify-start items-center gap-1'>
               <TextTiny>Showing 1-60 items out of a total of 1.2k for</TextTiny>
