@@ -43,6 +43,18 @@ export function InputBarButton({
   faded?: boolean
   placeholder?: string
 }) {
+  const textSizeFromOrient = reverse ? (
+    <TextMid faded={faded}>{children}</TextMid>
+  ) : (
+    <TextTiny faded={faded}>{children}</TextTiny>
+  )
+  
+  const textSize = large ? (
+    <TextLabel faded={faded}>{children}</TextLabel>
+  ) : (
+    textSizeFromOrient
+  )
+
   return (
     <div className='flex justify-start items-center'>
       <input
@@ -61,13 +73,7 @@ export function InputBarButton({
             : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
         } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
       >
-        {large ? (
-          <TextLabel faded={faded}>{children}</TextLabel>
-        ) : reverse ? (
-          <TextMid faded={faded}>{children}</TextMid>
-        ) : (
-          <TextTiny faded={faded}>{children}</TextTiny>
-        )}
+        {textSize}
       </button>
     </div>
   )
