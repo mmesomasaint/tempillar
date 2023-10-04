@@ -51,7 +51,7 @@ export default function DropDown({
             <DropItem
               key={`${item}~${isSelected}`}
               isSelected={isSelected}
-              setValue={(value) => setSelected && setSelected(value)}
+              setValue={(value) => setSelected?.(value)}
               full={full}
               large={large}
             >
@@ -92,7 +92,7 @@ export function DropDownMultiple({
       ]
     }
 
-    setSelectedItems && setSelectedItems?.(newList)
+    setSelectedItems?.(newList)
   }
 
   return (

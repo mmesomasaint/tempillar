@@ -23,7 +23,7 @@ export default function Range({
         <InputBarButton
           placeholder='Minimum'
           searchText={min?.toString()}
-          setSearchText={(value: string) => setMin && setMin(parseInt(value))}
+          setSearchText={(value: string) => setMin?.(parseInt(value))}
           faded
           reverse
         >
@@ -32,7 +32,7 @@ export default function Range({
         <InputBarButton
           placeholder='Maximum'
           searchText={max?.toString()}
-          setSearchText={(value: string) => setMax && setMax(parseInt(value))}
+          setSearchText={(value: string) => setMax?.(parseInt(value))}
           faded
           reverse
         >
@@ -50,11 +50,11 @@ export default function Range({
               selected={from === min && to === max}
               setSelected={(value: boolean) => {
                 if (value) {
-                  setMin && setMin(from)
-                  setMax && setMax(to)
+                  setMin?.(from)
+                  setMax?.(to)
                 } else {
-                  setMin && setMin(0)
-                  setMax && setMax(0)
+                  setMin?.(0)
+                  setMax?.(0)
                 }
               }}
             >

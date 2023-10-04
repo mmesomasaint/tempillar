@@ -15,7 +15,7 @@ export default function CheckBox({
   return (
     <div
       className='flex justify-start items-center gap-2'
-      onClick={() => setCheck && setCheck(!check)}
+      onClick={() => setCheck?.(!check)}
     >
       <div
         className={`w-[1.18rem] h-[1.18rem] rounded-md flex justify-center items-center border ${

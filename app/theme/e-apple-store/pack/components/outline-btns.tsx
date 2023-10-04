@@ -13,7 +13,7 @@ export default function OutlineButtons({
 }) {
   const setSelectedHandler = (value: boolean, key: string) => {
     const newOptions = { ...options, [key]: value }
-    setOptions && setOptions(newOptions)
+    setOptions?.(newOptions)
   }
 
   return (
@@ -45,7 +45,7 @@ export function OutlineButton({
 }) {
   return (
     <div
-      onClick={() => setSelected && setSelected(!selected)}
+      onClick={() => setSelected?.(!selected)}
       className={`inline-block p-4 rounded-3xl border ${
         large && 'p-5 rounded-3xl'
       } ${

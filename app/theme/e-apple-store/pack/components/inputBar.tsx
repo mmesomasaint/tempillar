@@ -20,7 +20,7 @@ export function InputBarIcon({
         value={searchText}
         className='w-full rounded-full p-3 pl-12 pr-2 placeholder:text-apple-store-faded placeholder:text-base placeholder:font-semibold text-apple-store-faded font-semibold text-base border border-apple-store-outline-faded-max group-focus-within:outline-apple-store-pri'
         placeholder='Search Store'
-        onChange={(e) => setSearchText && setSearchText(e.target.value)}
+        onChange={(e) => setSearchText?.(e.target.value)}
       />
     </div>
   )
@@ -52,7 +52,7 @@ export function InputBarButton({
         className={`grow ${reverse && 'order-last'} ${
           reverse ? 'rounded-r-2xl' : 'rounded-l-2xl'
         } w-full p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-outline-faded-max focus:outline-none focus:border-apple-store-pri`}
-        onChange={(e) => setSearchText && setSearchText(e.target.value)}
+        onChange={(e) => setSearchText?.(e.target.value)}
       />
       <button
         className={`self-stretch px-4 ${
