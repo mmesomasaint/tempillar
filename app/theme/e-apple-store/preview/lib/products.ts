@@ -7,6 +7,7 @@ export interface Product {
   colors: string[]
   rating: number
   amountSold: number
+  category?: string
 }
 
 export const products: Product[] = [
