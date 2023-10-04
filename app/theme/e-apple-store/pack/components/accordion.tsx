@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { BiDownArrow } from 'react-icons/bi'
+import { IoIosArrowDown } from 'react-icons/io'
 import { TextLabel } from '../elements/text'
 
 export default function Accordion({
@@ -22,7 +22,7 @@ export default function Accordion({
         onClick={() => setOpen((prev) => !prev)}
       >
         <TextLabel>{title}</TextLabel>
-        <BiDownArrow className={`${open && 'rotate-180'} text-sm`} />
+        <IoIosArrowDown className={`${open && 'rotate-180'} text-sm`} />
       </div>
       <div
         className={`${

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { BiDownArrow } from 'react-icons/bi'
+import { IoIosArrowDown } from 'react-icons/io'
 import { TbCategory2 } from 'react-icons/tb'
 import { TextLabel, TextTiny } from '../elements/text'
 
@@ -33,7 +33,7 @@ export default function DropDown({
         ) : (
           <TextTiny faded>{selected}</TextTiny>
         )}
-        <BiDownArrow
+        <IoIosArrowDown
           className={`shrink-0 text-xs ${
             large && 'text-sm'
           } text-apple-store-pri ${open && 'rotate-180'}`}
@@ -92,7 +92,7 @@ export function DropDownMultiple({
       ]
     }
 
-    setSelectedItems && setSelectedItems(newList)
+    setSelectedItems && setSelectedItems?.(newList)
   }
 
   return (
@@ -111,7 +111,7 @@ export function DropDownMultiple({
           <TbCategory2 className='text-xl' />
           <TextLabel>{title}</TextLabel>
         </div>
-        <BiDownArrow
+        <IoIosArrowDown
           className={`shrink-0 text-sm text-apple-store-pri ${
             open && 'rotate-180'
           }`}
