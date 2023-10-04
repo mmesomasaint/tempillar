@@ -20,7 +20,7 @@ export const products: Product[] = [
     colors: ['white', 'gray', 'red'],
     rating: 4.9,
     amountSold: 500,
-    category: 'iPhone'
+    category: 'iPhone',
   },
   {
     title: 'Apple Airpods Max',
@@ -31,7 +31,7 @@ export const products: Product[] = [
     colors: ['blue', 'yellow', 'red', 'black', 'white', 'lime'],
     rating: 3.8,
     amountSold: 190,
-    category: 'Airpod'
+    category: 'Airpod',
   },
   {
     title: 'Apple iPhone 14 pro',
@@ -42,7 +42,7 @@ export const products: Product[] = [
     colors: ['white', 'gray', 'red'],
     rating: 4.3,
     amountSold: 480,
-    category: 'iPhone'
+    category: 'iPhone',
   },
   {
     title: 'Apple iPad Pro',
@@ -53,7 +53,7 @@ export const products: Product[] = [
     colors: ['lime', 'gray', 'zinc'],
     rating: 3.8,
     amountSold: 430,
-    category: 'iPad'
+    category: 'iPad',
   },
   {
     title: 'Apple Airpods Max',
@@ -64,7 +64,7 @@ export const products: Product[] = [
     colors: ['blue', 'yellow', 'red', 'black', 'white', 'lime'],
     rating: 3.8,
     amountSold: 160,
-    category: 'Airpod'
+    category: 'Airpod',
   },
   {
     title: 'Apple Macbook Pro M1',
@@ -75,7 +75,7 @@ export const products: Product[] = [
     colors: ['silver', 'gray', 'brown'],
     rating: 4.8,
     amountSold: 680,
-    category: 'Macbook'
+    category: 'Macbook',
   },
   {
     title: 'Apple iWatch Ultra',
@@ -86,7 +86,7 @@ export const products: Product[] = [
     colors: ['lime', 'gray', 'zinc'],
     rating: 3.5,
     amountSold: 290,
-    category: 'iWatch'
+    category: 'iWatch',
   },
   {
     title: 'Airpods Pro 2nd Gen',
@@ -97,7 +97,7 @@ export const products: Product[] = [
     colors: ['black', 'gray', 'zinc', 'yellow'],
     rating: 4.0,
     amountSold: 680,
-    category: 'Airpod'
+    category: 'Airpod',
   },
   {
     title: 'Apple Airpods Max',
@@ -108,6 +108,6 @@ export const products: Product[] = [
     colors: ['blue', 'yellow', 'red', 'black', 'white', 'lime'],
     rating: 3.8,
     amountSold: 300,
-    category: 'Airpod'
+    category: 'Airpod',
   },
 ]
