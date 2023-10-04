@@ -20,6 +20,7 @@ export const products: Product[] = [
     colors: ['white', 'gray', 'red'],
     rating: 4.9,
     amountSold: 500,
+    category: 'Macbook'
   },
   {
     title: 'Apple Airpods Max',
