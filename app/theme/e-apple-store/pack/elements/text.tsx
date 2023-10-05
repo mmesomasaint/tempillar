@@ -3,7 +3,7 @@ export function TextHeadline({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -13,7 +13,9 @@ export function TextHeadline({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -27,7 +29,7 @@ export function TextIntro({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -37,7 +39,9 @@ export function TextIntro({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -51,7 +55,7 @@ export function TextMid({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -61,7 +65,9 @@ export function TextMid({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -75,7 +81,7 @@ export function TextBase({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -85,7 +91,9 @@ export function TextBase({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
@@ -99,7 +107,7 @@ export function TextSmall({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -109,24 +117,23 @@ export function TextSmall({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-base font-semibold ${
-        primary && 'text-apple-store-pri'
-      } ${faded && 'text-apple-store-faded'} ${
-        fadedMax && 'text-apple-store-faded-max'
-      }`}
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-base font-semibold ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </p>
   )
 }
 
-
 export function TextXSmall({
   primary,
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -136,11 +143,11 @@ export function TextXSmall({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-sm font-semibold ${
-        primary && 'text-apple-store-pri'
-      } ${faded && 'text-apple-store-faded'} ${
-        fadedMax && 'text-apple-store-faded-max'
-      }`}
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-sm font-semibold ${primary && 'text-apple-store-pri'} ${
+        faded && 'text-apple-store-faded'
+      } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
       {children}
     </p>
@@ -152,7 +159,7 @@ export function TextTiny({
   faded,
   fadedMax,
   children,
-  copy
+  copy,
 }: {
   children: React.ReactNode
   primary?: boolean
@@ -162,7 +169,9 @@ export function TextTiny({
 }) {
   return (
     <p
-      className={`${copy ? 'leading-tight' : 'leading-none'} text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
+      className={`${
+        copy ? 'leading-tight' : 'leading-none'
+      } text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
     >
