@@ -62,7 +62,7 @@ export function InputBarButton({
         placeholder={placeholder}
         value={searchText}
         className={`grow ${reverse && 'order-last'} ${
-          reverse ? 'rounded-r-2xl' : 'rounded-l-2xl'
+          reverse ? 'rounded-r-2xl' : 'rounded-l-full'
         } w-full p-2 placeholder:text-apple-store-faded placeholder:text-sm placeholder:font-semibold text-apple-store-faded font-semibold text-sm border border-apple-store-outline-faded-max focus:outline-none focus:border-apple-store-pri`}
         onChange={(e) => setSearchText?.(e.target.value)}
       />
@@ -71,7 +71,7 @@ export function InputBarButton({
           faded
             ? 'bg-apple-store-outline-faded-max'
             : 'bg-apple-store-pri/80 hover:bg-apple-store-pri'
-        } text-white ${reverse ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}
+        } text-white ${reverse ? 'rounded-l-full' : 'rounded-r-full'}`}
       >
         {textSize}
       </button>

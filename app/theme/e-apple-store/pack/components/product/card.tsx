@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { BsStarFill } from 'react-icons/bs'
-import { TextMid, TextXSmall, TextTiny } from '../../elements/text'
+import { TextMid, TextXSmall, TextTiny, TextIntro } from '../../elements/text'
 
-export default function Card({
+export function VCard({
   title,
   variants,
   src,
@@ -60,6 +60,31 @@ export default function Card({
             <TextTiny faded>sold</TextTiny>
           </div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+export function HCard({src, title, amount, variants, note, price}: {src: string, title: string, amount: number, variants: string[], note: string, price: number}) {
+  // Add the separator '|' betweeen every variant.
+  const variantsWithSep = variants.join(".|.").split(".")
+
+  return (
+    <div className='grow grid grid-cols-[repeat(14,_minmax(0,_1fr))] gap-7 items-center'>
+      <div className='col-span-3 rounded-2xl border border-apple-store-outline-faded-max'>
+        <Image src={src} width={400} height={400} alt={`Picture of ${title}`} className='w-full rounded-2xl' />
+      </div>
+      <div className='col-span-10 flex flex-col gap-5'>
+        
+      <TextIntro faded>
+                  Apple Macbook Pro 14'' 2022 | M2 Max Chip
+                </TextIntro>
+      <TextXSmall fadedMax>{amount} items</TextXSmall>
+      <div className='flex items-center justify-start gap-5'>
+        {variantsWithSep.map(variant => (<TextXSmall fadedMax>{variant}</TextXSmall>))}
+      </div>
+      <TextXSmall fadedMax>Note: {note}</TextXSmall>
+      <TextIntro>${price}</TextIntro>
       </div>
     </div>
   )
