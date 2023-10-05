@@ -150,7 +150,7 @@ export default function Checkout() {
               <div className='flex flex-col gap-2'>
                 <div className='flex justify-between items-center gap-2'>
                   <TextTiny faded>Sum Total</TextTiny>
-                  <TextXSmall>$2,915</TextXSmall>
+                  <TextXSmall>$2,690.16</TextXSmall>
                 </div>
                 <div className='flex justify-between items-center gap-2'>
                   <TextTiny faded>Shipping Cost</TextTiny>
@@ -164,7 +164,7 @@ export default function Checkout() {
               <div className='flex flex-col gap-3'>
                 <div className='flex justify-between items-center gap-2'>
                   <TextXSmall faded>Total</TextXSmall>
-                  <TextMid>$3,138.3</TextMid>
+                  <TextMid>$3,252.19</TextMid>
                 </div>
                 <Button fillPrimary>Pay Now</Button>
               </div>
