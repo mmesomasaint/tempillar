@@ -27,9 +27,9 @@ export default function Tab({titles, children}: {titles: string[], children: Rea
 
 function TabTitle({active, setActive, title}: {active: boolean, setActive: (value: string) => void, title: string}) {
   return (
-    <div className="relative w-fit py-2 px-5" onClick={() => setActive(title)}>
+    <div className="relative w-fit py-2 px-5 flex justify-center cursor-pointer" onClick={() => setActive(title)}>
       <TextXSmall primary={active} fadedMax={!active}>{title}</TextXSmall>
-      <div className={`absolute -bottom-1 w-full border ${active ? 'border-apple-store-pri' : 'border-apple-store-outline-faded-max'}`} />
+      <div className={`absolute top-[100%] w-full border ${active ? 'border-apple-store-pri' : 'border-transparent'}`} />
     </div>
   )
 }
