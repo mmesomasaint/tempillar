@@ -14,7 +14,7 @@ export function TextHeadline({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-3xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -40,7 +40,7 @@ export function TextIntro({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-2xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -66,7 +66,7 @@ export function TextMid({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-xl font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -92,7 +92,7 @@ export function TextBase({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-lg font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -118,7 +118,7 @@ export function TextSmall({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-base font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -144,7 +144,7 @@ export function TextXSmall({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-sm font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}
@@ -170,7 +170,7 @@ export function TextTiny({
   return (
     <p
       className={`${
-        copy ? 'leading-tight' : 'leading-none'
+        copy ? 'leading-snug' : 'leading-none'
       } text-xs font-semibold ${primary && 'text-apple-store-pri'} ${
         faded && 'text-apple-store-faded'
       } ${fadedMax && 'text-apple-store-faded-max'}`}

@@ -206,7 +206,7 @@ export default function Home() {
               </div>
             </HR>
             <Tab titles={['Detail', 'Specification']}>
-              <TextTiny faded>
+              <TextTiny faded copy>
                 The new Macbook Pro delivers outstanding performance for pro
                 users. Choose between the reliable M2 pro or even the more
                 reliable M2 max to power up your pro level workflows and get
