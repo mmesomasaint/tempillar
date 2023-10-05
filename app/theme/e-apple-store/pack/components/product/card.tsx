@@ -95,7 +95,7 @@ export function HCard({
         />
       </div>
       <div className='col-span-10 flex flex-col gap-5'>
-        <TextIntro faded>Apple Macbook Pro 14'' 2022 | M2 Max Chip</TextIntro>
+        <TextIntro faded>{title}</TextIntro>
         <TextXSmall fadedMax>{amount} items</TextXSmall>
         <div className='flex items-center justify-start gap-5'>
           {variantsWithSep.map((variant) => (
