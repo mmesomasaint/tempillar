@@ -113,23 +113,25 @@ export default function Checkout() {
         </div>
         <div className='grow grid grid-cols-[repeat(14,_minmax(0,_1fr))] gap-5 place-items-start'>
           <div className='col-span-11 '>
-            <TextIntro faded copy>Your Items &amp; Shipment</TextIntro>
+            <TextIntro faded copy>
+              Your Items &amp; Shipment
+            </TextIntro>
             <div className='h-fit w-full flex flex-col mt-4 gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
-            <HR>
-              <HCard
-                src='/imgs/macbook-pro-fv-1.webp'
-                title={`Apple Macbook Pro 14'' 2022 | M2 Max Chip`}
-                amount={2}
-                variants={[
-                  'Gray',
-                  '16GB RAM, 16 Core GPU Apple M2 Pro Chip',
-                  '512GB',
-                ]}
-                note='Please send quickly'
-                price={2690.16}
-              />
-            </HR>
-            <div></div>
+              <HR>
+                <HCard
+                  src='/imgs/macbook-pro-fv-1.webp'
+                  title={`Apple Macbook Pro 14'' 2022 | M2 Max Chip`}
+                  amount={2}
+                  variants={[
+                    'Gray',
+                    '16GB RAM, 16 Core GPU Apple M2 Pro Chip',
+                    '512GB',
+                  ]}
+                  note='Please send quickly'
+                  price={2690.16}
+                />
+              </HR>
+              <div></div>
             </div>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
@@ -151,20 +153,20 @@ export default function Checkout() {
             </HR>
             <div className='flex flex-col gap-6'>
               <HR dashed>
-              <div className='flex flex-col gap-2'>
-                <div className='flex justify-between items-center gap-2'>
-                  <TextTiny faded>Sum Total</TextTiny>
-                  <TextXSmall>$2,690.16</TextXSmall>
+                <div className='flex flex-col gap-2'>
+                  <div className='flex justify-between items-center gap-2'>
+                    <TextTiny faded>Sum Total</TextTiny>
+                    <TextXSmall>$2,690.16</TextXSmall>
+                  </div>
+                  <div className='flex justify-between items-center gap-2'>
+                    <TextTiny faded>Shipping Cost</TextTiny>
+                    <TextXSmall>$25</TextXSmall>
+                  </div>
+                  <div className='flex justify-between items-center gap-2'>
+                    <TextTiny faded>Tax(10%)</TextTiny>
+                    <TextXSmall>$538.3</TextXSmall>
+                  </div>
                 </div>
-                <div className='flex justify-between items-center gap-2'>
-                  <TextTiny faded>Shipping Cost</TextTiny>
-                  <TextXSmall>$25</TextXSmall>
-                </div>
-                <div className='flex justify-between items-center gap-2'>
-                  <TextTiny faded>Tax(10%)</TextTiny>
-                  <TextXSmall>$538.3</TextXSmall>
-                </div>
-              </div>
               </HR>
               <div className='flex flex-col gap-3'>
                 <div className='flex justify-between items-center gap-2'>
