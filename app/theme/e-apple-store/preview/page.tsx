@@ -18,7 +18,7 @@ import Accordion from '../pack/components/accordion'
 import CheckBox from '../pack/components/checkbox'
 import { HR } from '../pack/elements/rule'
 import { products, Product } from './lib/products'
-import Card from '../pack/components/product/card'
+import {VCard} from '../pack/components/product/card'
 import Range from '../pack/components/range'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from './lib/filter'
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
           <div className='flex flex-wrap justify-between items-stretch gap-5'>
             {searchResults.map((product: Product, id) => (
-              <Card
+              <VCard
                 key={`${product.src + id}`}
                 title={product.title}
                 variants={product.variants}

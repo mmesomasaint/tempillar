@@ -5,7 +5,7 @@ import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
 import { FiMapPin } from 'react-icons/fi'
-import DropDown, { DropDownMultiple } from '../../pack/components/dropdown'
+import { DropDownMultiple } from '../../pack/components/dropdown'
 import { InputBarButton, InputBarIcon } from '../../pack/components/inputBar'
 import {
   TextBase,
@@ -15,23 +15,17 @@ import {
   TextTiny,
   TextXSmall,
 } from '../../pack/elements/text'
-import Accordion from '../../pack/components/accordion'
-import CheckBox from '../../pack/components/checkbox'
 import { HR } from '../../pack/elements/rule'
 import { products, Product } from '../lib/products'
 import { HCard } from '../../pack/components/product/card'
-import Range from '../../pack/components/range'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
 import Search from '../lib/search'
-import { BsStar, BsStarFill } from 'react-icons/bs'
-import Slider from '../../pack/components/product/slider'
-import OutlineButtons, {
+import { BsStar } from 'react-icons/bs'
+import {
   OutlineButton,
 } from '../../pack/components/outline-btns'
 import Button from '../../pack/elements/button'
-import EditAmount from '../../pack/components/editAmount'
-import Tab from '../../pack/components/tab'
 
 export default function Checkout() {
   const [searchText, setSearchText] = useState('')

@@ -3,7 +3,7 @@ import Accordion from './pack/components/accordion'
 import CheckBox from './pack/components/checkbox'
 import DropDown from './pack/components/dropdown'
 import OutlineButtons, { OutlineButton } from './pack/components/outline-btns'
-import Card from './pack/components/product/card'
+import {VCard} from './pack/components/product/card'
 import Slider from './pack/components/product/slider'
 import { InputBarIcon, InputBarButton } from './pack/components/inputBar'
 import Button from './pack/elements/button'
@@ -54,7 +54,7 @@ export default function AppleStore() {
 '/imgs/airpods-pro-2nd-gen-sv-2.webp',
 '/imgs/airpods-pro-2nd-gen-sv-in.webp',
 '/imgs/airpods-pro-2nd-gen-sv-out.webp']} />
-      <Card title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/macbook-pro-fv-2.jpeg' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
+      <VCard title='Apple Macbook Air M1' variants={['256GB', '512GB']} src='/imgs/macbook-pro-fv-2.jpeg' price={1234} discount={2000} colors={['lime', 'gray', 'zinc']} rating={4.8} amountSold={680} />
       <CheckBox check={false}>Macbook Pro</CheckBox>
       <CheckBox check={true}>Airpods Pro</CheckBox>
       <CheckBox check={false}>iMac</CheckBox>
