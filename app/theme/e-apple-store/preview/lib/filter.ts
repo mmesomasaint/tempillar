@@ -29,6 +29,8 @@ export type FilterSection =
   | 'price'
   | 'paymentGateways'
 
+export type Category = 'airpod' | 'macbook' | 'iWatch' | 'iPad' | 'iPhone'
+
 export const DefaultFilter: Filter = {
   categories: {
     airpod: false,

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { TbShoppingBag } from 'react-icons/tb'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
@@ -8,7 +8,6 @@ import { FiMapPin } from 'react-icons/fi'
 import { DropDownMultiple } from '../../pack/components/dropdown'
 import { InputBarIcon } from '../../pack/components/inputBar'
 import {
-  TextBase,
   TextIntro,
   TextLabel,
   TextMid,
@@ -18,7 +17,7 @@ import {
 import { HR } from '../../pack/elements/rule'
 import { products, Product } from '../lib/products'
 import Image from 'next/image'
-import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
+import { Filter, DefaultFilter, FilterSection, Category } from '../lib/filter'
 import Search from '../lib/search'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Slider from '../../pack/components/product/slider'
@@ -31,6 +30,7 @@ export default function Home() {
   const [searchText, setSearchText] = useState('')
   const [searchResults, setSearchResults] = useState<Product[]>(products)
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
+  const categories = useMemo<string[]>(() => Object.keys(filter.categories), [filter])
 
   // Filter Setters
   const setSectionValue = (
@@ -43,8 +43,14 @@ export default function Home() {
       [section]: { ...prev[section], [id]: value },
     }))
   }
+
   const setCategory = (value: boolean, category: string) => {
     setSectionValue(value, 'categories', category)
+  }
+  
+  const resetCategories = () => {
+    const categories = Object.keys(filter.categories)
+    return categories.forEach(category => setCategory(false, category))
   }
 
   useEffect(() => {
@@ -59,8 +65,14 @@ export default function Home() {
         <div className='grow flex justify-center items-center gap-5'>
           <DropDownMultiple
             title={'Categories'}
-            selectedItems={['Macbook', 'iPhone', 'iWatch']}
-            items={['Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
+            selectedItems={[...categories.filter((category) => /**Return only categories with true value */ {return filter.categories[category as Category] === true})]}
+            items={categories}
+            setSelectedItems={(values: string[]) => {
+              // Reset the categories(Set all categories to default value i.e false).
+              resetCategories()
+              // Set the categories in `values` to true.
+              return values.forEach(category => setCategory(true, category))
+            }}
           />
           <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
         </div>
