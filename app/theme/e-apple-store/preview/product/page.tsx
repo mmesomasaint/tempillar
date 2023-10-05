@@ -221,18 +221,18 @@ export default function Home() {
               <div className='flex flex-col gap-2'>
                 <TextXSmall>Add Notes</TextXSmall>
                 <textarea
-                  rows={8}
+                  rows={6}
                   className='p-2 border border-apple-store-outline-faded-max rounded-xl text-xs'
                   placeholder='Type here..'
                 />
               </div>
             </HR>
-            <div className='flex flex-col gap-5'>
-              <div className='flex justify-between items-center gap-5'>
+            <div className='flex flex-col gap-3'>
+              <div className='flex justify-between items-center gap-2'>
                 <TextTiny faded>Sum Total</TextTiny>
                 <TextMid>$2,915</TextMid>
               </div>
-              <div className='flex flex-col gap-3'>
+              <div className='flex flex-col gap-2'>
                 <Button fillPrimary>Buy Now</Button>
                 <Button outlinePrimary>Add to Cart</Button>
               </div>
