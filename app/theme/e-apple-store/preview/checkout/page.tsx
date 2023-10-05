@@ -139,15 +139,16 @@ export default function Checkout() {
                 <div className='flex justify-start items-center gap-3'>
                   <div className='w-20 h-20 rounded-2xl border border-apple-store-outline-faded-max' />
                   <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-1'>
-                    <TextXSmall>Bayu Onyedike</TextXSmall>
-                    <TextTiny fadedMax>0805332803</TextTiny>
-                  </div>
-                  <div className='flex flex-col gap-1'>
-                    <TextTiny fadedMax>No 1709, lockestreet avenue nwanghabu</TextTiny>
-                    <TextTiny fadedMax>Port Harcourt</TextTiny>
-                  </div>
-                  
+                    <div className='flex flex-col gap-1'>
+                      <TextXSmall>Bayu Onyedike</TextXSmall>
+                      <TextTiny fadedMax>0805332803</TextTiny>
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                      <TextTiny fadedMax>
+                        No 1709, lockestreet avenue nwanghabu
+                      </TextTiny>
+                      <TextTiny fadedMax>Port Harcourt</TextTiny>
+                    </div>
                   </div>
                 </div>
                 <div className='flex justify-start items-center gap-4'>

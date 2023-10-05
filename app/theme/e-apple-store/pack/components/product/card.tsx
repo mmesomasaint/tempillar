@@ -99,7 +99,9 @@ export function HCard({
         <TextXSmall fadedMax>{amount} items</TextXSmall>
         <div className='flex items-center justify-start gap-5'>
           {variantsWithSep.map((variant) => (
-            <TextXSmall key={variant} fadedMax>{variant}</TextXSmall>
+            <TextXSmall key={variant} fadedMax>
+              {variant}
+            </TextXSmall>
           ))}
         </div>
         <TextXSmall fadedMax>Note: {note}</TextXSmall>
