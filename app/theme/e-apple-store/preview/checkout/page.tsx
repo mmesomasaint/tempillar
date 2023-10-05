@@ -22,9 +22,7 @@ import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
 import Search from '../lib/search'
 import { BsStar } from 'react-icons/bs'
-import {
-  OutlineButton,
-} from '../../pack/components/outline-btns'
+import { OutlineButton } from '../../pack/components/outline-btns'
 import Button from '../../pack/elements/button'
 
 export default function Checkout() {

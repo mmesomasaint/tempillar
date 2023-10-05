@@ -22,9 +22,7 @@ import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
 import Search from '../lib/search'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Slider from '../../pack/components/product/slider'
-import {
-  OutlineButton,
-} from '../../pack/components/outline-btns'
+import { OutlineButton } from '../../pack/components/outline-btns'
 import Button from '../../pack/elements/button'
 import EditAmount from '../../pack/components/editAmount'
 import Tab from '../../pack/components/tab'
