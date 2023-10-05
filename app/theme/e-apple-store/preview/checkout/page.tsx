@@ -19,7 +19,7 @@ import Accordion from '../../pack/components/accordion'
 import CheckBox from '../../pack/components/checkbox'
 import { HR } from '../../pack/elements/rule'
 import { products, Product } from '../lib/products'
-import {HCard} from '../../pack/components/product/card'
+import { HCard } from '../../pack/components/product/card'
 import Range from '../../pack/components/range'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
@@ -114,7 +114,18 @@ export default function Checkout() {
         <div className='grow grid grid-cols-[repeat(14,_minmax(0,_1fr))] gap-5 place-items-start'>
           <div className='col-span-11 h-fit w-full flex flex-col gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
             <HR>
-            <HCard src='/imgs/macbook-pro-fv-1.webp' title={`Apple Macbook Pro 14'' 2022 | M2 Max Chip`} amount={2} variants={['Gray', '16GB RAM, 16 Core GPU Apple M2 Pro Chip', '512GB']} note='Please send quickly' price={2690.16} />
+              <HCard
+                src='/imgs/macbook-pro-fv-1.webp'
+                title={`Apple Macbook Pro 14'' 2022 | M2 Max Chip`}
+                amount={2}
+                variants={[
+                  'Gray',
+                  '16GB RAM, 16 Core GPU Apple M2 Pro Chip',
+                  '512GB',
+                ]}
+                note='Please send quickly'
+                price={2690.16}
+              />
             </HR>
             <div></div>
           </div>
@@ -129,32 +140,32 @@ export default function Checkout() {
               <div className='flex flex-col gap-3'>
                 <TextXSmall>Payment Method</TextXSmall>
                 <div className='flex flex-wrap gap-1'>
-                <OutlineButton>GPay</OutlineButton>
-                <OutlineButton>GoPay</OutlineButton>
-                <OutlineButton>Visa</OutlineButton>
+                  <OutlineButton>GPay</OutlineButton>
+                  <OutlineButton>GoPay</OutlineButton>
+                  <OutlineButton>Visa</OutlineButton>
                 </div>
               </div>
             </HR>
             <div className='flex flex-col gap-6'>
               <div className='flex flex-col gap-2'>
-              <div className='flex justify-between items-center gap-2'>
-                <TextTiny faded>Sum Total</TextTiny>
-                <TextXSmall>$2,915</TextXSmall>
-              </div>
-              <div className='flex justify-between items-center gap-2'>
-                <TextTiny faded>Shipping Cost</TextTiny>
-                <TextXSmall>$25</TextXSmall>
-              </div>
-              <div className='flex justify-between items-center gap-2'>
-                <TextTiny faded>Tax(10%)</TextTiny>
-                <TextXSmall>$538.3</TextXSmall>
-              </div>
+                <div className='flex justify-between items-center gap-2'>
+                  <TextTiny faded>Sum Total</TextTiny>
+                  <TextXSmall>$2,915</TextXSmall>
+                </div>
+                <div className='flex justify-between items-center gap-2'>
+                  <TextTiny faded>Shipping Cost</TextTiny>
+                  <TextXSmall>$25</TextXSmall>
+                </div>
+                <div className='flex justify-between items-center gap-2'>
+                  <TextTiny faded>Tax(10%)</TextTiny>
+                  <TextXSmall>$538.3</TextXSmall>
+                </div>
               </div>
               <div className='flex flex-col gap-3'>
-              <div className='flex justify-between items-center gap-2'>
-                <TextXSmall faded>Total</TextXSmall>
-                <TextMid>$3,138.3</TextMid>
-              </div>
+                <div className='flex justify-between items-center gap-2'>
+                  <TextXSmall faded>Total</TextXSmall>
+                  <TextMid>$3,138.3</TextMid>
+                </div>
                 <Button fillPrimary>Pay Now</Button>
               </div>
             </div>
