@@ -8,7 +8,6 @@ import { FiMapPin } from 'react-icons/fi'
 import { DropDownMultiple } from '../../pack/components/dropdown'
 import { InputBarButton, InputBarIcon } from '../../pack/components/inputBar'
 import {
-  TextBase,
   TextIntro,
   TextLabel,
   TextMid,
