@@ -112,7 +112,9 @@ export default function Checkout() {
           </span>
         </div>
         <div className='grow grid grid-cols-[repeat(14,_minmax(0,_1fr))] gap-5 place-items-start'>
-          <div className='col-span-11 h-fit w-full flex flex-col gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
+          <div className='col-span-11 '>
+            <TextIntro faded copy>Your Items &amp; Shipment</TextIntro>
+            <div className='h-fit w-full flex flex-col mt-4 gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
             <HR>
               <HCard
                 src='/imgs/macbook-pro-fv-1.webp'
@@ -128,6 +130,7 @@ export default function Checkout() {
               />
             </HR>
             <div></div>
+            </div>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
             <HR>
@@ -147,6 +150,7 @@ export default function Checkout() {
               </div>
             </HR>
             <div className='flex flex-col gap-6'>
+              <HR dashed>
               <div className='flex flex-col gap-2'>
                 <div className='flex justify-between items-center gap-2'>
                   <TextTiny faded>Sum Total</TextTiny>
@@ -161,6 +165,7 @@ export default function Checkout() {
                   <TextXSmall>$538.3</TextXSmall>
                 </div>
               </div>
+              </HR>
               <div className='flex flex-col gap-3'>
                 <div className='flex justify-between items-center gap-2'>
                   <TextXSmall faded>Total</TextXSmall>
