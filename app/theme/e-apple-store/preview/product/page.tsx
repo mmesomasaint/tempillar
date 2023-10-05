@@ -207,7 +207,9 @@ export default function Home() {
             </HR>
             <Tab titles={['Detail', 'Specification']}>
               <TextTiny>This is supposed to contain the details.</TextTiny>
-              <TextTiny>This is supposed to contain the specifications.</TextTiny>
+              <TextTiny>
+                This is supposed to contain the specifications.
+              </TextTiny>
             </Tab>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
