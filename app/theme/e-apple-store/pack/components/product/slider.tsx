@@ -7,7 +7,7 @@ export default function Slider({ srcList }: { srcList: string[] }) {
   const [activeSrc, setActiveSrc] = useState<string>(srcList[0])
 
   return (
-    <div className='flex md:flex-col justify-between items-center gap-3 w-full h-[31rem] mx-auto'>
+    <div className='flex md:flex-col justify-between items-center gap-3 w-full h-[27rem] mx-auto'>
       <div className='order-last md:order-first'>
         <Image src={activeSrc} width={700} height={700} alt='main-image' />
       </div>
