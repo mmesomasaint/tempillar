@@ -15,8 +15,8 @@ export default function Tab({
 
   const onSetActive = (value: string) => {
     const idx = titles.findIndex((title) => title === value)
-    if (idx === -1) throw new Error('Title must be in titles prop')
-    setActiveId(idx)
+    if (idx !== -1) return setActiveId(idx)
+    throw new Error(`Title, '${value}' isn't one of titles prop.`)
   }
 
   return (
