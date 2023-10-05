@@ -114,7 +114,7 @@ export default function Home() {
             <TextTiny>Apple Macbook Pro 14'' 2022 | M2 Max Chip</TextTiny>
           </span>
         </div>
-        <div className='grow grid grid-cols-[repeat(13,_minmax(0,_1fr))] gap-5 place-items-start'>
+        <div className='grow grid grid-cols-[repeat(14,_minmax(0,_1fr))] gap-5 place-items-start'>
           <div className='col-span-4 w-full '>
             <Slider
               srcList={[
@@ -126,7 +126,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className='col-span-6 flex flex-col justify-between items-stretch gap-5 w-full'>
+          <div className='col-span-7 flex flex-col justify-between items-stretch gap-5 w-full'>
             <HR>
               <div className='flex flex-col gap-4'>
                 <TextMid faded>
