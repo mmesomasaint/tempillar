@@ -14,13 +14,17 @@ export default function Slider({ srcList }: { srcList: string[] }) {
       <div className='flex flex-col md:flex-row justify-evenly items-center gap-4 w-full'>
         {srcList.map((src, id) => (
           <div key={src} className='relative w-1/4 h-14 rounded-2xl'>
-          <Image
-            onClick={() => setActiveSrc(src)}
-            src={src}
-            fill
-            alt={`thumbnail-${id + 1}`}
-            className={`transform duration-700 rounded-xl border-2 ${src === activeSrc ? 'border-apple-store-pri' : 'border-apple-store-outline-faded-max'}`}
-          />
+            <Image
+              onClick={() => setActiveSrc(src)}
+              src={src}
+              fill
+              alt={`thumbnail-${id + 1}`}
+              className={`transform duration-700 rounded-xl border-2 ${
+                src === activeSrc
+                  ? 'border-apple-store-pri'
+                  : 'border-apple-store-outline-faded-max'
+              }`}
+            />
           </div>
         ))}
       </div>

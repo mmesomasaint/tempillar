@@ -95,27 +95,33 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-gray-100/70 px-7 py-4 min-h-full grow gap-5 flex flex-col w-full'>
-          <div className='flex justify-between items-center gap-10'>
-            <span className='flex justify-start items-center gap-10'>
-              <TextTiny faded>Home</TextTiny>
-              <TextTiny faded>
-                <BsStar className='text-base' />
-              </TextTiny>
-              <TextTiny faded>Macbook</TextTiny>
-              <TextTiny faded>
-                <BsStar className='text-lg' />
-              </TextTiny>
-              <TextTiny>Apple Macbook Pro M2 pro</TextTiny>
-            </span>
-          </div>
-        <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-12 gap-5 place-items-start'>
-        <div className='col-span-4 w-full '>
-          <Slider srcList={['/imgs/macbook-pro-fv-1.webp', '/imgs/macbook-pro-sv.jpg', '/imgs/mackbook-pro-tv.webp', '/imgs/macbook-pro-sv-3.jpeg', '/imgs/macbook-pro-tv-2.jpeg']} />
+        <div className='flex justify-between items-center gap-10'>
+          <span className='flex justify-start items-center gap-10'>
+            <TextTiny faded>Home</TextTiny>
+            <TextTiny faded>
+              <BsStar className='text-base' />
+            </TextTiny>
+            <TextTiny faded>Macbook</TextTiny>
+            <TextTiny faded>
+              <BsStar className='text-lg' />
+            </TextTiny>
+            <TextTiny>Apple Macbook Pro M2 pro</TextTiny>
+          </span>
         </div>
-          <div className='col-span-6 flex flex-col justify-between items-stretch gap-10'>
+        <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-12 gap-5 place-items-start'>
+          <div className='col-span-4 w-full '>
+            <Slider
+              srcList={[
+                '/imgs/macbook-pro-fv-1.webp',
+                '/imgs/macbook-pro-sv.jpg',
+                '/imgs/mackbook-pro-tv.webp',
+                '/imgs/macbook-pro-sv-3.jpeg',
+                '/imgs/macbook-pro-tv-2.jpeg',
+              ]}
+            />
           </div>
-          <div className='col-span-2 flex flex-wrap justify-between items-stretch gap-5'>
-          </div>
+          <div className='col-span-6 flex flex-col justify-between items-stretch gap-10'></div>
+          <div className='col-span-2 flex flex-wrap justify-between items-stretch gap-5'></div>
         </div>
       </div>
     </main>
