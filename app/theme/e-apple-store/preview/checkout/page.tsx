@@ -131,7 +131,37 @@ export default function Checkout() {
                   price={2690.16}
                 />
               </HR>
-              <div></div>
+              <div className='flex flex-col gap-4'>
+                <div className='flex justify-between items-center gap-4'>
+                  <TextIntro faded>Delivery Information</TextIntro>
+                  <Button outlinePrimary>Edit Address</Button>
+                </div>
+                <div className='flex justify-start items-center gap-3'>
+                  <div className='w-20 h-20 rounded-2xl border border-apple-store-outline-faded-max' />
+                  <div className='flex flex-col gap-4'>
+                  <div className='flex flex-col gap-1'>
+                    <TextXSmall>Bayu Onyedike</TextXSmall>
+                    <TextTiny fadedMax>0805332803</TextTiny>
+                  </div>
+                  <div className='flex flex-col gap-1'>
+                    <TextTiny fadedMax>No 1709, lockestreet avenue nwanghabu</TextTiny>
+                    <TextTiny fadedMax>Port Harcourt</TextTiny>
+                  </div>
+                  
+                  </div>
+                </div>
+                <div className='flex justify-start items-center gap-4'>
+                  <div className='flex items-center gap-2'>
+                    <BsStar className='text-base text-apple-store-faded-max' />
+                    <TextTiny fadedMax>Estimated Delivery in 3 days</TextTiny>
+                  </div>
+                  <TextLabel fadedMax>|</TextLabel>
+                  <div className='flex items-center gap-2'>
+                    <BsStar className='text-base text-apple-store-faded-max' />
+                    <TextTiny fadedMax>Free shipping insurance</TextTiny>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-6 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
