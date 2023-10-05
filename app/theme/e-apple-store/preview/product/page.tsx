@@ -30,6 +30,7 @@ import OutlineButtons, {
   OutlineButton,
 } from '../../pack/components/outline-btns'
 import Button from '../../pack/elements/button'
+import EditAmount from '../../pack/components/editAmount'
 
 export default function Home() {
   const [searchText, setSearchText] = useState('')
@@ -208,7 +209,7 @@ export default function Home() {
             <HR>
               <div className='flex flex-col gap-2'>
                 <TextXSmall>Set Quantity</TextXSmall>
-                <InputBarButton>+</InputBarButton>
+                <EditAmount value={1} full />
                 <div className='flex justify-start items-center gap-1'>
                   <TextTiny faded>Only</TextTiny>
                   <TextTiny primary>10 items</TextTiny>
