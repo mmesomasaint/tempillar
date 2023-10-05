@@ -206,10 +206,44 @@ export default function Home() {
               </div>
             </HR>
             <Tab titles={['Detail', 'Specification']}>
-              <TextTiny>This is supposed to contain the details.</TextTiny>
-              <TextTiny>
-                This is supposed to contain the specifications.
+              <TextTiny faded>
+                The new Macbook Pro delivers outstanding performance for pro
+                users. Choose between the reliable M2 pro or even the more
+                reliable M2 max to power up your pro level workflows and get
+                incredible battery life. With a stunning 13-inch retina XDR
+                display and a range of pro ports, you can't just imagine this
+                feeling. You experience it.
               </TextTiny>
+              <div className='flex flex-col gap-2 text-apple-store-faded'>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Display</TextTiny>
+                  <TextXSmall fadedMax>14-inch XDR display</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Color</TextTiny>
+                  <TextXSmall fadedMax>Silver Gray / Red / Silver</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Ram</TextTiny>
+                  <TextXSmall fadedMax>16GB / 32GB</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Chip</TextTiny>
+                  <TextXSmall fadedMax>M2 Pro</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>GPU</TextTiny>
+                  <TextXSmall fadedMax>16 Core / 32 Core</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Display</TextTiny>
+                  <TextXSmall fadedMax>XDR display</TextXSmall>
+                </div>
+                <div className='flex justify-start items-center gap-1'>
+                  <TextTiny>Display</TextTiny>
+                  <TextXSmall fadedMax>XDR display</TextXSmall>
+                </div>
+              </div>
             </Tab>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
