@@ -28,7 +28,10 @@ export default function Home() {
   const [searchText, setSearchText] = useState('')
   const [searchResults, setSearchResults] = useState<Product[]>(products)
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
-  const categories = useMemo<string[]>(() => Object.keys(filter.categories), [filter])
+  const categories = useMemo<string[]>(
+    () => Object.keys(filter.categories),
+    [filter]
+  )
 
   // Filter Setters
   const setSectionValue = (
@@ -57,10 +60,10 @@ export default function Home() {
   const setPrice = (value: number, price: string) => {
     setSectionValue(value, 'price', price)
   }
-  
+
   const resetCategories = () => {
     const categories = Object.keys(filter.categories)
-    return categories.forEach(category => setCategory(false, category))
+    return categories.forEach((category) => setCategory(false, category))
   }
 
   useEffect(() => {
@@ -75,13 +78,18 @@ export default function Home() {
         <div className='grow flex justify-center items-center gap-5'>
           <DropDownMultiple
             title={'Categories'}
-            selectedItems={[...categories.filter((category) => /**Return only categories with true value */ {return filter.categories[category as Category] === true})]}
+            selectedItems={[
+              ...categories.filter((category) => {
+                // Return only categories with `true` value
+                return filter.categories[category as Category] === true
+              }),
+            ]}
             items={categories}
             setSelectedItems={(values: string[]) => {
               // Reset the categories(Set all categories to default value i.e false).
               resetCategories()
               // Set the categories in `values` to true.
-              return values.forEach(category => setCategory(true, category))
+              return values.forEach((category) => setCategory(true, category))
             }}
           />
           <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
