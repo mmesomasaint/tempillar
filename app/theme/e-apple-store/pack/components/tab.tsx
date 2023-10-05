@@ -47,7 +47,7 @@ function TabTitle({
 }) {
   return (
     <div
-      className='relative w-fit py-2 px-5 flex justify-center cursor-pointer'
+      className='relative w-fit py-2 px-10 flex justify-center cursor-pointer'
       onClick={() => setActive(title)}
     >
       <TextXSmall primary={active} fadedMax={!active}>
