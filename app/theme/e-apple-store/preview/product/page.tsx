@@ -31,6 +31,7 @@ import OutlineButtons, {
 } from '../../pack/components/outline-btns'
 import Button from '../../pack/elements/button'
 import EditAmount from '../../pack/components/editAmount'
+import Tab from '../../pack/components/tab'
 
 export default function Home() {
   const [searchText, setSearchText] = useState('')
@@ -204,6 +205,10 @@ export default function Home() {
                 </div>
               </div>
             </HR>
+            <Tab titles={['Detail', 'Specification']}>
+              <TextTiny>This is supposed to contain the details.</TextTiny>
+              <TextTiny>This is supposed to contain the specifications.</TextTiny>
+            </Tab>
           </div>
           <div className='col-span-3 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
             <HR>
