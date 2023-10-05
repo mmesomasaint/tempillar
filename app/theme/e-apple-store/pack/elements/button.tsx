@@ -17,8 +17,8 @@ export default function Button({
 }) {
   return (
     <button
-      className={`leading-[0] my-2 p-4 rounded-2xl border ${
-        large && 'my-4 p-6 rounded-3xl'
+      className={`inline-block p-5 rounded-3xl border ${
+        large && 'p-6 rounded-3xl'
       } ${full && 'w-full'} ${
         outlinePrimary && 'border-apple-store-pri text-apple-store-pri'
       } ${

@@ -6,8 +6,9 @@ import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
 import { FiMapPin } from 'react-icons/fi'
 import DropDown, { DropDownMultiple } from '../../pack/components/dropdown'
-import { InputBarIcon } from '../../pack/components/inputBar'
+import { InputBarButton, InputBarIcon } from '../../pack/components/inputBar'
 import {
+  TextBase,
   TextIntro,
   TextLabel,
   TextMid,
@@ -23,8 +24,10 @@ import Range from '../../pack/components/range'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
 import Search from '../lib/search'
-import { BsStar } from 'react-icons/bs'
+import { BsStar, BsStarFill } from 'react-icons/bs'
 import Slider from '../../pack/components/product/slider'
+import OutlineButtons, { OutlineButton } from '../../pack/components/outline-btns'
+import Button from '../../pack/elements/button'
 
 export default function Home() {
   const [searchText, setSearchText] = useState('')
@@ -103,12 +106,12 @@ export default function Home() {
             </TextTiny>
             <TextTiny faded>Macbook</TextTiny>
             <TextTiny faded>
-              <BsStar className='text-lg' />
+              <BsStar className='text-base' />
             </TextTiny>
-            <TextTiny>Apple Macbook Pro M2 pro</TextTiny>
+            <TextTiny>Apple Macbook Pro 14'' 2022 | M2 Max Chip</TextTiny>
           </span>
         </div>
-        <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-12 gap-5 place-items-start'>
+        <div className='grow grid grid-cols-[repeat(13,_minmax(0,_1fr))] gap-5 place-items-start'>
           <div className='col-span-4 w-full '>
             <Slider
               srcList={[
@@ -120,8 +123,125 @@ export default function Home() {
               ]}
             />
           </div>
-          <div className='col-span-6 flex flex-col justify-between items-stretch gap-10'></div>
-          <div className='col-span-2 flex flex-wrap justify-between items-stretch gap-5'></div>
+          <div className='col-span-6 flex flex-col justify-between items-stretch gap-5 w-full'>
+            <HR>
+            <div className='flex flex-col gap-4'>
+              <TextMid faded>Apple Macbook Pro 14'' 2022 | M2 Max Chip</TextMid>
+              <TextIntro>$2,915</TextIntro>
+              <div className='flex justify-start items-center gap-4'>
+          <div className='flex justify-start items-center gap-2'>
+            <BsStarFill className='text-base text-yellow-500' />
+            <TextTiny faded>4.8</TextTiny>
+          </div>
+          <div className='flex justify-start gap-1'>
+            <TextTiny faded>680</TextTiny>
+            <TextTiny faded>sold</TextTiny>
+          </div>
+              </div>
+            </div>
+            </HR>
+            <HR>
+              <div className='flex flex-col gap-5'>
+                <div className='flex flex-col gap-2'>
+                  <TextXSmall>Color</TextXSmall>
+        <div className='flex justify-start items-center gap-2'>
+          {['gray', 'lime', 'red'].map((color) => (
+            <div
+              key={color}
+              className='w-6 h-6 rounded-full border border-apple-store-outline-faded-max'
+              style={{ backgroundColor: color }}
+            />
+          ))}
+        </div>
+                </div>
+                <div className='flex flex-col gap-2'>
+                  <TextXSmall>Processor</TextXSmall>
+                  <div className='flex gap-3 justify-start items-center'>
+                    <OutlineButton selected={true}>16GB, 16 Core GPU Apple M2 Chip</OutlineButton>
+                    <OutlineButton selected={false}>32GB, 32 Core GPU Apple M2 Chip</OutlineButton>
+                  </div>
+                </div>
+                <div className='flex flex-col gap-2'>
+                  <TextXSmall>Memory Size</TextXSmall>
+                  <div className='flex gap-3 justify-start items-center'>
+                    <OutlineButton selected={true}>512GB</OutlineButton>
+                    <OutlineButton selected={false}>1TB</OutlineButton>
+                  </div>
+                </div>
+              </div>
+            </HR>
+            <HR>
+              <div className='flex flex-col gap-3'>
+                <div className='flex justify-start items-center gap-2'>
+                  <BsStar className='text-base text-apple-store-faded' />
+                  <div className='flex justify-start items-center gap-1'>
+                    
+                  <TextTiny faded>Sent from</TextTiny>
+                  <TextXSmall>Umuaguduani Street, Port Harcourt</TextXSmall>
+                  </div>
+                </div>
+                <div className='flex justify-start items-center gap-2'>
+                  <BsStar className='text-base text-apple-store-faded' />
+                  <div className='flex justify-start items-center gap-1'>
+                    
+                  <TextTiny faded>Shipping Cost</TextTiny>
+                  <TextXSmall>$20</TextXSmall>
+                  </div>
+                </div>
+                <div className='flex justify-start items-center gap-2'>
+                  <BsStar className='text-base text-apple-store-faded' />
+                  <div className='flex justify-start items-center gap-1'>
+                    
+                  <TextTiny faded>Estimated Delivery</TextTiny>
+                  <TextXSmall>3 days</TextXSmall>
+                  </div>
+                </div>
+              </div>
+            </HR>
+          </div>
+          <div className='col-span-3 h-fit w-full flex flex-col gap-5 bg-white rounded-xl border border-apple-store-outline-faded-max p-5'>
+            <HR>
+              <div className='flex flex-col gap-2'>
+              <TextXSmall>Set Quantity</TextXSmall>
+              <InputBarButton>+</InputBarButton>
+              <div className='flex justify-start items-center gap-1'>
+              <TextTiny faded>Only</TextTiny><TextTiny primary>10 items</TextTiny><TextTiny faded>left</TextTiny>
+              </div>
+              </div>
+            </HR>
+            <HR>
+              <div className='flex flex-col gap-2'>
+              <TextXSmall>Add Notes</TextXSmall>
+              <textarea rows={8} className='p-2 border border-apple-store-outline-faded-max rounded-xl text-xs' placeholder='Type here..' />
+              </div>
+            </HR>
+            <div className='flex flex-col gap-5'>
+              <div className='flex justify-between items-center gap-5'>
+                <TextTiny faded>Sum Total</TextTiny>
+                <TextMid>$2,915</TextMid>
+              </div>
+              <div className='flex flex-col gap-3'>
+                <Button fillPrimary>Buy Now</Button>
+                <Button outlinePrimary>Add to Cart</Button>
+              </div>
+              <div className='flex justify-between items-center gap-2'>
+                <div className='flex justify-start items-center gap-1'>
+                  <BsStar className='text-base text-apple-store-faded-max' />
+                  <TextTiny faded>Chat</TextTiny>
+                </div>
+                <TextLabel faded>|</TextLabel>
+                <div className='flex justify-start items-center gap-1'>
+                  <BsStar className='text-base text-apple-store-faded-max' />
+                  <TextTiny faded>Wishlist</TextTiny>
+                </div>
+                <TextLabel faded>|</TextLabel>
+                <div className='flex justify-start items-center gap-1'>
+                  <BsStar className='text-base text-apple-store-faded-max' />
+                  <TextTiny faded>Share</TextTiny>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
