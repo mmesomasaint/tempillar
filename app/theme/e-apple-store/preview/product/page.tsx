@@ -1,0 +1,123 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { TbShoppingBag } from 'react-icons/tb'
+import { IoMdNotificationsOutline } from 'react-icons/io'
+import { MdOutlineEmail } from 'react-icons/md'
+import { FiMapPin } from 'react-icons/fi'
+import DropDown, { DropDownMultiple } from '../../pack/components/dropdown'
+import { InputBarIcon } from '../../pack/components/inputBar'
+import {
+  TextIntro,
+  TextLabel,
+  TextMid,
+  TextTiny,
+  TextXSmall,
+} from '../../pack/elements/text'
+import Accordion from '../../pack/components/accordion'
+import CheckBox from '../../pack/components/checkbox'
+import { HR } from '../../pack/elements/rule'
+import { products, Product } from '../lib/products'
+import Card from '../../pack/components/product/card'
+import Range from '../../pack/components/range'
+import Image from 'next/image'
+import { Filter, DefaultFilter, FilterSection } from '../lib/filter'
+import Search from '../lib/search'
+import { BsStar } from 'react-icons/bs'
+import Slider from '../../pack/components/product/slider'
+
+export default function Home() {
+  const [searchText, setSearchText] = useState('')
+  const [searchResults, setSearchResults] = useState<Product[]>(products)
+  const [filter, setFilter] = useState<Filter>(DefaultFilter)
+
+  // Filter Setters
+  const setSectionValue = (
+    value: boolean | number,
+    section: FilterSection,
+    id: string
+  ) => {
+    setFilter((prev) => ({
+      ...prev,
+      [section]: { ...prev[section], [id]: value },
+    }))
+  }
+  const setCategory = (value: boolean, category: string) => {
+    setSectionValue(value, 'categories', category)
+  }
+
+  useEffect(() => {
+    const newResults = Search(searchText, filter)
+    setSearchResults(newResults)
+  }, [searchText, filter])
+
+  return (
+    <main className='min-h-screen flex flex-col'>
+      <div className='flex border-y border-apple-store-outline-faded-max justify-between items-center gap-40 px-7 py-4'>
+        <TextIntro primary>iStore</TextIntro>
+        <div className='grow flex justify-center items-center gap-5'>
+          <DropDownMultiple
+            title={'Categories'}
+            selectedItems={['Macbook', 'iPhone', 'iWatch']}
+            items={['Macbook', 'iMac', 'iPhone', 'Airpod', 'iWatch']}
+          />
+          <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
+        </div>
+        <div className='flex justify-end items-center gap-3'>
+          <TbShoppingBag className='text-apple-store-faded-max text-xl' />
+          <IoMdNotificationsOutline className='text-apple-store-faded-max text-xl' />
+          <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
+          <TextLabel fadedMax>|</TextLabel>
+          <div className='relative w-7 h-7 rounded-full border border-apple-store-outline-faded-max'>
+            <Image
+              src='/imgs/woman-avatar.jpg'
+              fill
+              alt='avatar'
+              className='rounded-full'
+            />
+          </div>
+        </div>
+      </div>
+      <div className='border-b flex justify-between items-center gap-10 border-apple-store-outline-faded-max px-7 py-4'>
+        <div className='flex justify-start items-center gap-5'>
+          <TextTiny fadedMax>Macbook M2 Air</TextTiny>
+          <TextTiny fadedMax>Macbook M2 Pro</TextTiny>
+          <TextTiny fadedMax>Apple Watch Ultra</TextTiny>
+          <TextTiny fadedMax>Airpods Max</TextTiny>
+          <TextTiny fadedMax>iPad Pro</TextTiny>
+        </div>
+        <div className='flex justify-start items-center gap-2'>
+          <span className='flex justify-start items-center gap-1'>
+            <FiMapPin className='text-sm text-apple-store-faded-max' />
+            <TextXSmall fadedMax>Ships to</TextXSmall>
+          </span>
+          <TextXSmall>Umuajonisi River, Port Harcourt</TextXSmall>
+        </div>
+      </div>
+      <div className='bg-gray-100/70 px-7 py-4 min-h-full grow gap-5 flex flex-col w-full'>
+          <div className='flex justify-between items-center gap-10'>
+            <span className='flex justify-start items-center gap-10'>
+              <TextTiny faded>Home</TextTiny>
+              <TextTiny faded>
+                <BsStar className='text-base' />
+              </TextTiny>
+              <TextTiny faded>Macbook</TextTiny>
+              <TextTiny faded>
+                <BsStar className='text-lg' />
+              </TextTiny>
+              <TextTiny>Apple Macbook Pro M2 pro</TextTiny>
+            </span>
+          </div>
+        <div className='bg-gray-100/70 px-7 py-4 min-h-full grow grid grid-cols-12 gap-5 place-items-start'>
+        <div className='col-span-4 w-full '>
+          <Slider srcList={['/imgs/macbook-pro-fv-1.webp', '/imgs/macbook-pro-sv.jpg', '/imgs/mackbook-pro-tv.webp', '/imgs/macbook-pro-sv-3.jpeg', '/imgs/macbook-pro-tv-2.jpeg']} />
+        </div>
+          <div className='col-span-6 flex flex-col justify-between items-stretch gap-10'>
+          </div>
+          <div className='col-span-2 flex flex-wrap justify-between items-stretch gap-5'>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}
