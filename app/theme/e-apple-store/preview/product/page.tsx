@@ -70,11 +70,11 @@ export default function Home() {
           />
           <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
         </div>
-        <div className='flex justify-end items-center gap-3'>
+        <div className='flex justify-end items-center gap-3 text-apple-store-outline-faded-max'>
           <TbShoppingBag className='text-apple-store-faded-max text-xl' />
           <IoMdNotificationsOutline className='text-apple-store-faded-max text-xl' />
           <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
-          <TextLabel fadedMax>|</TextLabel>
+          <TextLabel>|</TextLabel>
           <div className='relative w-7 h-7 rounded-full border border-apple-store-outline-faded-max'>
             <Image
               src='/imgs/woman-avatar.jpg'
@@ -241,17 +241,17 @@ export default function Home() {
                 <Button fillPrimary>Buy Now</Button>
                 <Button outlinePrimary>Add to Cart</Button>
               </div>
-              <div className='flex justify-between items-center gap-2'>
+              <div className='flex justify-between items-center gap-2 text-apple-store-outline-faded-max'>
                 <div className='flex justify-start items-center gap-1'>
                   <BsStar className='text-base text-apple-store-faded-max' />
                   <TextTiny faded>Chat</TextTiny>
                 </div>
-                <TextLabel faded>|</TextLabel>
+                <TextLabel>|</TextLabel>
                 <div className='flex justify-start items-center gap-1'>
                   <BsStar className='text-base text-apple-store-faded-max' />
                   <TextTiny faded>Wishlist</TextTiny>
                 </div>
-                <TextLabel faded>|</TextLabel>
+                <TextLabel>|</TextLabel>
                 <div className='flex justify-start items-center gap-1'>
                   <BsStar className='text-base text-apple-store-faded-max' />
                   <TextTiny faded>Share</TextTiny>

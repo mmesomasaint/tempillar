@@ -46,7 +46,7 @@ export function OutlineButton({
   return (
     <div
       onClick={() => setSelected?.(!selected)}
-      className={`inline-block p-4 rounded-3xl border ${
+      className={`cursor-pointer inline-block p-4 rounded-3xl border ${
         large && 'p-5 rounded-3xl'
       } ${
         selected

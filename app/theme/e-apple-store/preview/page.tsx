@@ -70,11 +70,11 @@ export default function Home() {
           />
           <InputBarIcon searchText={searchText} setSearchText={setSearchText} />
         </div>
-        <div className='flex justify-end items-center gap-3'>
+        <div className='flex justify-end items-center gap-3 text-apple-store-outline-faded-max'>
           <TbShoppingBag className='text-apple-store-faded-max text-xl' />
           <IoMdNotificationsOutline className='text-apple-store-faded-max text-xl' />
           <MdOutlineEmail className='text-apple-store-faded-max text-xl' />
-          <TextLabel fadedMax>|</TextLabel>
+          <TextLabel>|</TextLabel>
           <div className='relative w-7 h-7 rounded-full border border-apple-store-outline-faded-max'>
             <Image
               src='/imgs/woman-avatar.jpg'
