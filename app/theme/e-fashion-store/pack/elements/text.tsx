@@ -1,0 +1,1 @@
+/** Components representing all the text variants */
