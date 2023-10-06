@@ -20,7 +20,12 @@ const config: Config = {
         'apple-store-faded': '#6b7280',
         'apple-store-faded-max': '#9ca3af',
         'apple-store-outline-faded': '#d1d5db',
-        'apple-store-outline-faded-max': '#e5e7eb'
+        'apple-store-outline-faded-max': '#e5e7eb',
+        'fashion-store-pri': '#84cc16',
+        'fashion-store-sec': '#0a0a0a',
+        'fashion-store-sec-faded': '#52525b',
+        'fashion-store-sec-faded-max': '#a1a1aa',
+        'fashion-store-outline': '#d4d4d8'
       },
     },
   },
