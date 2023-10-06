@@ -18,7 +18,6 @@ import { HR } from '../../pack/elements/rule'
 import { products, Product } from '../lib/products'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection, Category } from '../lib/filter'
-import Search from '../lib/search'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import Slider from '../../pack/components/product/slider'
 import { OutlineButton } from '../../pack/components/outline-btns'
@@ -28,7 +27,6 @@ import Tab from '../../pack/components/tab'
 
 export default function Home() {
   const [searchText, setSearchText] = useState('')
-  const [searchResults, setSearchResults] = useState<Product[]>(products)
   const [filter, setFilter] = useState<Filter>(DefaultFilter)
   const categories = useMemo<string[]>(
     () => Object.keys(filter.categories),
@@ -55,11 +53,6 @@ export default function Home() {
     const categories = Object.keys(filter.categories)
     return categories.forEach((category) => setCategory(false, category))
   }
-
-  useEffect(() => {
-    const newResults = Search(searchText, filter)
-    setSearchResults(newResults)
-  }, [searchText, filter])
 
   return (
     <main className='min-h-screen flex flex-col'>
