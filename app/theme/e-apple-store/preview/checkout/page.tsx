@@ -15,7 +15,6 @@ import {
   TextXSmall,
 } from '../../pack/elements/text'
 import { HR } from '../../pack/elements/rule'
-import { products, Product } from '../lib/products'
 import { HCard } from '../../pack/components/product/card'
 import Image from 'next/image'
 import { Filter, DefaultFilter, FilterSection, Category } from '../lib/filter'
