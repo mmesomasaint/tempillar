@@ -1,4 +1,4 @@
-import { TextMid, TextXSmall } from '../elements/text'
+import { TextMid, TextXSmall } from '../../elements/text'
 
 export default function CollectionCard({
   bgSrc,

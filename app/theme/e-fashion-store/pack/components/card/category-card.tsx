@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Button from '../elements/button'
-import { TextLabel } from '../elements/text'
+import Button from '../../elements/button'
+import { TextLabel } from '../../elements/text'
 import { BsStar } from 'react-icons/bs'
 
 export default function CategoryCard({
