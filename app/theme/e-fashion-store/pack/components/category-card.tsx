@@ -6,22 +6,15 @@ import { BsStar } from 'react-icons/bs'
 export default function CategoryCard({
   src,
   title,
-  long,
-  tall,
 }: {
   src: string
   title: string
-  long?: boolean
-  tall?: boolean
 }) {
-  const width = long ? 'w-3/4' : 'w-1/4'
-  const height = tall ? 'h-full' : 'h-60'
-
   return (
     <div
-      className={`relative rounded-2xl shadow-sm text-white ${width} ${height}`}
+      className={`relative rounded-2xl shadow-sm text-white w-full h-full`}
     >
-      <Image fill src={src} alt='category image' />
+      <Image fill src={src} alt='category image' className='rounded-2xl' />
       <div className='w-full bg-transparent z-20 absolute h-full flex justify-start items-end p-3'>
         
       <Button>

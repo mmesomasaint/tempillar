@@ -35,7 +35,19 @@ export default function ComponentDisplay() {
           <TextLabel>See All</TextLabel>
           <BsStar className='text-lg' />
       </Button>
+      <div className='w-1/4 h-60'>
       <CategoryCard src='/imgs/men-shoes.jpg' title="Shoe" />
+      </div>
+      <div className="h-[30rem] w-[45rem] grid grid-cols-3 grid-rows-2 gap-3 items-stretch">
+        <div className="row-span-2">
+      <CategoryCard src='/imgs/caucasian-posed-female.jpg' title="Shoe"/>
+      </div>
+      <div className="col-span-2">
+      <CategoryCard src='/imgs/hori-test.jpg' title="decoration"/>
+      </div>
+      <CategoryCard src='/imgs/men-shoes.jpg' title="Shoe" />
+      <CategoryCard src='/imgs/men-shoes.jpg' title="Shoe" />
+      </div>
     </div>
   )
 }
