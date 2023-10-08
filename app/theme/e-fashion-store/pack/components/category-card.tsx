@@ -15,7 +15,7 @@ export default function CategoryCard({
   tall?: boolean
 }) {
   const width = long ? 'w-3/4' : 'w-1/4'
-  const height = tall ? 'h-full' : 'h-64'
+  const height = tall ? 'h-full' : 'h-60'
 
   return (
     <div
