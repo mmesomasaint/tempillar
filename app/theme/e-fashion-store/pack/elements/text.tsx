@@ -8,7 +8,7 @@ export function TextHeadline({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-7xl text-fashion-store-sec ${
+      className={`leading-none font-medium text-7xl ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -26,7 +26,7 @@ export function TextIntro({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-5xl text-fashion-store-sec ${
+      className={`leading-none font-medium text-5xl ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -44,7 +44,7 @@ export function TextMid({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-3xl text-fashion-store-sec ${
+      className={`leading-none font-medium text-3xl ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -62,7 +62,7 @@ export function TextBase({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-2xl text-fashion-store-sec ${
+      className={`leading-none font-medium text-2xl ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -80,7 +80,7 @@ export function TextSmall({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-xl text-fashion-store-sec ${
+      className={`leading-none font-medium text-xl ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -98,7 +98,7 @@ export function TextXSmall({
 }) {
   return (
     <p
-      className={`leading-none font-medium text-base text-fashion-store-sec ${
+      className={`leading-none font-medium text-base ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >
@@ -116,7 +116,7 @@ export function TextLabel({
 }) {
   return (
     <p
-      className={`leading-[0] font-medium text-base text-white ${
+      className={`leading-[0] font-medium text-base ${
         faded && 'text-fashion-store-sec-faded'
       }`}
     >

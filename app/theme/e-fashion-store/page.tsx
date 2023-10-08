@@ -1,4 +1,6 @@
-import { TextBase, TextHeadline, TextIntro, TextMid, TextSmall, TextXSmall } from "./pack/elements/text";
+import { BsStar } from "react-icons/bs";
+import Button from "./pack/elements/button";
+import { TextBase, TextHeadline, TextIntro, TextLabel, TextMid, TextSmall, TextXSmall } from "./pack/elements/text";
 
 export default function ComponentDisplay() {
   return (
@@ -15,6 +17,22 @@ export default function ComponentDisplay() {
       <TextSmall faded>We are a different kind of eccommerce, selling</TextSmall>
       <TextXSmall>Black Mamba Style Lurr</TextXSmall>
       <TextXSmall faded>Black Mamba Style Lurr</TextXSmall>
+      <Button>
+          <TextLabel>Shop Now</TextLabel>
+          <BsStar className='text-lg' />
+      </Button>
+      <Button primary>
+          <TextLabel>See All</TextLabel>
+          <BsStar className='text-lg' />
+      </Button>
+      <Button outlinePri>
+          <TextLabel>See All</TextLabel>
+          <BsStar className='text-lg' />
+      </Button>
+      <Button outlineSec>
+          <TextLabel>See All</TextLabel>
+          <BsStar className='text-lg' />
+      </Button>
     </div>
   )
 }

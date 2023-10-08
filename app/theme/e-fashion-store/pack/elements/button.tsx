@@ -1,7 +1,17 @@
-export default function Button({children, primary, outlinePri, outlineSec}: {children: React.ReactNode, primary?: boolean, outlinePri?: boolean, outlineSec?: boolean}) {
+'use client'
+
+import {ReactNode} from 'react'
+
+export default function Button({children, primary, outlinePri, outlineSec}: {children: ReactNode | ReactNode[], primary?: boolean, outlinePri?: boolean, outlineSec?: boolean}) {
+  const textColor = outlinePri ? 'text-fashion-store-pri' : outlineSec ? 'text-fashion-store-sec' : 'text-white',
+  borderColor = primary || outlinePri ? 'border-fashion-store-pri' : 'border-fashion-store-sec',
+  bgColor = outlinePri || outlineSec ? 'bg-white' : primary ? 'bg-fashion-store-pri' : 'bg-fashion-store-sec'
+
   return (
-    <button className={`py-2 px-4 rounded-full shadow-sm border border-fashion-store-sec text-white bg-fashion-store-sec ${primary && 'bg-fashion-store-pri border-fashion-store-pri'} ${outlinePri && 'bg-white text-fashion-store-pri border-fashion-store-pri'} ${outlineSec && 'bg-white text-fashion-store-sec border-fashion-store-sec'}`}>
+    <button className={`py-4 px-7 rounded-full shadow-sm border ${borderColor} ${bgColor}`}>
+    <div className={`flex justify-between items-center gap-4 ${textColor}`}>
       {children}
+      </div>
     </button>
   )
 }
