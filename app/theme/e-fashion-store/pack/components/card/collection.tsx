@@ -9,9 +9,10 @@ export default function CollectionCard({
   title: string
   subTitle: string
 }) {
+  // const bg = `bg-[url('${bgSrc}')]` - suspend for now.
   return (
     <div
-      className={`bg-[url('${bgSrc}')] bg-no-repeat bg-contain bg-right bg-white rounded-2xl shadow-sm w-1/2`}
+      className={` bg-no-repeat bg-contain bg-right bg-white rounded-2xl shadow-sm w-1/2`}
     >
       <div className='flex flex-col gap-4'>
         <TextMid faded>{title}</TextMid>
