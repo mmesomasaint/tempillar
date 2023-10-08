@@ -14,18 +14,21 @@ export default function CategoryCard({
   long?: boolean
   tall?: boolean
 }) {
-  const width = long ? 'w-1/4' : 'w-3/4'
-  const height = tall ? 'h-1/4' : 'h-3/4'
+  const width = long ? 'w-3/4' : 'w-1/4'
+  const height = tall ? 'h-full' : 'h-64'
 
   return (
     <div
-      className={`relative flex justify-start items-end p-6 rounded-2xl shadow-sm ${width} ${height}`}
+      className={`relative rounded-2xl shadow-sm text-white ${width} ${height}`}
     >
       <Image fill src={src} alt='category image' />
+      <div className='w-full bg-transparent z-20 absolute h-full flex justify-start items-end p-3'>
+        
       <Button>
         <TextLabel>{title}</TextLabel>
         <BsStar className='text-sm' />
       </Button>
+      </div>
     </div>
   )
 }

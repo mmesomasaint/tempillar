@@ -35,6 +35,7 @@ export default function ComponentDisplay() {
           <TextLabel>See All</TextLabel>
           <BsStar className='text-lg' />
       </Button>
+      <CategoryCard src='/imgs/men-shoes.jpg' title="Shoe" />
     </div>
   )
 }
