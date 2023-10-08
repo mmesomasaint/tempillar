@@ -1,6 +1,8 @@
 import { BsStar } from "react-icons/bs";
 import Button from "./pack/elements/button";
 import { TextBase, TextHeadline, TextIntro, TextLabel, TextMid, TextSmall, TextXSmall } from "./pack/elements/text";
+import { TbCategoryFilled } from "react-icons/tb";
+import CategoryCard from "./pack/components/category-card";
 
 export default function ComponentDisplay() {
   return (
