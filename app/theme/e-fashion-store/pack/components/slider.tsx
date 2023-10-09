@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, ReactNode } from 'react'
+import { useState, useMemo } from 'react'
 import ProductCard, { ProductCardProps } from './card/product'
 import { BsStar } from 'react-icons/bs'
 
