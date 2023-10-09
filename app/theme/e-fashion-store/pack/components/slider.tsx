@@ -12,12 +12,12 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
 
   const getNextActive = (value: string) => {
     if (activeId !== -1 && activeId < products.length - 1)
-      products[activeId + 1].title
+      return products[activeId + 1].title
     throw new Error('TransitionError: active title not found.')
   }
 
   const getPrevActive = (value: string) => {
-    if (activeId !== -1 && activeId > 1) products[activeId - 1].title
+    if (activeId !== -1 && activeId > 1) return products[activeId - 1].title
     throw new Error('TransitionError: active title not found.')
   }
 
