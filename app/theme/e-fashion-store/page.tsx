@@ -66,6 +66,12 @@ export default function ComponentDisplay() {
         title='A New Pair of Shoes'
         subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
       />
+      <CollectionCard
+        picLeft
+        bgSrc='/imgs/face3.png'
+        title='A New Pair of Shoes'
+        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+      />
       <ProductCard
         src='/imgs/orange-dress-female.jpg'
         title='Dress Orange Santa Cruzz'

@@ -5,7 +5,7 @@ export default function CollectionCard({
   bgSrc,
   title,
   subTitle,
-  picLeft
+  picLeft,
 }: {
   bgSrc: string
   title: string
@@ -13,8 +13,12 @@ export default function CollectionCard({
   picLeft?: boolean
 }) {
   return (
-    <div className='flex justify-between items-stretch w-1/2 h-fit rounded-2xl shadow-sm'>
-      <div className='flex flex-col justify-center gap-6 pl-3'>
+    <div className='bg-white flex justify-between items-stretch w-1/2 h-fit rounded-2xl shadow-sm'>
+      <div
+        className={`bg-white flex flex-col justify-center gap-6 ${
+          picLeft ? 'pr-3' : 'pl-3'
+        }`}
+      >
         <TextMid>{title}</TextMid>
         <TextXSmall copy faded>
           {subTitle}
