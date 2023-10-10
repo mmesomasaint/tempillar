@@ -16,7 +16,7 @@ export default function CollectionCard({
     <div className='bg-white flex justify-between items-stretch w-1/2 h-fit rounded-2xl shadow-sm'>
       <div
         className={`bg-white flex flex-col justify-center gap-6 ${
-          picLeft ? 'pr-3' : 'pl-3'
+          picLeft ? 'pr-6' : 'pl-6'
         }`}
       >
         <TextMid>{title}</TextMid>
