@@ -13,7 +13,7 @@ export default function ProductCard({
   src,
   title,
   price,
-  className
+  className,
 }: ProductCardProps) {
   return (
     <div className={`flex flex-col gap-3 w-full ${className}`}>
