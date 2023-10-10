@@ -30,6 +30,7 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
 
         return (
           <ProductCard
+            key={product.title}
             className={`absolute top-0 duration-700 ${
               isActive ? activeStyle : normStyle
             }`}
