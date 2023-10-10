@@ -13,21 +13,14 @@ export default function Button({
   outlinePri?: boolean
   outlineSec?: boolean
 }) {
-  const textColor = outlinePri
-      ? 'text-fashion-store-pri'
-      : outlineSec
-      ? 'text-fashion-store-sec'
-      : 'text-white',
+  const outTextColor = outlineSec ? 'text-fashion-store-sec' : 'text-white',
+    textColor = outlinePri ? 'text-fashion-store-pri' : outTextColor,
     borderColor =
       primary || outlinePri
         ? 'border-fashion-store-pri'
         : 'border-fashion-store-sec',
-    bgColor =
-      outlinePri || outlineSec
-        ? 'bg-white'
-        : primary
-        ? 'bg-fashion-store-pri'
-        : 'bg-fashion-store-sec'
+    priBgColor = primary ? 'bg-fashion-store-pri' : 'bg-fashion-store-sec',
+    bgColor = outlinePri || outlineSec ? 'bg-white' : priBgColor
 
   return (
     <button
