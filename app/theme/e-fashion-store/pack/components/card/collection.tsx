@@ -5,10 +5,12 @@ export default function CollectionCard({
   bgSrc,
   title,
   subTitle,
+  picLeft
 }: {
   bgSrc: string
   title: string
   subTitle: string
+  picLeft?: boolean
 }) {
   return (
     <div className='flex justify-between items-stretch w-1/2 h-fit rounded-2xl shadow-sm'>
@@ -23,7 +25,7 @@ export default function CollectionCard({
         width={300}
         height={300}
         alt='collection image'
-        className='rounded-r-2xl'
+        className={`${picLeft ? 'rounded-l-2xl order-first' : 'rounded-r-2xl'}`}
       />
     </div>
   )
