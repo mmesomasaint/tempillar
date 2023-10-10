@@ -9,7 +9,6 @@ import {
   TextSmall,
   TextXSmall,
 } from './pack/elements/text'
-import { TbCategoryFilled } from 'react-icons/tb'
 import CategoryCard from './pack/components/card/category'
 import CollectionCard from './pack/components/card/collection'
 import ProductCard from './pack/components/card/product'
