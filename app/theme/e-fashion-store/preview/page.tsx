@@ -180,32 +180,32 @@ export default function PreviewHome() {
           </TextSmall>
         </div>
         <div className='grid grid-cols-2 gap-10 place-items-stretch'>
-      <CollectionCard
-        bgSrc='/imgs/face2.png'
-        title='A New Pair of Shoes'
-        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
-        full
-      />
-      <CollectionCard
-        picLeft
-        bgSrc='/imgs/face3.png'
-        title='A New Pair of Shoes'
-        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
-        full
-      />
-      <CollectionCard
-        bgSrc='/imgs/face3.png'
-        title='A New Pair of Shoes'
-        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
-        full
-      />
-      <CollectionCard
-        picLeft
-        bgSrc='/imgs/face2.png'
-        title='A New Pair of Shoes'
-        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
-        full
-      />
+          <CollectionCard
+            bgSrc='/imgs/face2.png'
+            title='A New Pair of Shoes'
+            subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+            full
+          />
+          <CollectionCard
+            picLeft
+            bgSrc='/imgs/face3.png'
+            title='A New Pair of Shoes'
+            subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+            full
+          />
+          <CollectionCard
+            bgSrc='/imgs/face3.png'
+            title='A New Pair of Shoes'
+            subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+            full
+          />
+          <CollectionCard
+            picLeft
+            bgSrc='/imgs/face2.png'
+            title='A New Pair of Shoes'
+            subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+            full
+          />
         </div>
       </div>
     </main>
