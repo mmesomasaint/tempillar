@@ -16,10 +16,10 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
   }
 
   return (
-    <div className='relative h-[27rem] w-[75%] left-[100%] -translate-x-full p-1'>
+    <div className='relative h-[27rem] w-[78%] left-[100%] -translate-x-full p-1'>
       {products.map((product, idx) => {
         const isActive = idx <= active
-        const activeStyle = `z-${idx}0 left-0 w-[52%]`
+        const activeStyle = `z-${idx}0 left-0 w-[50%]`
         const normStyle = `z-${
           products.length - idx
         }0 left-[100%] -translate-x-full w-[44%]`
