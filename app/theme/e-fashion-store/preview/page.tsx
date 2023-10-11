@@ -15,6 +15,7 @@ import { BsStar } from 'react-icons/bs'
 import Slider from '../pack/components/slider'
 import { ProductCardProps } from '../pack/components/card/product'
 import CategoryCard from '../pack/components/card/category'
+import InputBar from '../pack/components/inputbar'
 
 const miniProducts: ProductCardProps[] = [
   {
@@ -98,6 +99,15 @@ export default function PreviewHome() {
           </div>
           <CategoryCard src='/imgs/men-shoes.jpg' title='Shoe' />
           <CategoryCard src='/imgs/men-shoes.jpg' title='Shoe' />
+        </div>
+      </div>
+      <div className='px-7 py-16'>
+        <div className='w-1/2 mx-auto flex justify-center items-center gap-10'>
+          <InputBar full/>
+          <Button primary>
+            <BsStar className='text-base' />
+            <TextLabel>Filter</TextLabel>
+          </Button>
         </div>
       </div>
     </main>
