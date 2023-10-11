@@ -16,7 +16,7 @@ export default function CategoryCard({
       <div className='w-full bg-transparent z-20 absolute h-full flex justify-start items-end p-3'>
         <Button>
           <TextLabel>{title}</TextLabel>
-          <BsStar className='text-sm' />
+          <BsStar className='text-base' />
         </Button>
       </div>
     </div>

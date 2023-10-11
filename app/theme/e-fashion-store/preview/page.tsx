@@ -4,6 +4,7 @@ import { TbShoppingBag } from 'react-icons/tb'
 import {
   TextBase,
   TextHeadline,
+  TextIntro,
   TextLabel,
   TextMid,
   TextSmall,
@@ -13,6 +14,7 @@ import Button from '../pack/elements/button'
 import { BsStar } from 'react-icons/bs'
 import Slider from '../pack/components/slider'
 import { ProductCardProps } from '../pack/components/card/product'
+import CategoryCard from '../pack/components/card/category'
 
 const miniProducts: ProductCardProps[] = [
   {
@@ -58,14 +60,14 @@ export default function PreviewHome() {
           </div>
         </div>
       </div>
-      <div className='grid grid-cols-2 gap-10 px-7 py-10'>
+      <div className='grid grid-cols-2 gap-10 px-7 py-16'>
         <div className='flex flex-col gap-10 mr-0'>
           <TextHeadline copy>
             Elevate your style with the trends streetwear
           </TextHeadline>
           <Button primary>
             <TextLabel>Shop Now</TextLabel>
-            <BsStar className='text-lg' />
+            <BsStar className='text-base' />
           </Button>
           <div className='flex justify-start items-center gap-4'>
             <TextBase fadedMax>BrandsLogo</TextBase>
@@ -75,6 +77,25 @@ export default function PreviewHome() {
           </div>
         </div>
         <Slider products={miniProducts} />
+      </div>
+      <div className='px-7 py-16 bg-fashion-store-sec-faded-max/20 w-full'>
+        <div className='flex justify-between items-center gap-10'>
+          <TextIntro>Our Category</TextIntro>
+          <Button primary>
+            <TextLabel>See All</TextLabel>
+            <BsStar className='text-base' />
+          </Button>
+        </div>
+        <div className='h-[40rem] grid grid-cols-3 grid-rows-2 gap-6 items-stretch py-10'>
+          <div className='row-span-2'>
+            <CategoryCard src='/imgs/caucasian-posed-female.jpg' title='Dress' />
+          </div>
+          <div className='col-span-2'>
+            <CategoryCard src='/imgs/hori-test.jpg' title='decoration' />
+          </div>
+          <CategoryCard src='/imgs/men-shoes.jpg' title='Shoe' />
+          <CategoryCard src='/imgs/men-shoes.jpg' title='Shoe' />
+        </div>
       </div>
     </main>
   )
