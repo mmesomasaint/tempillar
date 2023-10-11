@@ -1,7 +1,13 @@
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { MdOutlineEmail } from 'react-icons/md'
 import { TbShoppingBag } from 'react-icons/tb'
-import { TextBase, TextHeadline, TextLabel, TextMid, TextSmall } from '../pack/elements/text'
+import {
+  TextBase,
+  TextHeadline,
+  TextLabel,
+  TextMid,
+  TextSmall,
+} from '../pack/elements/text'
 import Image from 'next/image'
 import Button from '../pack/elements/button'
 import { BsStar } from 'react-icons/bs'
@@ -34,18 +40,19 @@ export default function PreviewHome() {
       </div>
       <div className='grid grid-cols-2 gap-10'>
         <div className='flex flex-col gap-6 px-7 py-10'>
-          <TextHeadline copy>Elevate your style with the trends streetwear</TextHeadline>
-      <Button primary>
-        <TextLabel>Shop Now</TextLabel>
-        <BsStar className='text-lg' />
-      </Button>
-      <div className='flex justify-start items-center gap-4'>
-        
-      <TextBase fadedMax>BrandsLogo</TextBase>
-      <TextBase fadedMax>BrandsLogo</TextBase>
-      <TextBase fadedMax>BrandsLogo</TextBase>
-      <TextBase fadedMax>BrandsLogo</TextBase>
-      </div>
+          <TextHeadline copy>
+            Elevate your style with the trends streetwear
+          </TextHeadline>
+          <Button primary>
+            <TextLabel>Shop Now</TextLabel>
+            <BsStar className='text-lg' />
+          </Button>
+          <div className='flex justify-start items-center gap-4'>
+            <TextBase fadedMax>BrandsLogo</TextBase>
+            <TextBase fadedMax>BrandsLogo</TextBase>
+            <TextBase fadedMax>BrandsLogo</TextBase>
+            <TextBase fadedMax>BrandsLogo</TextBase>
+          </div>
         </div>
       </div>
     </main>
