@@ -103,7 +103,7 @@ export default function PreviewHome() {
       </div>
       <div className='px-7 py-16'>
         <div className='w-1/2 mx-auto flex justify-center items-center gap-10'>
-          <InputBar full/>
+          <InputBar full />
           <Button primary>
             <BsStar className='text-base' />
             <TextLabel>Filter</TextLabel>
