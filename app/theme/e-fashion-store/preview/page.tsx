@@ -39,7 +39,7 @@ export default function PreviewHome() {
         </div>
       </div>
       <div className='grid grid-cols-2 gap-10'>
-        <div className='flex flex-col gap-6 px-7 py-10'>
+        <div className='flex flex-col gap-10 px-7 py-10'>
           <TextHeadline copy>
             Elevate your style with the trends streetwear
           </TextHeadline>
