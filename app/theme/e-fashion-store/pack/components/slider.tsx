@@ -16,7 +16,7 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
   }
 
   return (
-    <div className='relative h-[27rem] w-[36%] -right-[25%] p-1'>
+    <div className='relative h-[27rem] w-[75%] left-[100%] -translate-x-full p-1'>
       {products.map((product, idx) => {
         const isActive = idx <= active
         const activeStyle = `z-${idx}0 left-0 w-[52%]`
@@ -40,14 +40,14 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
       })}
       <div className='absolute z-50 bottom-3 left-[100%] -translate-x-full w-[44%]  flex justify-start items-center gap-6'>
         <button
-          className='w-10 h-10 rounded-full shadow-sm bg-black border border-black disabled:bg-white text-white disabled:text-black flex justify-center items-center'
+          className='w-10 h-10 rounded-full shadow-sm bg-black border border-black duration-700 disabled:bg-white text-white disabled:text-black flex justify-center items-center'
           onClick={() => getPrevActive()}
           disabled={active <= 0}
         >
           <BsStar className='text-base' />
         </button>
         <button
-          className='w-10 h-10 rounded-full shadow-sm bg-black border border-black disabled:bg-white text-white disabled:text-black flex justify-center items-center'
+          className='w-10 h-10 rounded-full shadow-sm bg-black border border-black duration-700 disabled:bg-white text-white disabled:text-black flex justify-center items-center'
           onClick={() => getNextActive()}
           disabled={active >= products.length - 1}
         >
