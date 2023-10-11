@@ -170,6 +170,14 @@ export default function PreviewHome() {
           ))}
         </div>
       </div>
+      <div className='px-7 py-16 bg-fashion-store-sec-faded-max/20 w-full'>
+        <div className='flex flex-col gap-4 items-center w-[60%] mx-auto text-center'>
+          <TextIntro>Our Category</TextIntro>
+      <TextSmall faded copy>
+        We are a different kind of eccommerce, selling high-quality products and providing a unique and enjoyable shopping experience
+      </TextSmall>
+        </div>
+      </div>
     </main>
   )
 }
