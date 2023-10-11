@@ -243,11 +243,12 @@ export default function PreviewHome() {
         <div className='flex flex-col gap-5'>
           <TextSmall>Sign Up For Our News Collection</TextSmall>
           <div className='relative w-full h-fit'>
+            <MdOutlineEmail className='absolute left-3 top-[50%] -translate-y-[50%] text-base' />
             <BsArrowRight className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
             <input
               type='email'
               placeholder='Email'
-              className='w-full py-3 pl-5 pr-16 bg-fashion-store-sec border-b-2 border-b-white/80 focus:outline-none focus:border-b-white focus:text-white'
+              className='w-full py-3 pl-10 pr-16 bg-fashion-store-sec border-b-2 border-b-white/80 focus:outline-none focus:border-b-white focus:text-white'
             />
           </div>
         </div>
