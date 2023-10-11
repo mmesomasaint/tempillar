@@ -11,7 +11,26 @@ import {
 } from './pack/elements/text'
 import CategoryCard from './pack/components/card/category'
 import CollectionCard from './pack/components/card/collection'
-import ProductCard from './pack/components/card/product'
+import ProductCard, { ProductCardProps } from './pack/components/card/product'
+import Slider from './pack/components/slider'
+
+const miniProducts: ProductCardProps[] = [
+  {
+    title: 'Suit Black Panther Cusszz',
+    src: '/imgs/show-back-female.jpg',
+    price: 29.80
+  },
+  {
+    title: 'Style Jamet Madorra Kuproy',
+    src: '/imgs/caucasian-posed-female.jpg',
+    price: 21.00
+  },
+  {
+    title: 'Plain Cream Shirt',
+    src: '/imgs/walking-female.jpg',
+    price: 26.43
+  }
+]
 
 export default function ComponentDisplay() {
   return (
@@ -77,6 +96,7 @@ export default function ComponentDisplay() {
         title='Dress Orange Santa Cruzz'
         price={30.99}
       />
+      <Slider products={miniProducts} />
     </div>
   )
 }

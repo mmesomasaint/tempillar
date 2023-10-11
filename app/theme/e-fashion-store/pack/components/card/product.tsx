@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { TextXSmall } from '../../elements/text'
+import { TextSmall, TextXSmall } from '../../elements/text'
 import { BsStar } from 'react-icons/bs'
 
 export type ProductCardProps = {
@@ -7,6 +7,8 @@ export type ProductCardProps = {
   title: string
   price: number
   className?: string
+  full?: boolean
+  bigger?: boolean
 }
 
 export default function ProductCard({
@@ -14,16 +16,33 @@ export default function ProductCard({
   title,
   price,
   className,
+  full,
+  bigger,
 }: ProductCardProps) {
   return (
-    <div className={`flex flex-col gap-3 w-1/6 h-[23rem] ${className}`}>
+    <div
+      className={`flex flex-col gap-3 ${
+        bigger ? 'h-[26rem]' : 'h-[22rem]'
+      } bg-white rounded-2xl ${full ? 'w-full' : 'w-1/6'} ${className}`}
+    >
       <div className='relative grow w-full'>
         <Image src={src} fill alt='product image' className='rounded-2xl' />
-        <BsStar className='absolute right-3 top-3 z-20 text-base text-fashion-store-sec' />
+        <div className='absolute z-10 right-3 top-3 w-6 h-6 flex justify-center items-center bg-white rounded-full'>
+          <BsStar className='text-base text-fashion-store-sec' />
+        </div>
       </div>
-      <div className='flex justify-between items-center gap-10'>
-        <TextXSmall copy>{title}</TextXSmall>
-        <TextXSmall>{`$${price.toString()}`}</TextXSmall>
+      <div className='flex justify-between items-center gap-10 bg-white'>
+        {bigger ? (
+          <>
+            <TextSmall copy>{title}</TextSmall>
+            <TextSmall>{`$${price.toString()}`}</TextSmall>
+          </>
+        ) : (
+          <>
+            <TextXSmall copy>{title}</TextXSmall>
+            <TextXSmall>{`$${price.toString()}`}</TextXSmall>
+          </>
+        )}
       </div>
     </div>
   )
