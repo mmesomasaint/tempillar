@@ -143,7 +143,7 @@ export default function PreviewHome() {
         </div>
       </div>
       <div className='px-7 py-16 flex flex-col gap-7'>
-        <div className='w-1/2 mx-auto flex justify-center items-center gap-10'>
+        <div className='w-1/2 mx-auto flex justify-center items-center gap-6'>
           <InputBar full />
           <Button primary>
             <BsStar className='text-base' />
