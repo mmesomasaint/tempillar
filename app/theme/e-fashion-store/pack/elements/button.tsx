@@ -24,7 +24,7 @@ export default function Button({
 
   return (
     <button
-      className={`py-4 px-7 rounded-full shadow-sm border ${borderColor} ${bgColor}`}
+      className={`w-fit py-4 px-7 rounded-full shadow-sm border ${borderColor} ${bgColor}`}
     >
       <div className={`flex justify-between items-center gap-4 ${textColor}`}>
         {children}

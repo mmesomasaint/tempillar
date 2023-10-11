@@ -13,7 +13,7 @@ export function TextHeadline({
   return (
     <p
       className={`${
-        copy ? 'leading-snug' : 'leading-none'
+        copy ? ' leading-tight' : 'leading-none'
       } font-medium text-7xl ${faded && 'text-fashion-store-sec-faded'} ${
         fadedMax && 'text-fashion-store-sec-faded-max'
       }`}
@@ -37,7 +37,7 @@ export function TextIntro({
   return (
     <p
       className={`${
-        copy ? 'leading-snug' : 'leading-none'
+        copy ? 'leading-tight' : 'leading-none'
       } font-medium text-5xl ${faded && 'text-fashion-store-sec-faded'} ${
         fadedMax && 'text-fashion-store-sec-faded-max'
       }`}
