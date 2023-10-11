@@ -55,22 +55,22 @@ const displayProducts: ProductCardProps[] = [
   {
     title: 'Minimalist Sweater',
     src: '/imgs/orange-dress-female.jpg',
-    price: 24.90,
+    price: 24.9,
   },
   {
     title: 'Basic Sweater Minimalist ',
     src: '/imgs/coperate-female.jpg',
-    price: 30.00,
+    price: 30.0,
   },
   {
     title: 'Minimalist Top Woman Siuu',
     src: '/imgs/nerd-female.jpg',
-    price: 24.90,
+    price: 24.9,
   },
   {
     title: 'Minimalist Boss Coat',
     src: '/imgs/boss-female.jpg',
-    price: 24.90,
+    price: 24.9,
   },
 ]
 
@@ -148,14 +148,26 @@ export default function PreviewHome() {
             <TextLabel>Filter</TextLabel>
           </Button>
         </div>
-        <OutlineButtons options={{Jacket: false, 'T-Shirt': false, Shirt: false, Shoe: false, Cap: false, Glasses: false, Watches: false}} />
+        <OutlineButtons
+          options={{
+            Jacket: false,
+            'T-Shirt': false,
+            Shirt: false,
+            Shoe: false,
+            Cap: false,
+            Glasses: false,
+            Watches: false,
+          }}
+        />
         <div className='grid grid-cols-4 place-items-stretch gap-16'>
-          {displayProducts.map(product => <ProductCard 
-            title={product.title}
-            src={product.src}
-            price={product.price}
-            full
-          />)}
+          {displayProducts.map((product) => (
+            <ProductCard
+              title={product.title}
+              src={product.src}
+              price={product.price}
+              full
+            />
+          ))}
         </div>
       </div>
     </main>
