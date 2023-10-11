@@ -6,16 +6,18 @@ export default function CollectionCard({
   title,
   subTitle,
   picLeft,
+  full
 }: {
   bgSrc: string
   title: string
   subTitle: string
   picLeft?: boolean
+  full?: boolean
 }) {
   return (
-    <div className='bg-white flex justify-between items-stretch w-1/2 h-fit rounded-2xl shadow-sm'>
+    <div className={`bg-white flex justify-between items-stretch h-fit rounded-2xl shadow-sm ${full ? 'w-full' : 'w-1/2'}`}>
       <div
-        className={`bg-white flex flex-col justify-center gap-6 ${
+        className={`bg-white flex flex-col justify-center rounded-2xl gap-6 ${
           picLeft ? 'pr-6' : 'pl-6'
         }`}
       >

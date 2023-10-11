@@ -17,6 +17,7 @@ import ProductCard, { ProductCardProps } from '../pack/components/card/product'
 import CategoryCard from '../pack/components/card/category'
 import InputBar from '../pack/components/inputbar'
 import OutlineButtons from '../pack/components/outlinebtns'
+import CollectionCard from '../pack/components/card/collection'
 
 const miniProducts: ProductCardProps[] = [
   {
@@ -170,13 +171,41 @@ export default function PreviewHome() {
           ))}
         </div>
       </div>
-      <div className='px-7 py-16 bg-fashion-store-sec-faded-max/20 w-full'>
+      <div className='flex flex-col gap-7 px-7 py-16 bg-fashion-store-sec-faded-max/20 w-full'>
         <div className='flex flex-col gap-4 items-center w-[60%] mx-auto text-center'>
           <TextIntro>Our Category</TextIntro>
           <TextSmall faded copy>
             We are a different kind of eccommerce, selling high-quality products
             and providing a unique and enjoyable shopping experience
           </TextSmall>
+        </div>
+        <div className='grid grid-cols-2 gap-10 place-items-stretch'>
+      <CollectionCard
+        bgSrc='/imgs/face2.png'
+        title='A New Pair of Shoes'
+        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+        full
+      />
+      <CollectionCard
+        picLeft
+        bgSrc='/imgs/face3.png'
+        title='A New Pair of Shoes'
+        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+        full
+      />
+      <CollectionCard
+        bgSrc='/imgs/face3.png'
+        title='A New Pair of Shoes'
+        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+        full
+      />
+      <CollectionCard
+        picLeft
+        bgSrc='/imgs/face2.png'
+        title='A New Pair of Shoes'
+        subTitle='Streetwear enthusiasts can now enjoy guranteed quality with the release of the latest news in the market'
+        full
+      />
         </div>
       </div>
     </main>
