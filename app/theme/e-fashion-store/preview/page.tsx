@@ -212,7 +212,9 @@ export default function PreviewHome() {
       <div className='bg-fashion-store-sec px-7 py-16 grid grid-cols-3 gap-12 text-white/80'>
         <div className='flex flex-col gap-4'>
           <TextMid>Kameel</TextMid>
-          <TextXSmall copy>Enjoy Same Quality With Next Level Sweatwear Collection</TextXSmall>
+          <TextXSmall copy>
+            Enjoy Same Quality With Next Level Sweatwear Collection
+          </TextXSmall>
         </div>
         <div className='grid grid-cols-3 gap-3'>
           <div className='flex flex-col gap-4'>
@@ -241,7 +243,11 @@ export default function PreviewHome() {
           <TextSmall>SignUp To Our News Collection</TextSmall>
           <div className='relative w-full h-fit'>
             <BsStar className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
-          <input type='email' placeholder='Email' className='w-full py-3 pl-5 pr-16 bg-fashion-store-sec border-b-2 border-b-white/80 focus:outline-none focus:border-b-white focus:text-white' />
+            <input
+              type='email'
+              placeholder='Email'
+              className='w-full py-3 pl-5 pr-16 bg-fashion-store-sec border-b-2 border-b-white/80 focus:outline-none focus:border-b-white focus:text-white'
+            />
           </div>
         </div>
       </div>
