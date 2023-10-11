@@ -240,7 +240,7 @@ export default function PreviewHome() {
           </div>
         </div>
         <div className='flex flex-col gap-5'>
-          <TextSmall>SignUp To Our News Collection</TextSmall>
+          <TextSmall>Sign Up For Our News Collection</TextSmall>
           <div className='relative w-full h-fit'>
             <BsStar className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
             <input
