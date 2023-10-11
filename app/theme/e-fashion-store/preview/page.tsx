@@ -12,7 +12,8 @@ import {
 } from '../pack/elements/text'
 import Image from 'next/image'
 import Button from '../pack/elements/button'
-import { BsStar } from 'react-icons/bs'
+import { BsArrowRight } from 'react-icons/bs'
+import { HiOutlineFilter } from 'react-icons/hi'
 import Slider from '../pack/components/slider'
 import ProductCard, { ProductCardProps } from '../pack/components/card/product'
 import CategoryCard from '../pack/components/card/category'
@@ -109,7 +110,7 @@ export default function PreviewHome() {
           </TextHeadline>
           <Button primary>
             <TextLabel>Shop Now</TextLabel>
-            <BsStar className='text-base' />
+            <BsArrowRight className='text-base' />
           </Button>
           <div className='flex justify-start items-center gap-4'>
             <TextBase fadedMax>BrandsLogo</TextBase>
@@ -125,7 +126,7 @@ export default function PreviewHome() {
           <TextIntro>Our Category</TextIntro>
           <Button primary>
             <TextLabel>See All</TextLabel>
-            <BsStar className='text-base' />
+            <BsArrowRight className='text-base' />
           </Button>
         </div>
         <div className='h-[40rem] grid grid-cols-3 grid-rows-2 gap-6 items-stretch py-10'>
@@ -146,7 +147,7 @@ export default function PreviewHome() {
         <div className='w-1/2 mx-auto flex justify-center items-center gap-6'>
           <InputBar full />
           <Button primary>
-            <BsStar className='text-base' />
+            <HiOutlineFilter className='text-base' />
             <TextLabel>Filter</TextLabel>
           </Button>
         </div>
@@ -242,7 +243,7 @@ export default function PreviewHome() {
         <div className='flex flex-col gap-5'>
           <TextSmall>Sign Up For Our News Collection</TextSmall>
           <div className='relative w-full h-fit'>
-            <BsStar className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
+            <BsArrowRight className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
             <input
               type='email'
               placeholder='Email'

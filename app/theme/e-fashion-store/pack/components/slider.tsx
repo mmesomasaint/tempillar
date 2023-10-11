@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import ProductCard, { ProductCardProps } from './card/product'
-import { BsStar } from 'react-icons/bs'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 
 export default function Slider({ products }: { products: ProductCardProps[] }) {
   const [active, setActive] = useState<number>(0)
@@ -43,14 +43,14 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
           onClick={() => getPrevActive()}
           disabled={active <= 0}
         >
-          <BsStar className='text-base' />
+          <BsArrowLeft className='text-base' />
         </button>
         <button
           className='w-10 h-10 rounded-full shadow-sm bg-black border border-black duration-700 disabled:bg-white text-white disabled:text-black flex justify-center items-center'
           onClick={() => getNextActive()}
           disabled={active >= products.length - 1}
         >
-          <BsStar className='text-base' />
+          <BsArrowRight className='text-base' />
         </button>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import Image from 'next/image'
-import { BsStar } from 'react-icons/bs'
+import { MdOutlineFavoriteBorder, MdFavorite } from 'react-icons/md'
 
 export type ProductCardProps = {
   src: string
   title: string
   price: number
+  isFave?: boolean
   className?: string
   bigger?: boolean
 }
@@ -13,6 +14,7 @@ export default function ProductCard({
   src,
   title,
   price,
+  isFave,
   className,
   bigger,
 }: ProductCardProps) {
@@ -25,7 +27,7 @@ export default function ProductCard({
       <div className='relative grow w-full'>
         <Image src={src} fill alt='product image' className='rounded-2xl' />
         <div className='absolute z-10 right-3 top-3 w-6 h-6 flex justify-center items-center bg-white rounded-full'>
-          <BsStar className='text-base text-fashion-store-sec' />
+          {isFave ? <MdFavorite className='text-base text-fashion-store-sec' /> : <MdOutlineFavoriteBorder className='text-base text-fashion-store-sec' />}
         </div>
       </div>
       <div className='flex justify-between items-center gap-10 bg-white'>

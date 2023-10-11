@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Button from '../../elements/button'
 import { TextLabel } from '../../elements/text'
-import { BsStar } from 'react-icons/bs'
+import { BsArrowRight } from 'react-icons/bs'
 
 export default function CategoryCard({
   src,
@@ -16,7 +16,7 @@ export default function CategoryCard({
       <div className='w-full bg-transparent z-20 absolute h-full flex justify-start items-end p-3'>
         <Button>
           <TextLabel>{title}</TextLabel>
-          <BsStar className='text-base' />
+          <BsArrowRight className='text-base' />
         </Button>
       </div>
     </div>

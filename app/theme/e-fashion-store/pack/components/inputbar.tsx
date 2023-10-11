@@ -1,6 +1,6 @@
 'use client'
 
-import { BsStar } from 'react-icons/bs'
+import { RiSearchLine } from 'react-icons/ri'
 
 export default function InputBar({
   text,
@@ -15,7 +15,7 @@ export default function InputBar({
 }) {
   return (
     <div className={`relative h-fit ${full ? 'w-full' : 'w-fit'}`}>
-      <BsStar className='absolute text-fashion-store-outline top-[50%] -translate-y-[50%] left-6 text-base' />
+      <RiSearchLine className='absolute text-fashion-store-outline top-[50%] -translate-y-[50%] left-6 text-base' />
       <input
         placeholder={placeholder ?? 'Search'}
         value={text}
