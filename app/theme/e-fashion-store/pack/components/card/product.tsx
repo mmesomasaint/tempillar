@@ -32,17 +32,12 @@ export default function ProductCard({
         </div>
       </div>
       <div className='flex justify-between items-center gap-10 bg-white'>
-        {bigger ? (
-          <>
-            <TextSmall copy>{title}</TextSmall>
-            <TextSmall>{`$${price.toString()}`}</TextSmall>
-          </>
-        ) : (
-          <>
-            <TextXSmall copy>{title}</TextXSmall>
-            <TextXSmall>{`$${price.toString()}`}</TextXSmall>
-          </>
-        )}
+        <p className={`${bigger ? 'text-xl' : 'text-base'} font-medium`}>
+          {title}
+        </p>
+        <p className={`${bigger ? 'text-xl' : 'text-base'} font-medium`}>
+          {price}
+        </p>
       </div>
     </div>
   )
