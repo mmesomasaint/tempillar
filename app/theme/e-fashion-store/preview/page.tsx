@@ -88,7 +88,10 @@ export default function PreviewHome() {
         </div>
         <div className='h-[40rem] grid grid-cols-3 grid-rows-2 gap-6 items-stretch py-10'>
           <div className='row-span-2'>
-            <CategoryCard src='/imgs/caucasian-posed-female.jpg' title='Dress' />
+            <CategoryCard
+              src='/imgs/caucasian-posed-female.jpg'
+              title='Dress'
+            />
           </div>
           <div className='col-span-2'>
             <CategoryCard src='/imgs/hori-test.jpg' title='decoration' />
