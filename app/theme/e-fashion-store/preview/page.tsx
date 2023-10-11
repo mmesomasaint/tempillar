@@ -164,6 +164,7 @@ export default function PreviewHome() {
         <div className='grid grid-cols-4 place-items-stretch gap-16'>
           {displayProducts.map((product) => (
             <ProductCard
+              key={product.title}
               title={product.title}
               src={product.src}
               price={product.price}
