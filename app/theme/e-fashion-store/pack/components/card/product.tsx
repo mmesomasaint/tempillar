@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { TextSmall, TextXSmall } from '../../elements/text'
 import { BsStar } from 'react-icons/bs'
 
 export type ProductCardProps = {
