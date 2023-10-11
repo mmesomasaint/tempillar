@@ -13,9 +13,10 @@ import Image from 'next/image'
 import Button from '../pack/elements/button'
 import { BsStar } from 'react-icons/bs'
 import Slider from '../pack/components/slider'
-import { ProductCardProps } from '../pack/components/card/product'
+import ProductCard, { ProductCardProps } from '../pack/components/card/product'
 import CategoryCard from '../pack/components/card/category'
 import InputBar from '../pack/components/inputbar'
+import OutlineButtons from '../pack/components/outlinebtns'
 
 const miniProducts: ProductCardProps[] = [
   {
@@ -32,6 +33,44 @@ const miniProducts: ProductCardProps[] = [
     title: 'Plain Cream Shirt',
     src: '/imgs/walking-female.jpg',
     price: 26.43,
+  },
+]
+
+const displayProducts: ProductCardProps[] = [
+  {
+    title: 'Suit Black Panther Cusszz',
+    src: '/imgs/show-back-female.jpg',
+    price: 29.8,
+  },
+  {
+    title: 'Style Jamet Madorra Kuproy',
+    src: '/imgs/caucasian-posed-female.jpg',
+    price: 21.0,
+  },
+  {
+    title: 'Plain Cream Shirt',
+    src: '/imgs/walking-female.jpg',
+    price: 26.43,
+  },
+  {
+    title: 'Minimalist Sweater',
+    src: '/imgs/orange-dress-female.jpg',
+    price: 24.90,
+  },
+  {
+    title: 'Basic Sweater Minimalist ',
+    src: '/imgs/coperate-female.jpg',
+    price: 30.00,
+  },
+  {
+    title: 'Minimalist Top Woman Siuu',
+    src: '/imgs/nerd-female.jpg',
+    price: 24.90,
+  },
+  {
+    title: 'Minimalist Boss Coat',
+    src: '/imgs/boss-female.jpg',
+    price: 24.90,
   },
 ]
 
@@ -101,13 +140,22 @@ export default function PreviewHome() {
           <CategoryCard src='/imgs/men-shoes.jpg' title='Shoe' />
         </div>
       </div>
-      <div className='px-7 py-16'>
+      <div className='px-7 py-16 flex flex-col gap-7'>
         <div className='w-1/2 mx-auto flex justify-center items-center gap-10'>
           <InputBar full />
           <Button primary>
             <BsStar className='text-base' />
             <TextLabel>Filter</TextLabel>
           </Button>
+        </div>
+        <OutlineButtons options={{Jacket: false, 'T-Shirt': false, Shirt: false, Shoe: false, Cap: false, Glasses: false, Watches: false}} />
+        <div className='grid grid-cols-4 place-items-stretch gap-16'>
+          {displayProducts.map(product => <ProductCard 
+            title={product.title}
+            src={product.src}
+            price={product.price}
+            full
+          />)}
         </div>
       </div>
     </main>
