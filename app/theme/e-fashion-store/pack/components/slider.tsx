@@ -8,7 +8,7 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
   const [active, setActive] = useState<number>(0)
 
   const getNextActive = () => {
-    if (active < products.length - 1) setActive(active+1)
+    if (active < products.length - 1) setActive(active + 1)
   }
 
   const getPrevActive = () => {
@@ -19,7 +19,7 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
     <div className='relative h-[27rem] w-[78%] left-[100%] -translate-x-full p-1'>
       {products.map((product, idx) => {
         const isActive = idx <= active
-        const activeStyle = `z-${idx}0 left-0 w-[50%]`
+        const activeStyle = `z-${idx}0 left-0 w-[51%]`
         const normStyle = `z-${
           products.length - idx
         }0 left-[100%] -translate-x-full w-[44%]`
@@ -33,7 +33,6 @@ export default function Slider({ products }: { products: ProductCardProps[] }) {
             src={product.src}
             title={product.title}
             price={product.price}
-            full={isActive}
             bigger={isActive}
           />
         )

@@ -7,7 +7,6 @@ export type ProductCardProps = {
   title: string
   price: number
   className?: string
-  full?: boolean
   bigger?: boolean
 }
 
@@ -16,14 +15,13 @@ export default function ProductCard({
   title,
   price,
   className,
-  full,
   bigger,
 }: ProductCardProps) {
   return (
     <div
       className={`flex flex-col gap-3 ${
         bigger ? 'h-[26rem]' : 'h-[22rem]'
-      } bg-white rounded-2xl ${full ? 'w-full' : 'w-1/6'} ${className}`}
+      } bg-white rounded-2xl ${className}`}
     >
       <div className='relative grow w-full'>
         <Image src={src} fill alt='product image' className='rounded-2xl' />

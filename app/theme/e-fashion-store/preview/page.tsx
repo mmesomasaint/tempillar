@@ -168,7 +168,6 @@ export default function PreviewHome() {
               title={product.title}
               src={product.src}
               price={product.price}
-              full
             />
           ))}
         </div>
