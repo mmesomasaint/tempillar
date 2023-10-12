@@ -27,7 +27,7 @@ export default function ProductCard({
       <div className='relative grow w-full'>
         <Image src={src} fill alt='product image' className='rounded-2xl' />
         <div className='absolute z-10 right-3 top-3 w-6 h-6 flex justify-center items-center bg-white rounded-full'>
-          {isFave ? <MdFavorite className='text-base text-fashion-store-sec' /> : <MdOutlineFavoriteBorder className='text-base text-fashion-store-sec' />}
+          {isFave ? <MdFavorite className='text-base text-red-500' /> : <MdOutlineFavoriteBorder className='text-base text-fashion-store-sec' />}
         </div>
       </div>
       <div className='flex justify-between items-center gap-10 bg-white'>
