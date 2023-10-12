@@ -1,8 +1,5 @@
 'use client'
 
-import { BsStar } from "react-icons/bs"
-import { TextLabel } from "../elements/text"
-
 export default function OutlineButtons({
   options,
   setOptions,
