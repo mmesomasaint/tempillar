@@ -35,7 +35,7 @@ export default function ProductCard({
           {title}
         </p>
         <p className={`${bigger ? 'text-xl' : 'text-base'} font-medium`}>
-          {price}
+          ${price}
         </p>
       </div>
     </div>
