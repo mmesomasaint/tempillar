@@ -210,14 +210,14 @@ export default function PreviewHome() {
           />
         </div>
       </div>
-      <div className='bg-fashion-store-sec px-7 py-16 grid grid-cols-3 gap-12 text-white/80'>
+      <div className='bg-fashion-store-sec px-7 py-16 grid grid-cols-4 gap-12 text-white/80'>
         <div className='flex flex-col gap-4'>
           <TextMid>Kameel</TextMid>
           <TextXSmall copy>
             Enjoy Same Quality With Next Level Sweatwear Collection
           </TextXSmall>
         </div>
-        <div className='grid grid-cols-3 gap-3'>
+        <div className='col-span-2 grid grid-cols-3 gap-3'>
           <div className='flex flex-col gap-4'>
             <TextSmall>Discover</TextSmall>
             <TextXSmall>Home</TextXSmall>
@@ -241,7 +241,7 @@ export default function PreviewHome() {
           </div>
         </div>
         <div className='flex flex-col gap-5'>
-          <TextSmall>Sign Up For Our News Collection</TextSmall>
+          <TextSmall copy>Sign Up For Our News Collection</TextSmall>
           <div className='relative w-full h-fit'>
             <MdOutlineEmail className='absolute left-3 top-[50%] -translate-y-[50%] text-base' />
             <BsArrowRight className='absolute right-7 top-[50%] -translate-y-[50%] text-base' />
