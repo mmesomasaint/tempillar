@@ -24,9 +24,7 @@ export default function Product({
       <div className='col-span-12 md:col-span-3'>
         <div className='relative w-full h-[30rem]'> Product Image</div>
       </div>
-      <div className="col-span-12 md:col-span-9">
-        Description and Details
-      </div>
+      <div className='col-span-12 md:col-span-9'>Description and Details</div>
     </div>
   )
 }
