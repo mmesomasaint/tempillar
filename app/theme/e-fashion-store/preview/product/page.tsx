@@ -12,5 +12,5 @@ type ProductProps = {
 }
 
 export default function Product({}: ProductProps) {
-  return <div>PRoduct main page</div>
+  return <div>Product main page</div>
 }
